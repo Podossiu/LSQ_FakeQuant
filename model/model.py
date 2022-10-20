@@ -49,7 +49,9 @@ def prepare_qat_model(model_name = 'resnet', pre_trained = True, mode = "lsq"):
         model.qconfig = qconfig
         model.fuse_model()
         model.train()
-        torch.ao.quantization.prepare_qat(model, inplace = True)
+        for n, m in model.named_children():
+            if "layer" in n or "quant" in n or "fc" in n:
+                m.qconfig = qconfig
+                torch.ao.quantization.prepare_qat(m, inplace = True)
     return model
-
 

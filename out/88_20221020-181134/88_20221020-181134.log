@@ -1,0 +1,47 @@
+2022-10-20 18:11:34,174 - INFO  - Log file for this run: /home/ilena7440/LSQFakeQuant/out/88_20221020-181134/88_20221020-181134.log
+2022-10-20 18:11:35,362 - INFO  - Dataset `cifar10` size:
+          Training Set = 50000 (196)
+        Validation Set = 10000 (40)
+              Test Set = 10000 (40)
+2022-10-20 18:11:35,398 - INFO  - Created `resnet20` model
+          Use pre-trained model = True
+2022-10-20 18:11:35,521 - INFO  - Optimizer: SGD (
+           Parameter Group 0
+               dampening: 0
+               foreach: None
+               lr: 0.001
+               maximize: False
+               momentum: 0.9
+               nesterov: False
+               weight_decay: 0.0001
+           )
+2022-10-20 18:11:35,521 - INFO  - LR scheduler: `MultiStepLr`
+    Update per batch: True
+             Group 0: 0.001
+
+2022-10-20 18:11:36,673 - INFO  - >>>>>> Epoch -1 (pre-trained model evaluation)
+2022-10-20 18:11:36,673 - INFO  - Validation: 10000 samples (256 per mini-batch)
+2022-10-20 18:11:38,080 - INFO  - Validation [   20/   40]   Loss 4.049206   Top1 15.390625   Top5 67.246094   BatchTime 0.070322   
+2022-10-20 18:11:38,719 - INFO  - Validation [   40/   40]   Loss 4.045352   Top1 15.600000   Top5 66.960000   BatchTime 0.051126   
+2022-10-20 18:11:38,790 - INFO  - ==> Top1: 15.600    Top5: 66.960    Loss: 4.045
+
+2022-10-20 18:11:38,790 - INFO  - Scoreboard best 1 ==> Epoch [-1][Top1: 15.600   Top5: 66.960]
+2022-10-20 18:11:38,790 - INFO  - >>>>>> Epoch   0
+2022-10-20 18:11:38,790 - INFO  - Training: 50000 samples (256 per mini-batch)
+2022-10-20 18:11:40,870 - INFO  - Training [0][   20/  196]   Loss 1.204906   Top1 66.601562   Top5 93.710938   BatchTime 0.103973   LR 0.001000   
+2022-10-20 18:11:42,419 - INFO  - Training [0][   40/  196]   Loss 1.026951   Top1 70.488281   Top5 95.000000   BatchTime 0.090707   LR 0.001000   
+2022-10-20 18:11:43,965 - INFO  - Training [0][   60/  196]   Loss 0.936983   Top1 72.473958   Top5 95.592448   BatchTime 0.086230   LR 0.001000   
+2022-10-20 18:11:45,510 - INFO  - Training [0][   80/  196]   Loss 0.876462   Top1 73.818359   Top5 96.015625   BatchTime 0.083990   LR 0.001000   
+2022-10-20 18:11:47,056 - INFO  - Training [0][  100/  196]   Loss 0.829898   Top1 74.945312   Top5 96.335938   BatchTime 0.082650   LR 0.001000   
+2022-10-20 18:11:48,602 - INFO  - Training [0][  120/  196]   Loss 0.795315   Top1 75.742188   Top5 96.582031   BatchTime 0.081754   LR 0.001000   
+2022-10-20 18:11:50,147 - INFO  - Training [0][  140/  196]   Loss 0.768285   Top1 76.297433   Top5 96.771763   BatchTime 0.081113   LR 0.001000   
+2022-10-20 18:11:51,693 - INFO  - Training [0][  160/  196]   Loss 0.745720   Top1 76.784668   Top5 96.945801   BatchTime 0.080634   LR 0.001000   
+2022-10-20 18:11:53,234 - INFO  - Training [0][  180/  196]   Loss 0.728103   Top1 77.220052   Top5 97.063802   BatchTime 0.080235   LR 0.001000   
+2022-10-20 18:11:54,529 - INFO  - ==> Top1: 77.524    Top5: 97.184    Loss: 0.714
+
+2022-10-20 18:11:54,593 - INFO  - Validation: 10000 samples (256 per mini-batch)
+2022-10-20 18:11:55,652 - INFO  - Validation [0][   20/   40]   Loss 0.623043   Top1 79.863281   Top5 98.144531   BatchTime 0.052879   
+2022-10-20 18:11:56,179 - INFO  - Validation [0][   40/   40]   Loss 0.635541   Top1 79.770000   Top5 98.130000   BatchTime 0.039629   
+2022-10-20 18:11:56,250 - INFO  - ==> Top1: 79.770    Top5: 98.130    Loss: 0.636
+
+2022-10-20 18:11:56,250 - INFO  - Validation: 10000 samples (256 per mini-batch)

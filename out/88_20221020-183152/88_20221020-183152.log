@@ -1,0 +1,33 @@
+2022-10-20 18:31:52,622 - INFO  - Log file for this run: /home/ilena7440/LSQFakeQuant/out/88_20221020-183152/88_20221020-183152.log
+2022-10-20 18:31:53,806 - INFO  - Dataset `cifar10` size:
+          Training Set = 50000 (196)
+        Validation Set = 10000 (40)
+              Test Set = 10000 (40)
+2022-10-20 18:31:53,842 - INFO  - Created `resnet20` model
+          Use pre-trained model = True
+2022-10-20 18:31:53,887 - INFO  - Optimizer: SGD (
+           Parameter Group 0
+               dampening: 0
+               foreach: None
+               lr: 0.001
+               maximize: False
+               momentum: 0.9
+               nesterov: False
+               weight_decay: 0.0001
+           )
+2022-10-20 18:31:53,887 - INFO  - LR scheduler: `MultiStepLr`
+    Update per batch: True
+             Group 0: 0.001
+
+2022-10-20 18:31:55,030 - INFO  - >>>>>> Epoch -1 (pre-trained model evaluation)
+2022-10-20 18:31:55,030 - INFO  - Validation: 10000 samples (256 per mini-batch)
+2022-10-20 18:31:55,893 - INFO  - Validation [   20/   40]   Loss 3047.717615   Top1 12.753906   Top5 57.070312   BatchTime 0.043144   
+2022-10-20 18:31:56,024 - INFO  - Validation [   40/   40]   Loss 3031.409504   Top1 12.670000   Top5 56.460000   BatchTime 0.024837   
+2022-10-20 18:31:56,090 - INFO  - ==> Top1: 12.670    Top5: 56.460    Loss: 3031.410
+
+2022-10-20 18:31:56,090 - INFO  - Scoreboard best 1 ==> Epoch [-1][Top1: 12.670   Top5: 56.460]
+2022-10-20 18:31:56,090 - INFO  - >>>>>> Epoch   0
+2022-10-20 18:31:56,090 - INFO  - Training: 50000 samples (256 per mini-batch)
+2022-10-20 18:31:57,158 - INFO  - Training [0][   20/  196]   Loss 1.083318   Top1 70.429688   Top5 97.363281   BatchTime 0.053384   LR 0.001000   
+2022-10-20 18:31:57,673 - INFO  - Training [0][   40/  196]   Loss 0.844895   Top1 76.083984   Top5 98.242188   BatchTime 0.039573   LR 0.001000   
+2022-10-20 18:31:58,188 - INFO  - Training [0][   60/  196]   Loss 0.719077   Top1 78.925781   Top5 98.665365   BatchTime 0.034957   LR 0.001000   
