@@ -39,7 +39,7 @@ class training_arguments:
     def __init__(self, name, arch = 'resnet18',device_type = "cuda", n_gpu = 1, log_num_best_scores = 3, resume = False,
                  resume_path = "", pre_trained = True, epochs = 120, log_print_freq = 20, output_dir = './out',
                 device_gpu = [0], optimizer = optimizer_arguments(), scheduler = scheduler_arguments(),
-                dataloader = dataloader_arguments(), log_dir = './'):
+                dataloader = dataloader_arguments(), log_dir = './', mode = 'lsq'):
         super(training_arguments,self).__init__()
         self.arch = arch
         self.device_gpu = device_gpu
@@ -58,5 +58,6 @@ class training_arguments:
         self.resume = resume
         self.log_num_best_scores = log_num_best_scores
         self.log_dir = log_dir
+        self.mode = mode
     def __repr__(self):
         return str(self.__dict__)

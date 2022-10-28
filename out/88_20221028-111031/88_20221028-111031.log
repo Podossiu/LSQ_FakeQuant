@@ -1,0 +1,37 @@
+2022-10-28 11:10:31,695 - INFO  - Log file for this run: /home/ilena7440/LSQFakeQuant/out/88_20221028-111031/88_20221028-111031.log
+2022-10-28 11:10:34,830 - INFO  - Dataset `imagenet` size:
+          Training Set = 1281167 (5005)
+        Validation Set = 50000 (196)
+              Test Set = 50000 (196)
+2022-10-28 11:10:34,919 - INFO  - Created `mobilenetv2` model
+          Use pre-trained model = True
+2022-10-28 11:10:34,935 - INFO  - Optimizer: SGD (
+           Parameter Group 0
+               dampening: 0
+               foreach: None
+               lr: 0.001
+               maximize: False
+               momentum: 0.9
+               nesterov: False
+               weight_decay: 0.0001
+           )
+2022-10-28 11:10:34,935 - INFO  - LR scheduler: `MultiStepLr`
+    Update per batch: True
+             Group 0: 0.001
+
+2022-10-28 11:10:36,262 - INFO  - >>>>>> Epoch -1 (pre-trained model evaluation)
+2022-10-28 11:10:36,262 - INFO  - Validation: 50000 samples (256 per mini-batch)
+2022-10-28 11:10:47,668 - INFO  - Validation [   20/  196]   Loss 3.417034   Top1 53.281250   Top5 76.347656   BatchTime 0.570282   
+2022-10-28 11:10:51,678 - INFO  - Validation [   40/  196]   Loss 3.450824   Top1 51.103516   Top5 75.732422   BatchTime 0.385380   
+2022-10-28 11:10:55,694 - INFO  - Validation [   60/  196]   Loss 3.427855   Top1 52.350260   Top5 77.402344   BatchTime 0.323859   
+2022-10-28 11:10:59,922 - INFO  - Validation [   80/  196]   Loss 3.371840   Top1 52.949219   Top5 77.729492   BatchTime 0.295737   
+2022-10-28 11:11:04,048 - INFO  - Validation [  100/  196]   Loss 3.478920   Top1 51.070312   Top5 76.042969   BatchTime 0.277849   
+2022-10-28 11:11:08,326 - INFO  - Validation [  120/  196]   Loss 3.545000   Top1 49.967448   Top5 74.873047   BatchTime 0.267190   
+2022-10-28 11:11:12,462 - INFO  - Validation [  140/  196]   Loss 3.604976   Top1 48.828125   Top5 73.741629   BatchTime 0.258565   
+2022-10-28 11:11:16,661 - INFO  - Validation [  160/  196]   Loss 3.651159   Top1 47.773438   Top5 72.766113   BatchTime 0.252486   
+2022-10-28 11:11:20,690 - INFO  - Validation [  180/  196]   Loss 3.682561   Top1 46.983507   Top5 72.233073   BatchTime 0.246818   
+2022-10-28 11:11:23,710 - INFO  - ==> Top1: 47.090    Top5: 72.380    Loss: 3.688
+
+2022-10-28 11:11:23,710 - INFO  - Scoreboard best 1 ==> Epoch [-1][Top1: 47.090   Top5: 72.380]
+2022-10-28 11:11:23,710 - INFO  - >>>>>> Epoch   0
+2022-10-28 11:11:23,710 - INFO  - Training: 1281167 samples (256 per mini-batch)

@@ -5,7 +5,7 @@ import time
 from quan import *
 import torch
 
-from util import AverageMeter, save_checkpoint_quantized
+from util import AverageMeter, save_checkpoint_quantized, transform_model
 
 __all__ = ['train_qat', 'validate', 'PerformanceScoreboard']
 #torch.backends.quantized.engine = 'qnnpack'
@@ -53,13 +53,13 @@ def train_qat(train_loader, val_loader, test_loader,qat_model,
         logger.info('>>>>>> Epoch %3d' %epoch)
         t_top1, t_top5, t_loss = train_one_epoch_qat(train_loader, qat_model, criterion, 
                 optimizer, lr_scheduler, epoch,monitors, args, init_qparams = init_qparams)
-
+        
         quantized_model = torch.ao.quantization.convert(qat_model.cpu().eval(), inplace = False).to("cpu")
         print("validation quantized model on cpu")
         quantized_model.eval()
-        qat_model.to(args.device_type)
-        v_top1, v_top5, v_loss = validate(val_loader, qat_model.eval(), criterion, epoch, monitors, args, quantized = False)
+        v_top1, v_top5, v_loss = validate(val_loader, qat_model.eval(), criterion, epoch, monitors, args, quantized = True)
         print(v_top1, v_top5)
+        qat_model.to(args.device_type)
         v_top1, v_top5, v_loss = validate(val_loader, quantized_model, criterion, epoch, monitors, args, quantized = True)
         #tbmonitor.writer.add_scalars('Train_vs_Validation/Loss', {'train': t_loss, 'val': v_loss}, epoch)
         #tbmonitor.writer.add_scalars('Train_vs_Validation/Top1', {'train': t_top1, 'val': v_top1}, epoch)

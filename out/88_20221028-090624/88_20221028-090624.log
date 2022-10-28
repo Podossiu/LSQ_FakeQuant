@@ -1,0 +1,30 @@
+2022-10-28 09:06:24,018 - INFO  - Log file for this run: /home/ilena7440/LSQFakeQuant/out/88_20221028-090624/88_20221028-090624.log
+2022-10-28 09:06:25,765 - INFO  - Dataset `cifar10` size:
+          Training Set = 50000 (196)
+        Validation Set = 10000 (40)
+              Test Set = 10000 (40)
+2022-10-28 09:06:25,798 - INFO  - Created `resnet20` model
+          Use pre-trained model = True
+2022-10-28 09:06:25,961 - INFO  - Optimizer: SGD (
+           Parameter Group 0
+               dampening: 0
+               foreach: None
+               lr: 0.001
+               maximize: False
+               momentum: 0.9
+               nesterov: False
+               weight_decay: 0.0001
+           )
+2022-10-28 09:06:25,961 - INFO  - LR scheduler: `MultiStepLr`
+    Update per batch: True
+             Group 0: 0.001
+
+2022-10-28 09:06:27,227 - INFO  - >>>>>> Epoch -1 (pre-trained model evaluation)
+2022-10-28 09:06:27,227 - INFO  - Validation: 10000 samples (256 per mini-batch)
+2022-10-28 09:06:30,150 - INFO  - Validation [   20/   40]   Loss 2.361715   Top1 9.882812   Top5 49.316406   BatchTime 0.146134   
+2022-10-28 09:06:31,843 - INFO  - Validation [   40/   40]   Loss 2.358984   Top1 10.000000   Top5 49.940000   BatchTime 0.115380   
+2022-10-28 09:06:31,918 - INFO  - ==> Top1: 10.000    Top5: 49.940    Loss: 2.359
+
+2022-10-28 09:06:31,919 - INFO  - Scoreboard best 1 ==> Epoch [-1][Top1: 10.000   Top5: 49.940]
+2022-10-28 09:06:31,919 - INFO  - >>>>>> Epoch   0
+2022-10-28 09:06:31,919 - INFO  - Training: 50000 samples (256 per mini-batch)

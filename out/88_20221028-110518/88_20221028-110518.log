@@ -1,0 +1,23 @@
+2022-10-28 11:05:18,843 - INFO  - Log file for this run: /home/ilena7440/LSQFakeQuant/out/88_20221028-110518/88_20221028-110518.log
+2022-10-28 11:05:20,184 - INFO  - Dataset `cifar10` size:
+          Training Set = 50000 (196)
+        Validation Set = 10000 (40)
+              Test Set = 10000 (40)
+2022-10-28 11:05:20,291 - INFO  - Created `mobilenetv2` model
+          Use pre-trained model = True
+2022-10-28 11:05:20,307 - INFO  - Optimizer: SGD (
+           Parameter Group 0
+               dampening: 0
+               foreach: None
+               lr: 0.001
+               maximize: False
+               momentum: 0.9
+               nesterov: False
+               weight_decay: 0.0001
+           )
+2022-10-28 11:05:20,307 - INFO  - LR scheduler: `MultiStepLr`
+    Update per batch: True
+             Group 0: 0.001
+
+2022-10-28 11:05:21,559 - INFO  - >>>>>> Epoch -1 (pre-trained model evaluation)
+2022-10-28 11:05:21,559 - INFO  - Validation: 10000 samples (256 per mini-batch)
