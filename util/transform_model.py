@@ -1,6 +1,7 @@
 import torch
 import copy
 from quan import *
+
 @torch.no_grad()
 def transform_model(model, args):
     transformed_model = copy.deepcopy(model)
