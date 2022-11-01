@@ -4,6 +4,7 @@ from .resnet import *
 from .resnet_cifar import *
 from .mobilenet import *
 from quan import *
+import copy
 
 def create_model(model_name = "resnet", pre_trained = True):
     logger = logging.getLogger()
@@ -58,16 +59,17 @@ def create_model(model_name = "resnet", pre_trained = True):
 
     return model
 
-def prepare_qat_model(model_name = 'resnet', pre_trained = True, mode = "lsq"):
-    print(model_name)
+def prepare_qat_model(model_name = 'resnet', pre_trained = True, mode = "lsq", distillation = False):
     model = create_model(model_name, pre_trained)
+    if distillation:
+        teacher_model = copy.deepcopy(model)
     if mode == "lsq":
         qconfig = default_lsq_qconfig
         model.qconfig = qconfig
         model.fuse_model()
         model.train()
         for n, m in model.named_children():
-            if "layer" in n or "quant" in n or "fc" in n or "conv" in n:
+            if "layer" in n or "quant" in n or "fc" in n or "conv" in n or "classifier" in n:
                 m.qconfig = qconfig
                 torch.ao.quantization.prepare_qat(m, inplace = True)
     elif mode == "qil":
@@ -76,8 +78,22 @@ def prepare_qat_model(model_name = 'resnet', pre_trained = True, mode = "lsq"):
             model.fuse_model()
             model.train()
             for n, m in model.named_children():
-                if "layer" in n or "quant" in n or "fc" in n or "conv" in n:
+                if "layer" in n or "quant" in n or "fc" in n or "conv" in n or "classifier" in n:
                     m.qconfig = qconfig
                     torch.ao.quantization.prepare_qat(m, inplace = True)
+    elif mode == "slsq":
+        qconfig = default_slsq_qconfig
+        model.qconfig = qconfig
+        model.fuse_model()
+        model.train()
+        for n, m in model.named_children():
+            if ("layer" in n or "quant" in n or "fc" in n or "conv" in n or "classifier" in n or "features" in n) and not ("first" in n):
+                m.qconfig = qconfig
+                torch.ao.quantization.prepare_qat(m, inplace = True)
+                for n1, m1 in m.named_children():
+                    m1.qconfig = qconfig
+                    torch.ao.quantization.prepare_qat(m1, inplace = True)
+    if distillation:
+        return model, teacher_model
     return model
 

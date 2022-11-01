@@ -1,7 +1,0 @@
-2022-10-20 18:37:30,384 - INFO  - Log file for this run: /home/ilena7440/LSQFakeQuant/out/88_20221020-183730/88_20221020-183730.log
-2022-10-20 18:37:31,574 - INFO  - Dataset `cifar10` size:
-          Training Set = 50000 (196)
-        Validation Set = 10000 (40)
-              Test Set = 10000 (40)
-2022-10-20 18:37:31,609 - INFO  - Created `resnet20` model
-          Use pre-trained model = True

@@ -7,7 +7,7 @@ import torch
 
 from util import AverageMeter, save_checkpoint_quantized, transform_model
 
-__all__ = ['train_qat', 'validate', 'PerformanceScoreboard']
+__all__ = ['train_qat', 'validate', 'PerformanceScoreboard', 'train_qat_slsq']
 #torch.backends.quantized.engine = 'qnnpack'
 logger = logging.getLogger()
 
@@ -26,6 +26,57 @@ def accuracy(output, target, topk=(1,)):
             correct_k = correct[:k].reshape(-1).float().sum(0, keepdim=True)
             res.append(correct_k.mul_(100.0 / batch_size))
         return res
+
+def train_qat_slsq(train_loader, val_loader, test_loader,qat_model, teacher_model,
+        criterion, optimizer, lr_scheduler, epoch, monitors, 
+        args, init_qparams = True, hard_pruning = False):
+    start_epoch = 0
+    device = torch.device("cuda") if torch.cuda.is_available() else torch.device("cpu")
+    if args.n_gpu > 1:
+        qat_model = torch.nn.DataParallel(qat_model)
+    
+    qat_model.to(args.device_type)
+    teacher_model.to(args.device_type)
+    criterion = criterion
+    optimizer = optimizer
+    lr_scheduler = lr_scheduler
+    
+    perf_scoreboard = PerformanceScoreboard(args.log_num_best_scores)
+    
+    quantized_model = None
+    if args.resume_path or args.pre_trained:
+        logger.info('>>>>>> Epoch -1 (pre-trained model evaluation)')
+        top1, top5, _ = validate_slsq(val_loader, qat_model, criterion, start_epoch - 1, monitors, args)
+        perf_scoreboard.update(top1, top5, start_epoch - 1)
+    for epoch in range(start_epoch, args.epochs):
+        logger.info('>>>>>> Epoch %3d' %epoch)
+        t_top1, t_top5, t_loss = train_one_epoch_slsq_with_distillation(train_loader, qat_model, teacher_model, 
+                                criterion, optimizer, lr_scheduler, epoch, monitors, args, init_qparams, hard_pruning)
+        qat_model.cpu().eval()
+        transformed_model = transform_model(qat_model, args)
+        quantized_model = torch.ao.quantization.convert(transformed_model, inplace = False).to("cpu")
+        #quantized_model = torch.ao.quantization.convert(qat_model, inplace = False).to("cpu")
+        quantized_model.eval()
+        print("validation quantized model on cpu")
+
+        v_top1, v_top5, v_loss = validate_slsq(val_loader, transformed_model.cpu().eval(), criterion, epoch, monitors, args, quantized = True, sparse_model = False)
+        print(v_top1, v_top5)
+        qat_model.to(args.device_type)
+        v_top1, v_top5, v_loss = validate_slsq(val_loader, quantized_model, criterion, epoch, monitors, args, quantized = True, sparse_model = True)
+        #tbmonitor.writer.add_scalars('Train_vs_Validation/Loss', {'train': t_loss, 'val': v_loss}, epoch)
+        #tbmonitor.writer.add_scalars('Train_vs_Validation/Top1', {'train': t_top1, 'val': v_top1}, epoch)
+        #tbmonitor.writer.add_scalars('Train_vs_Validation/Top5', {'train': t_top5, 'val': v_top5}, epoch)
+        
+        perf_scoreboard.update(v_top1, v_top5, epoch)
+        is_best = perf_scoreboard.is_best(epoch)
+        
+        save_checkpoint_quantized(epoch, args.arch, transformed_model, quantized_model, {'top1' : v_top1, 'top5' : v_top5}, is_best, args.name, args.log_dir)
+    logger.info('>>>>>> Epoch -1 (final model evaluation)')
+    validate_slsq(test_loader, quantized_model, criterion, -1, monitors, args, quantized = True)
+
+    #tbmonitor.writer.close()
+    logger.info('Program completed sucessfully ... exiting ...')
+
 
 def train_qat(train_loader, val_loader, test_loader,qat_model, 
         criterion, optimizer, lr_scheduler, epoch, monitors, 
@@ -74,6 +125,89 @@ def train_qat(train_loader, val_loader, test_loader,qat_model,
 
     #tbmonitor.writer.close()
     logger.info('Program completed sucessfully ... exiting ...')
+
+def train_one_epoch_slsq_with_distillation(train_loader, qat_model, teacher_model, criterion, optimizer, lr_scheduler, epoch, monitors, args, init_qparams, hard_pruning = False):
+    
+    def soft_cross_entropy(predicts, targets):
+        student_likelihood = torch.nn.functional.log_softmax(predicts, dim = -1)
+        targets_prob = torch.nn.functional.softmax(targets, dim = -1)
+        return (-targets_prob * student_likelihood).mean()
+
+    if hard_pruning:
+        qat_model.apply(hard_pruning_mode)
+    else:
+        qat_model.apply(soft_pruning_mode)
+    
+    losses = AverageMeter()
+    top1 = AverageMeter()
+    top5 = AverageMeter()
+    batch_time = AverageMeter()
+    
+    total_sample = len(train_loader.sampler)
+    batch_size = train_loader.batch_size
+    steps_per_epoch = math.ceil(total_sample / batch_size)
+    logger.info('Training: %d samples (%d per mini-batch)', total_sample, batch_size)
+    
+    teacher_model.eval()
+    qat_model.train()
+    end_time = time.time()
+    for batch_idx, (inputs, targets) in enumerate(train_loader):
+        if epoch == 0 and init_qparams == True and batch_idx == 0:
+            qat_model.apply(init_mode)
+        
+
+        inputs = inputs.to(args.device_type)
+        targets = targets.to(args.device_type)
+
+
+        with torch.no_grad():
+            teacher_output = teacher_model(inputs)
+        outputs = qat_model(inputs)
+        loss = criterion(outputs, targets)
+        distil_loss = soft_cross_entropy(outputs, teacher_output)
+        loss += distil_loss
+        
+        if not hard_pruning:
+            masking_loss = 0.
+            masking_loss_list = []
+            for n, m in qat_model.named_modules():
+                if hasattr(m, "soft_mask") and m.soft_mask is not None:
+                    masking_loss_list.append(m.soft_mask.mean())
+            masking_loss = torch.stack(masking_loss_list).mean()
+            print("{:.8f}".format(masking_loss))
+            loss += masking_loss * 10
+        acc1, acc5 = accuracy(outputs.data, targets.data, topk=(1, 5))
+        losses.update(loss.item(), inputs.size(0))
+        top1.update(acc1.item(), inputs.size(0))
+        top5.update(acc5.item(), inputs.size(0))
+        
+        if epoch == 0 and init_qparams == True and batch_idx == 0:
+            qat_model.apply(training_mode)
+
+        if lr_scheduler is not None:
+            lr_scheduler.step(epoch=epoch, batch=batch_idx)
+
+        optimizer.zero_grad()
+        loss.backward()
+        optimizer.step()
+        
+        batch_time.update(time.time() - end_time)
+        end_time = time.time()
+        
+        if (batch_idx + 1) % args.log_print_freq == 0:
+            for m in monitors:
+                m.update(epoch, batch_idx + 1, steps_per_epoch, 'Training', {
+                    'Loss': losses,
+                    'Top1': top1,
+                    'Top5': top5,
+                    'BatchTime': batch_time,
+                    'LR': optimizer.param_groups[0]['lr'],
+                })
+
+    logger.info('==> Top1: %.3f    Top5: %.3f    Loss: %.3f\n',
+                top1.avg, top5.avg, losses.avg)
+    return top1.avg, top5.avg, losses.avg
+
 
 def train_one_epoch_qat(train_loader, qat_model, criterion, optimizer, lr_scheduler, epoch, monitors, args, init_qparams):
     losses = AverageMeter()
@@ -128,6 +262,71 @@ def train_one_epoch_qat(train_loader, qat_model, criterion, optimizer, lr_schedu
 
     logger.info('==> Top1: %.3f    Top5: %.3f    Loss: %.3f\n',
                 top1.avg, top5.avg, losses.avg)
+    return top1.avg, top5.avg, losses.avg
+
+def validate_slsq(data_loader, model, criterion, epoch, monitors, args, quantized = False, sparse_model = False):
+    losses = AverageMeter()
+    top1 = AverageMeter()
+    top5 = AverageMeter()
+    batch_time = AverageMeter()
+
+    total_sample = len(data_loader.sampler)
+    batch_size = data_loader.batch_size
+    steps_per_epoch = math.ceil(total_sample / batch_size)
+
+    logger.info('Validation: %d samples (%d per mini-batch)', total_sample, batch_size)
+
+    model.eval()
+    end_time = time.time()
+    for batch_idx, (inputs, targets) in enumerate(data_loader):
+        with torch.no_grad():
+            if quantized:
+                inputs = inputs.to("cpu")
+                targets = targets.to("cpu")
+            else:
+                inputs = inputs.to(args.device_type)
+                targets = targets.to(args.device_type)
+            
+            outputs = model(inputs)
+            loss = criterion(outputs, targets)
+            acc1, acc5 = accuracy(outputs.data, targets.data, topk=(1, 5))
+            losses.update(loss.item(), inputs.size(0))
+            top1.update(acc1.item(), inputs.size(0))
+            top5.update(acc5.item(), inputs.size(0))
+            batch_time.update(time.time() - end_time)
+            end_time = time.time()
+
+            if (batch_idx + 1) % args.log_print_freq == 0:
+                for m in monitors:
+                    m.update(epoch, batch_idx + 1, steps_per_epoch, 'Validation', {
+                        'Loss': losses,
+                        'Top1': top1,
+                        'Top5': top5,
+                        'BatchTime': batch_time
+                    })
+    sparsity = 0.
+    total_zero = 0.
+    total_numel = 0.
+    with torch.no_grad():
+        if not sparse_model:
+            for n,m in model.named_modules():
+                if hasattr(m, "weight_fake_quant"):
+                    weight_zero = (m.weight_fake_quant(m.weight) == 0).sum().detach()
+                    weight_numel = m.weight.numel()
+                    sparsity = weight_zero / weight_numel
+                    total_zero += weight_zero
+                    total_numel += weight_numel
+        else:
+            for n,m in model.named_modules():
+                if ("first" in n):
+                    pass
+                elif hasattr(m, "weight"):
+                    print(n)
+                    print(m.weight() == 0.)
+        sparsity = total_zero / total_numel 
+
+    logger.info('==> Top1: %.3f    Top5: %.3f    Loss: %.3f\n', top1.avg, top5.avg, losses.avg)
+    logger.info('==> Sparsity : %.3f\n', sparsity)
     return top1.avg, top5.avg, losses.avg
 
 

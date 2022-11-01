@@ -1,5 +1,0 @@
-2022-10-28 11:09:57,982 - INFO  - Log file for this run: /home/ilena7440/LSQFakeQuant/out/88_20221028-110957/88_20221028-110957.log
-2022-10-28 11:10:01,095 - INFO  - Dataset `imagenet` size:
-          Training Set = 1281167 (5005)
-        Validation Set = 50000 (196)
-              Test Set = 50000 (196)

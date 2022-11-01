@@ -1,0 +1,38 @@
+2022-11-01 12:09:51,531 - INFO  - Log file for this run: /home/ilena7440/LSQ_FakeQuant/out/88_20221101-120951/88_20221101-120951.log
+2022-11-01 12:09:52,741 - INFO  - Dataset `cifar10` size:
+          Training Set = 50000 (196)
+        Validation Set = 10000 (40)
+              Test Set = 10000 (40)
+2022-11-01 12:09:52,830 - INFO  - Created `mobilenetv2` model
+          Use pre-trained model = True
+2022-11-01 12:09:53,488 - INFO  - Optimizer: SGD (
+           Parameter Group 0
+               dampening: 0
+               foreach: None
+               lr: 0.001
+               maximize: False
+               momentum: 0.9
+               nesterov: False
+               weight_decay: 0.0001
+           )
+2022-11-01 12:09:53,488 - INFO  - LR scheduler: `MultiStepLr`
+    Update per batch: True
+             Group 0: 0.001
+
+2022-11-01 12:09:54,573 - INFO  - >>>>>> Epoch -1 (pre-trained model evaluation)
+2022-11-01 12:09:54,574 - INFO  - Validation: 10000 samples (256 per mini-batch)
+2022-11-01 12:09:58,132 - INFO  - Validation [   20/   40]   Loss nan   Top1 10.078125   Top5 50.019531   BatchTime 0.177832   
+2022-11-01 12:09:59,474 - INFO  - Validation [   40/   40]   Loss nan   Top1 10.000000   Top5 50.000000   BatchTime 0.122472   
+2022-11-01 12:09:59,566 - INFO  - ==> Top1: 10.000    Top5: 50.000    Loss: nan
+
+2022-11-01 12:09:59,566 - INFO  - ==> Sparsity : 0.059
+
+2022-11-01 12:09:59,567 - INFO  - Scoreboard best 1 ==> Epoch [-1][Top1: 10.000   Top5: 50.000]
+2022-11-01 12:09:59,567 - INFO  - >>>>>> Epoch   0
+2022-11-01 12:09:59,568 - INFO  - Training: 50000 samples (256 per mini-batch)
+2022-11-01 12:10:03,148 - INFO  - Training [0][   20/  196]   Loss 20.416649   Top1 0.058594   Top5 0.761719   BatchTime 0.178859   LR 0.001000   
+2022-11-01 12:10:05,840 - INFO  - Training [0][   40/  196]   Loss 18.865258   Top1 0.693359   Top5 3.144531   BatchTime 0.156753   LR 0.001000   
+2022-11-01 12:10:08,632 - INFO  - Training [0][   60/  196]   Loss 18.005975   Top1 1.660156   Top5 7.167969   BatchTime 0.151021   LR 0.001000   
+2022-11-01 12:10:11,351 - INFO  - Training [0][   80/  196]   Loss 17.428224   Top1 2.773438   Top5 11.708984   BatchTime 0.147254   LR 0.001000   
+2022-11-01 12:10:14,099 - INFO  - Training [0][  100/  196]   Loss 16.948145   Top1 4.007812   Top5 16.937500   BatchTime 0.145284   LR 0.001000   
+2022-11-01 12:10:16,843 - INFO  - Training [0][  120/  196]   Loss 16.543306   Top1 5.348307   Top5 21.855469   BatchTime 0.143937   LR 0.001000   

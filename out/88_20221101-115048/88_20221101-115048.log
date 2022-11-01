@@ -1,0 +1,32 @@
+2022-11-01 11:50:48,730 - INFO  - Log file for this run: /home/ilena7440/LSQ_FakeQuant/out/88_20221101-115048/88_20221101-115048.log
+2022-11-01 11:50:49,939 - INFO  - Dataset `cifar10` size:
+          Training Set = 50000 (196)
+        Validation Set = 10000 (40)
+              Test Set = 10000 (40)
+2022-11-01 11:50:50,030 - INFO  - Created `mobilenetv2` model
+          Use pre-trained model = True
+2022-11-01 11:50:50,700 - INFO  - Optimizer: SGD (
+           Parameter Group 0
+               dampening: 0
+               foreach: None
+               lr: 0.001
+               maximize: False
+               momentum: 0.9
+               nesterov: False
+               weight_decay: 0.0001
+           )
+2022-11-01 11:50:50,700 - INFO  - LR scheduler: `MultiStepLr`
+    Update per batch: True
+             Group 0: 0.001
+
+2022-11-01 11:50:51,771 - INFO  - >>>>>> Epoch -1 (pre-trained model evaluation)
+2022-11-01 11:50:51,772 - INFO  - Validation: 10000 samples (256 per mini-batch)
+2022-11-01 11:50:55,288 - INFO  - Validation [   20/   40]   Loss nan   Top1 10.078125   Top5 50.019531   BatchTime 0.175142   
+2022-11-01 11:50:56,592 - INFO  - Validation [   40/   40]   Loss nan   Top1 10.000000   Top5 50.000000   BatchTime 0.120184   
+2022-11-01 11:50:56,680 - INFO  - ==> Top1: 10.000    Top5: 50.000    Loss: nan
+
+2022-11-01 11:50:56,680 - INFO  - ==> Sparsity : 0.059
+
+2022-11-01 11:50:56,680 - INFO  - Scoreboard best 1 ==> Epoch [-1][Top1: 10.000   Top5: 50.000]
+2022-11-01 11:50:56,680 - INFO  - >>>>>> Epoch   0
+2022-11-01 11:50:56,681 - INFO  - Training: 50000 samples (256 per mini-batch)

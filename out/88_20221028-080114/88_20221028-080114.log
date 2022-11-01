@@ -1,5 +1,0 @@
-2022-10-28 08:01:14,783 - INFO  - Log file for this run: /home/ilena7440/LSQFakeQuant/out/88_20221028-080114/88_20221028-080114.log
-2022-10-28 08:01:16,505 - INFO  - Dataset `cifar10` size:
-          Training Set = 50000 (196)
-        Validation Set = 10000 (40)
-              Test Set = 10000 (40)

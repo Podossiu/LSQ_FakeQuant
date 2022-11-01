@@ -123,7 +123,9 @@ class MobileNetV2(nn.Module):
 
         # building first layer
         input_channel = _make_divisible(32 * width_mult, 4 if width_mult == 0.1 else 8)
-        layers = [conv_3x3_bn(3, input_channel, 2)]
+        #layers = [conv_3x3_bn(3, input_channel, 2)]
+        self.first_layer = conv_3x3_bn(3, input_channel, 2)
+        layers = []
         # building inverted residual blocks
         block = InvertedResidual
         for t, c, n, s in self.cfgs:
@@ -137,18 +139,19 @@ class MobileNetV2(nn.Module):
         self.conv = conv_1x1_bn(input_channel, output_channel)
         self.avgpool = nn.AdaptiveAvgPool2d((1, 1))
         self.classifier = nn.Linear(output_channel, num_classes)
-
+        
         self._initialize_weights()
         self.quant = QuantStub()
         self.dequant = DeQuantStub()
     def forward(self, x):
-        x = self.features(x)
+        x = self.first_layer(x)
         x = self.quant(x)
+        x = self.features(x)
         x = self.conv(x)
         x = self.avgpool(x)
         x = torch.flatten(x, 1)
-        x = self.dequant(x)
         x = self.classifier(x)
+        x = self.dequant(x)
         return x
 
     def _initialize_weights(self):
@@ -168,13 +171,13 @@ class MobileNetV2(nn.Module):
     def fuse_model(self):
         
             for module_name, module in self.named_children():
-                if "conv" in module_name:
+                if "first" in module_name:
+                    torch.ao.quantization.fuse_modules_qat(module, [['0','1','2']], inplace = True)
+                elif "conv" in module_name:
                     torch.ao.quantization.fuse_modules_qat(module, [['0','1','2']], inplace = True)
                 else:
                     for basic_block_name, basic_block in module.named_children():
                         if  basic_block_name == "0":
-                            torch.ao.quantization.fuse_modules_qat(basic_block, [['0','1','2']], inplace = True)
-                        elif  basic_block_name == "1":
                             for sub_block_name, sub_block in basic_block.named_children():
                                 if "conv" in sub_block_name:
                                     torch.ao.quantization.fuse_modules_qat(sub_block, [['0','1','2'], ['3','4']], inplace = True)
@@ -188,7 +191,22 @@ def _mobilenetv2(arch, width_mult, pretrained, progress,**kwargs):
     if pretrained:
         print("********************pre-trained*****************")
         state_dict = load_state_dict_from_url(model_urls[arch], progress = progress)
-        model.load_state_dict(state_dict)
+        new_state_dict = {}
+        for k,v in state_dict.items():
+            if "features.0" in k:
+                key_list = k.split('.')
+                key_list[0] = "first_layer"
+                del key_list[1]
+                new_key = ".".join(key_list)
+                new_state_dict[new_key] = v
+            elif "features" in k:
+                key_list = k.split('.')
+                key_list[1] = str(int(key_list[1]) - 1)
+                new_key = ".".join(key_list)
+                new_state_dict[new_key] = v
+            else:
+                new_state_dict[k] = v
+        model.load_state_dict(new_state_dict)
     return model
 
 def mobilenetv2(pretrained = True, progress = True, **kwargs):

@@ -9,9 +9,9 @@ from model import *
 import yaml
 def main():
     script_dir = Path.cwd()
-    data_args = trainer.dataloader_arguments(dataset = "imagenet", num_classes = 1000, path = "/data/imagenet", batch_size = 256)
+    data_args = trainer.dataloader_arguments(dataset = "cifar10", num_classes = 1000, path = "/data", batch_size = 256)
     optimizer_args = trainer.optimizer_arguments(weight_decay = 1e-4, learning_rate = 0.001)
-    args = trainer.training_arguments(name = "88",device_gpu = [0,1], optimizer = optimizer_args, dataloader = data_args, arch = 'mobilenetv2', mode = "lsq")
+    args = trainer.training_arguments(name = "88",device_gpu = [0,1], optimizer = optimizer_args, dataloader = data_args, arch = 'mobilenetv2', mode = "slsq")
     output_dir = script_dir / args.output_dir
     output_dir.mkdir(exist_ok = True)
 
