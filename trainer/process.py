@@ -311,18 +311,28 @@ def validate_slsq(data_loader, model, criterion, epoch, monitors, args, quantize
         if not sparse_model:
             for n,m in model.named_modules():
                 if hasattr(m, "weight_fake_quant"):
-                    weight_zero = (m.weight_fake_quant(m.weight) == 0).sum().detach()
+                    weight_zero = (m.weight_fake_quant(m.weight) == 0).sum()
                     weight_numel = m.weight.numel()
                     sparsity = weight_zero / weight_numel
                     total_zero += weight_zero
                     total_numel += weight_numel
+                    print(n, sparsity)
         else:
             for n,m in model.named_modules():
                 if ("first" in n):
-                    pass
+                    weight_zero = (m.weight == 0).sum()
+                    weight_numel = m.weight.numel()
+                    sparsity = weight_zero / weight_numel
+                    total_zero += weight_zero
+                    total_numel += weight_numel
+                    print(n, sparsity)
                 elif hasattr(m, "weight"):
-                    print(n)
-                    print(m.weight() == 0.)
+                    weight_zero = (m.weight() == 0.).sum()
+                    weight_numel = m.weight().numel()
+                    sparsity = weight_zero / weight_numel
+                    total_zero += weight_zero
+                    total_numel += weight_numel
+                    print(n, sparsity)
         sparsity = total_zero / total_numel 
 
     logger.info('==> Top1: %.3f    Top5: %.3f    Loss: %.3f\n', top1.avg, top5.avg, losses.avg)
