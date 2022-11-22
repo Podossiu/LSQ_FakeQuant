@@ -1,0 +1,24 @@
+2022-11-22 03:34:56,842 - INFO  - Log file for this run: /home/ilena7440/LSQ_FakeQuant/out/88_20221122-033456/88_20221122-033456.log
+2022-11-22 03:35:05,525 - INFO  - Dataset `cifar10` size:
+          Training Set = 50000 (391)
+        Validation Set = 10000 (79)
+              Test Set = 10000 (79)
+2022-11-22 03:35:05,623 - INFO  - Created `once_for_all` model
+          Use pre-trained model = True
+2022-11-22 03:35:05,908 - INFO  - Optimizer: SGD (
+           Parameter Group 0
+               dampening: 0
+               differentiable: False
+               foreach: None
+               lr: 0.0001
+               maximize: False
+               momentum: 0.9
+               nesterov: False
+               weight_decay: 0.0005
+           )
+2022-11-22 03:35:05,908 - INFO  - LR scheduler: `MultiStepLr`
+    Update per batch: True
+             Group 0: 0.0001
+
+2022-11-22 03:35:08,048 - INFO  - >>>>>> Epoch -1 (pre-trained model evaluation)
+2022-11-22 03:35:08,049 - INFO  - Validation: 10000 samples (128 per mini-batch)

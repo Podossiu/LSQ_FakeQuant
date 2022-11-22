@@ -1,0 +1,32 @@
+2022-11-22 03:27:36,006 - INFO  - Log file for this run: /home/ilena7440/LSQ_FakeQuant/out/88_20221122-032735/88_20221122-032735.log
+2022-11-22 03:27:37,773 - INFO  - Dataset `cifar10` size:
+          Training Set = 50000 (391)
+        Validation Set = 10000 (79)
+              Test Set = 10000 (79)
+2022-11-22 03:27:37,871 - INFO  - Created `once_for_all` model
+          Use pre-trained model = True
+2022-11-22 03:27:38,152 - INFO  - Optimizer: SGD (
+           Parameter Group 0
+               dampening: 0
+               differentiable: False
+               foreach: None
+               lr: 0.0001
+               maximize: False
+               momentum: 0.9
+               nesterov: False
+               weight_decay: 0.0005
+           )
+2022-11-22 03:27:38,153 - INFO  - LR scheduler: `MultiStepLr`
+    Update per batch: True
+             Group 0: 0.0001
+
+2022-11-22 03:27:39,769 - INFO  - >>>>>> Epoch -1 (pre-trained model evaluation)
+2022-11-22 03:27:39,769 - INFO  - Validation: 10000 samples (128 per mini-batch)
+2022-11-22 03:27:43,018 - INFO  - Validation [   20/   79]   Loss 8.111629   Top1 0.000000   Top5 0.000000   BatchTime 0.162311   
+2022-11-22 03:27:44,046 - INFO  - Validation [   40/   79]   Loss 8.152248   Top1 0.000000   Top5 0.000000   BatchTime 0.106876   
+2022-11-22 03:27:45,016 - INFO  - Validation [   60/   79]   Loss 8.178463   Top1 0.000000   Top5 0.000000   BatchTime 0.087407   
+2022-11-22 03:27:45,976 - INFO  - ==> Top1: 0.000    Top5: 0.000    Loss: 8.187
+
+2022-11-22 03:27:45,977 - INFO  - Scoreboard best 1 ==> Epoch [-1][Top1: 0.000   Top5: 0.000]
+2022-11-22 03:27:45,977 - INFO  - >>>>>> Epoch   0
+2022-11-22 03:27:45,977 - INFO  - Training: 50000 samples (128 per mini-batch)

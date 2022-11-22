@@ -153,7 +153,8 @@ class LSQFakeQuantize(FakeQuantizeBase):
                 s_grad_scale = 1.0 / ((self.quant_max * X.numel()) ** 0.5)
             else:
                 s_grad_scale = 1.0 / ((self.quant_max * X.numel()) ** 0.5)
-            s_scale = (self.scale - s_grad_scale * self.scale).detach() + s_grad_scale * self.scale
+            s_grad = s * s_grad_scale
+            s = ( s - s_grad).detach() + s_grad
 
             X = X / s_scale
             X = torch.clamp(X, self.quant_min, self.quant_max)

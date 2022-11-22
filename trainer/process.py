@@ -226,7 +226,6 @@ def train_one_epoch_qat(train_loader, qat_model, criterion, optimizer, lr_schedu
     for batch_idx, (inputs, targets) in enumerate(train_loader):
         if epoch == 0 and init_qparams == True and batch_idx == 0:
             qat_model.apply(init_mode)
-
         inputs = inputs.to(args.device_type)
         targets = targets.to(args.device_type)
         outputs = qat_model(inputs)
@@ -236,7 +235,7 @@ def train_one_epoch_qat(train_loader, qat_model, criterion, optimizer, lr_schedu
         top1.update(acc1.item(), inputs.size(0))
         top5.update(acc5.item(), inputs.size(0))
 
-        if epoch == 0 and init_qparams == True and batch_idx == 0:
+        if epoch == 0 and init_qparams == True and batch_idx == 10:
             qat_model.apply(training_mode)
 
         if lr_scheduler is not None:
