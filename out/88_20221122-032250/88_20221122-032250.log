@@ -1,7 +1,0 @@
-2022-11-22 03:22:50,496 - INFO  - Log file for this run: /home/ilena7440/LSQ_FakeQuant/out/88_20221122-032250/88_20221122-032250.log
-2022-11-22 03:23:02,676 - INFO  - Dataset `cifar10` size:
-          Training Set = 50000 (391)
-        Validation Set = 10000 (79)
-              Test Set = 10000 (79)
-2022-11-22 03:23:02,762 - INFO  - Created `once_for_all` model
-          Use pre-trained model = True

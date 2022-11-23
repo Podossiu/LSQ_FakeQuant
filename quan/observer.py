@@ -112,8 +112,6 @@ class LSQFakeQuantize(FakeQuantizeBase):
             assert quant_min <= quant_max, \
                     'quant_min must be less than or equal to quant_max'
             dtype = observer_kwargs.get("dtype", torch.quint8)
-            if hasattr(observer, "p"):
-                dtype = getattr(getattr(observer, "p", {}), "keywords", {}).get("dtype", dtype)
             assert torch.iinfo(dtype).min <= quant_min, 'quant_min out of bound'
             assert quant_max <= torch.iinfo(dtype).max, 'quant_max out of bound'
             observer_kwargs.update({"quant_min":quant_min, "quant_max" : quant_max})
@@ -133,6 +131,18 @@ class LSQFakeQuantize(FakeQuantizeBase):
                 IS_QSCHEME_PER_TENSOR(self.qscheme), \
                 'Only per channel and per tensor quantization are fake quantize' + ' got qscheme : ' + str(self.qscheme)
         self.is_per_channel = IS_QSCHEME_PER_CHANNEL(self.qscheme)
+    
+    @torch.jit.export
+    def grad_scale(self, x, scale):
+        y = x
+        y_grad = x * scale
+        return (y - y_grad).detach() + y_grad
+    
+    @torch.jit.export
+    def round_pass(self, x):
+        y = x.round()
+        y_grad = x
+        return ( y - y_grad).detach() + y_grad
 
     @torch.jit.export
     def calculate_qparams(self):
@@ -153,12 +163,12 @@ class LSQFakeQuantize(FakeQuantizeBase):
                 s_grad_scale = 1.0 / ((self.quant_max * X.numel()) ** 0.5)
             else:
                 s_grad_scale = 1.0 / ((self.quant_max * X.numel()) ** 0.5)
-            s_grad = s * s_grad_scale
-            s = ( s - s_grad).detach() + s_grad
 
+            s_scale = self.grad_scale(self.scale, s_grad_scale)
+            
             X = X / s_scale
             X = torch.clamp(X, self.quant_min, self.quant_max)
-            X = (X.round() - X).detach() + X
+            X = self.round_pass(X)
             X = X * s_scale
         return X
     
@@ -457,7 +467,7 @@ class S_LSQFakeQuantize(FakeQuantizeBase):
 
         self.register_buffer("scale", torch.tensor([1.0], dtype = torch.float))
         self.register_buffer("zero_point", torch.tensor([0.0], dtype = torch.int32))
-        self.soft_mask = torch.tensor([])
+        self.soft_mask = None
         # S_LSQ Parameter
         self.c = torch.nn.Parameter(torch.tensor([1.0], dtype = torch.float))
         self.p = torch.nn.Parameter(torch.tensor([0.0], dtype = torch.float))
@@ -496,9 +506,9 @@ class S_LSQFakeQuantize(FakeQuantizeBase):
         x_reshape = x.reshape(co // self.block_size, self.block_size, ci, kh, kw)
 
         score = x_reshape.abs().mean(dim = 1, keepdim = True).detach() - p
-        
         if not self.hard_pruning:
-            _soft_mask = torch.nn.functional.sigmoid(score / self.temperature)
+            temperature = (score.abs().view(-1).sort()[0][int(score.numel() * self.temperature)]) * 0.5
+            _soft_mask = torch.nn.functional.sigmoid(score / temperature)
             self.soft_mask = _soft_mask
             self.soft_mask = self.soft_mask.repeat(1, self.block_size, 1, 1, 1).reshape(co, ci, kh, kw)
             return self.soft_mask
@@ -522,9 +532,11 @@ class S_LSQFakeQuantize(FakeQuantizeBase):
             quantized_x = X
         if self.fake_quant_enabled[0] == 1:
             #self.p.data.clamp_(torch.tensor([0], dtype = self.p.dtype).to(self.p.device), self.c.data)
-            s_grad_scale = 1.0 / ((self.quant_max * X.numel()) ** 0.5)
-            c_scale = self.grad_scale(self.c, s_grad_scale)
-            p_scale = self.grad_scale(self.p, s_grad_scale)
+            x_numel = (X.abs() >= self.p).float().sum().detach()
+            c_grad_scale = (self.quant_max / x_numel) ** 0.5 / (self.c / (self.c - self.p)).detach() * self.quant_max
+            p_grad_scale = (self.quant_max / x_numel) ** 0.5 / ((self.p+1e-20) / (self.c - self.p)).detach() 
+            c_scale = self.grad_scale(self.c, c_grad_scale)
+            p_scale = self.grad_scale(self.p, p_grad_scale)
             
             sign = X.sign()
             s = (c_scale - p_scale) / self.quant_max
@@ -533,7 +545,7 @@ class S_LSQFakeQuantize(FakeQuantizeBase):
             quantized_x = (torch.round(quantized_x) - quantized_x).detach() + quantized_x
             quantized_x  = quantized_x * s
 
-            if (len(X.shape) == 4):
+            if (len(X.shape) == 4 and X.shape[1] != 1):
                 mask = self.soft_pruner(X, p_scale)
                 quantized_x = quantized_x * mask
         return quantized_x
@@ -574,7 +586,7 @@ default_affine_weight_fake_quant = LSQFakeQuantize.with_args(observer = LSQObser
                                                       dtype = torch.qint8, qscheme = torch.per_tensor_affine, reduce_range = False)
 default_affine_activation_fake_quant = LSQFakeQuantize.with_args(observer = LSQObserver, quant_min = 0, quant_max = 255, 
                                                       dtype = torch.quint8, qscheme = torch.per_tensor_affine, reduce_range = True)
-default_symmetric_weight_fake_quant = LSQFakeQuantize.with_args(observer = LSQObserver, quant_min = -128, quant_max = 127,
+default_symmetric_weight_fake_quant = LSQFakeQuantize.with_args(observer = LSQObserver, quant_min = -127, quant_max = 127,
                                                       dtype = torch.qint8, qscheme = torch.per_tensor_symmetric, reduce_range = False)
 default_symmetric_activation_fake_quant = LSQFakeQuantize.with_args(observer = LSQObserver, quant_min = 0, quant_max = 255,
                                                       dtype = torch.quint8, qscheme = torch.per_tensor_symmetric, reduce_range = True)
@@ -584,7 +596,7 @@ QIL_default_affine_weight_fake_quant = QILFakeQuantize.with_args(observer = QILO
                                                       dtype = torch.qint8, qscheme = torch.per_tensor_affine, reduce_range = False)
 QIL_default_affine_activation_fake_quant = QILFakeQuantize.with_args(observer = QILObserver, quant_min = 0, quant_max = 255, 
                                                       dtype = torch.quint8, qscheme = torch.per_tensor_affine, reduce_range = True)
-QIL_default_symmetric_weight_fake_quant = QILFakeQuantize.with_args(observer = QILObserver, quant_min = -128, quant_max = 127,
+QIL_default_symmetric_weight_fake_quant = QILFakeQuantize.with_args(observer = QILObserver, quant_min = -127, quant_max = 127,
                                                       dtype = torch.qint8, qscheme = torch.per_tensor_symmetric, reduce_range = False)
 QIL_default_symmetric_activation_fake_quant = QILFakeQuantize.with_args(observer = QILObserver, quant_min = 0, quant_max = 255,
                                                       dtype = torch.quint8, qscheme = torch.per_tensor_symmetric, reduce_range = True)
@@ -594,7 +606,7 @@ S_LSQ_default_affine_weight_fake_quant = S_LSQFakeQuantize.with_args(observer = 
                                                       dtype = torch.qint8, qscheme = torch.per_tensor_affine, reduce_range = False)
 S_LSQ_default_affine_activation_fake_quant = LSQFakeQuantize.with_args(observer = LSQObserver, quant_min = 0, quant_max = 255, 
                                                       dtype = torch.quint8, qscheme = torch.per_tensor_affine, reduce_range = True)
-S_LSQ_default_symmetric_weight_fake_quant = S_LSQFakeQuantize.with_args(observer = S_LSQObserver, quant_min = -128, quant_max = 127, block_size = 4, temperature = 1e-3,
+S_LSQ_default_symmetric_weight_fake_quant = S_LSQFakeQuantize.with_args(observer = S_LSQObserver, quant_min = -127, quant_max = 127, block_size = 4, temperature = 1e-3,
                                                       dtype = torch.qint8, qscheme = torch.per_tensor_symmetric, reduce_range = False)
 S_LSQ_default_symmetric_activation_fake_quant = LSQFakeQuantize.with_args(observer = LSQObserver, quant_min = 0, quant_max = 255,
                                                       dtype = torch.quint8, qscheme = torch.per_tensor_symmetric, reduce_range = True)

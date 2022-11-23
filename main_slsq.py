@@ -11,7 +11,7 @@ def main():
     script_dir = Path.cwd()
     data_args = trainer.dataloader_arguments(dataset = "cifar10", num_classes = 10, path = "/data", batch_size = 256)
     optimizer_args = trainer.optimizer_arguments(weight_decay = 1e-4, learning_rate = 0.001)
-    args = trainer.training_arguments(name = "88",device_gpu = [0,1], optimizer = optimizer_args, dataloader = data_args, arch = 'mobilenetv2', mode = "slsq")
+    args = trainer.training_arguments(name = "88",device_gpu = [0], optimizer = optimizer_args, dataloader = data_args, arch = 'mobilenetv2', mode = "slsq")
     output_dir = script_dir / args.output_dir
     output_dir.mkdir(exist_ok = True)
 
@@ -44,8 +44,8 @@ def main():
     qat_model,teacher_model = prepare_qat_model(model_name = args.arch, pre_trained = True, mode = args.mode, distillation = True)
     criterion = torch.nn.CrossEntropyLoss().to(args.device_type)
 
-    optimizer = torch.optim.SGD(qat_model.parameters(), lr = args.optimizer.learning_rate, 
-            momentum = args.optimizer.momentum, weight_decay = args.optimizer.weight_decay)
+    optimizer = torch.optim.AdamW(qat_model.parameters(), lr = args.optimizer.learning_rate, 
+                                weight_decay = args.optimizer.weight_decay)
     lr_scheduler = util.lr_scheduler(optimizer, batch_size = train_loader.batch_size, 
                                     num_samples = len(train_loader.sampler),
                                     **(args.scheduler.__dict__))
@@ -59,8 +59,8 @@ def main():
                             hard_pruning = False)
 
     print("*************hard_pruning_mode*******************")
-    optimizer = torch.optim.SGD(qat_model.parameters(), lr = args.optimizer.learning_rate, 
-                                momentum = args.optimizer.momentum, weight_decay = args.optimizer.weight_decay)
+    optimizer = torch.optim.AdamW(qat_model.parameters(), lr = args.optimizer.learning_rate, 
+                                weight_decay = args.optimizer.weight_decay)
 
     lr_scheduler = util.lr_scheduler(optimizer, batch_size = train_loader.batch_size, 
                                     num_samples = len(train_loader.sampler),

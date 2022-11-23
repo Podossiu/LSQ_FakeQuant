@@ -63,6 +63,7 @@ class MobileNetV3(MyNetwork):
         self.classifier = classifier
         self.quant = QuantStub()
         self.dequant = DeQuantStub()
+        self.avg_pool = torch.nn.AdaptiveAvgPool2d(1)
 
     def forward(self, x):
         x = self.first_conv(x)
@@ -70,10 +71,11 @@ class MobileNetV3(MyNetwork):
         for block in self.blocks:
             x = block(x)
         x = self.final_expand_layer(x)
-        x = x.mean(3, keepdim=True).mean(2, keepdim=True)  # global average pooling
+        #x = x.mean(3, keepdim=True).mean(2, keepdim=True)  # global average pooling
+        x = self.avg_pool(x)
         x = self.feature_mix_layer(x)
-        x = x.flatten(1)
         x = self.dequant(x)
+        x = x.flatten(1)
         x = self.classifier(x)
         return x
 
@@ -90,7 +92,7 @@ class MobileNetV3(MyNetwork):
                                     torch.ao.quantization.fuse_modules_qat(bbb, [["conv", "bn", "act"]], inplace = True)
                                 else:
                                     torch.ao.quantization.fuse_modules_qat(bbb, [["conv", "bn"]], inplace = True)
-    
+        print(self)
 
     @property
     def module_str(self):

@@ -204,11 +204,13 @@ def build_activation(act_func, inplace=True):
     elif act_func == 'sigmoid':
         return nn.Sigmoid()
     elif act_func == 'h_swish':
-        #return Hswish(inplace=inplace)
-        return nn.Hardswish(inplace = inplace)
+        return Hswish(inplace=inplace)
+        #return nn.Hardswish(inplace = inplace)
+        #return nn.ReLU(inplace=inplace)
     elif act_func == 'h_sigmoid':
         return nn.HardSigmoid(inplace=inplace)
         #return Hsigmoid(inplace=inplace)
+        #return nn.ReLU(inplace=inplace)
     elif act_func is None:
         return None
     else:
@@ -260,20 +262,23 @@ class SEModule(nn.Module):
 
         self.channel = channel
         self.reduction = SEModule.REDUCTION
-
         num_mid = make_divisible(self.channel // self.reduction, divisor=8)
-
+        
         self.fc = nn.Sequential(OrderedDict([
+            ('avg_pool', nn.AdaptiveAvgPool2d(1)),
             ('reduce', nn.Conv2d(self.channel, num_mid, 1, 1, 0, bias=True)),
             ('relu', nn.ReLU(inplace=True)),
             ('expand', nn.Conv2d(num_mid, self.channel, 1, 1, 0, bias=True)),
             #('h_sigmoid', Hsigmoid(inplace=True)),
-            ('h_sigmoid', nn.Hardsigmoid(inplace=True)),
+            #('h_sigmoid', nn.Hardsigmoid(inplace=True)),
+            ('relu', nn.ReLU(inplace=True)),
         ]))
         self.skip_mul = nn.quantized.FloatFunctional()
+        self.dequant = DeQuantStub()
+        self.quant = QuantStub()
     def forward(self, x):
-        y = x.mean(3, keepdim=True).mean(2, keepdim=True)
-        y = self.fc(y)
+        
+        y = self.fc(x)
         #return self.skip_mul(x * y
         return self.skip_mul.mul(x, y)
 

@@ -5,6 +5,8 @@ import time
 from quan import *
 import torch
 
+
+torch.autograd.set_detect_anomaly(True)
 from util import AverageMeter, save_checkpoint_quantized, transform_model
 
 __all__ = ['train_qat', 'validate', 'PerformanceScoreboard', 'train_qat_slsq']
@@ -32,8 +34,8 @@ def train_qat_slsq(train_loader, val_loader, test_loader,qat_model, teacher_mode
         args, init_qparams = True, hard_pruning = False):
     start_epoch = 0
     device = torch.device("cuda") if torch.cuda.is_available() else torch.device("cpu")
-    if args.n_gpu > 1:
-        qat_model = torch.nn.DataParallel(qat_model)
+    #if args.n_gpu > 1:
+        #qat_model = torch.nn.DataParallel(qat_model)
     
     qat_model.to(args.device_type)
     teacher_model.to(args.device_type)
@@ -44,10 +46,6 @@ def train_qat_slsq(train_loader, val_loader, test_loader,qat_model, teacher_mode
     perf_scoreboard = PerformanceScoreboard(args.log_num_best_scores)
     
     quantized_model = None
-    if args.resume_path or args.pre_trained:
-        logger.info('>>>>>> Epoch -1 (pre-trained model evaluation)')
-        top1, top5, _ = validate_slsq(val_loader, qat_model, criterion, start_epoch - 1, monitors, args)
-        perf_scoreboard.update(top1, top5, start_epoch - 1)
     for epoch in range(start_epoch, args.epochs):
         logger.info('>>>>>> Epoch %3d' %epoch)
         t_top1, t_top5, t_loss = train_one_epoch_slsq_with_distillation(train_loader, qat_model, teacher_model, 
@@ -84,8 +82,8 @@ def train_qat(train_loader, val_loader, test_loader,qat_model,
 
     start_epoch = 0
     device = torch.device("cuda") if torch.cuda.is_available() else torch.device("cpu")
-    if args.n_gpu > 1:
-        qat_model = torch.nn.DataParallel(qat_model)
+    #if args.n_gpu > 1:
+        #qat_model = torch.nn.DataParallel(qat_model)
     
     qat_model.to(args.device_type)
 
@@ -96,10 +94,12 @@ def train_qat(train_loader, val_loader, test_loader,qat_model,
     perf_scoreboard = PerformanceScoreboard(args.log_num_best_scores)
     
     quantized_model = None
+    '''
     if args.resume_path or args.pre_trained:
         logger.info('>>>>>> Epoch -1 (pre-trained model evaluation)')
         top1, top5, _ = validate(val_loader, qat_model, criterion, start_epoch - 1, monitors, args)
         perf_scoreboard.update(top1, top5, start_epoch - 1)
+    '''
     for epoch in range(start_epoch, args.epochs):
         logger.info('>>>>>> Epoch %3d' %epoch)
         t_top1, t_top5, t_loss = train_one_epoch_qat(train_loader, qat_model, criterion, 
@@ -173,9 +173,11 @@ def train_one_epoch_slsq_with_distillation(train_loader, qat_model, teacher_mode
             for n, m in qat_model.named_modules():
                 if hasattr(m, "soft_mask") and m.soft_mask is not None:
                     masking_loss_list.append(m.soft_mask.mean())
-            masking_loss = torch.stack(masking_loss_list).mean()
+            if masking_loss_list != []:
+                masking_loss = torch.linalg.norm(torch.stack(masking_loss_list), dim = 0, ord = 2)
+            print(masking_loss_list)
             print("{:.8f}".format(masking_loss))
-            loss += masking_loss * 10
+            loss += masking_loss * 0.3
         acc1, acc5 = accuracy(outputs.data, targets.data, topk=(1, 5))
         losses.update(loss.item(), inputs.size(0))
         top1.update(acc1.item(), inputs.size(0))
@@ -221,6 +223,9 @@ def train_one_epoch_qat(train_loader, qat_model, criterion, optimizer, lr_schedu
     logger.info('Training: %d samples (%d per mini-batch)', total_sample, batch_size)
 
     qat_model.train()
+    criterion = criterion
+    optimizer = optimizer
+    lr_scheduler = lr_scheduler
     end_time = time.time()
     
     for batch_idx, (inputs, targets) in enumerate(train_loader):
@@ -237,12 +242,18 @@ def train_one_epoch_qat(train_loader, qat_model, criterion, optimizer, lr_schedu
 
         if epoch == 0 and init_qparams == True and batch_idx == 10:
             qat_model.apply(training_mode)
+            print(qat_model)
+            input()
 
         if lr_scheduler is not None:
             lr_scheduler.step(epoch=epoch, batch=batch_idx)
 
         optimizer.zero_grad()
         loss.backward()
+        '''
+        for n, m in qat_model.named_parameters():
+            print(n, m.grad)
+        '''
         optimizer.step()
         
 
@@ -285,6 +296,7 @@ def validate_slsq(data_loader, model, criterion, epoch, monitors, args, quantize
             else:
                 inputs = inputs.to(args.device_type)
                 targets = targets.to(args.device_type)
+
             
             outputs = model(inputs)
             loss = criterion(outputs, targets)
@@ -353,6 +365,7 @@ def validate(data_loader, model, criterion, epoch, monitors, args, quantized = F
 
     model.eval()
     end_time = time.time()
+    model.apply(training_mode)
     for batch_idx, (inputs, targets) in enumerate(data_loader):
         with torch.no_grad():
             if quantized:
