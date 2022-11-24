@@ -448,7 +448,7 @@ class S_LSQFakeQuantize(FakeQuantizeBase):
     scale : torch.Tensor
     zero_point : torch.Tensor
 
-    def __init__(self, observer = S_LSQObserver, quant_min = None, quant_max = None, block_size = 4, temperature = 1e-3, hard_pruning = False,**observer_kwargs):
+    def __init__(self, observer = S_LSQObserver, quant_min = None, quant_max = None, block_size = 4, temperature = 0.05, hard_pruning = False,**observer_kwargs):
         super().__init__()
         if quant_min is not None and quant_max is not None:
             assert quant_min <= quant_max, \
@@ -505,7 +505,7 @@ class S_LSQFakeQuantize(FakeQuantizeBase):
         co, ci, kh, kw = x.shape
         x_reshape = x.reshape(co // self.block_size, self.block_size, ci, kh, kw)
 
-        score = x_reshape.abs().mean(dim = 1, keepdim = True).detach() - p
+        score = x_reshape.abs().mean(dim = 1, keepdim = True) - p
         if not self.hard_pruning:
             temperature = (score.abs().view(-1).sort()[0][int(score.numel() * self.temperature)]) * 0.5
             _soft_mask = torch.nn.functional.sigmoid(score / temperature)
@@ -529,12 +529,14 @@ class S_LSQFakeQuantize(FakeQuantizeBase):
                 if self.c.shape != _c.shape:
                     self.c.resize_(_c.shape)
                 self.c.data.copy_(_c)
+
             quantized_x = X
         if self.fake_quant_enabled[0] == 1:
             #self.p.data.clamp_(torch.tensor([0], dtype = self.p.dtype).to(self.p.device), self.c.data)
+            self.p.data.clamp_(torch.zeros_like(self.p), self.c.data)
             x_numel = (X.abs() >= self.p).float().sum().detach()
-            c_grad_scale = (self.quant_max / x_numel) ** 0.5 / (self.c / (self.c - self.p)).detach() * self.quant_max
-            p_grad_scale = (self.quant_max / x_numel) ** 0.5 / ((self.p+1e-20) / (self.c - self.p)).detach() 
+            c_grad_scale = (self.quant_max / x_numel) ** 0.5 * (self.c / (self.c - self.p)).detach() * self.quant_max
+            p_grad_scale = (self.quant_max / x_numel) ** 0.5 * ((self.p+1e-20) / (self.c - self.p)).detach() 
             c_scale = self.grad_scale(self.c, c_grad_scale)
             p_scale = self.grad_scale(self.p, p_grad_scale)
             

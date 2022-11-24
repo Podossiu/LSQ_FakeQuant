@@ -97,7 +97,7 @@ def prepare_qat_model(model_name = 'resnet', pre_trained = True, mode = "lsq", d
         model.fuse_model()
         model.train()
         for n, m in model.named_children():
-            if ("layer" in n or "quant" in n or "fc" in n or "conv" in n or "classifier" in n or "features" in n) and not ("first" in n):
+            if ("layer" in n or "quant" in n or "fc" in n or "conv" in n or "features" in n) and not ("first" in n or "classifier" in n):
                 m.qconfig = qconfig
                 torch.ao.quantization.prepare_qat(m, inplace = True)
                 for n1, m1 in m.named_children():

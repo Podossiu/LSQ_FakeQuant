@@ -4,10 +4,9 @@ import operator
 import time
 from quan import *
 import torch
-
-
-torch.autograd.set_detect_anomaly(True)
 from util import AverageMeter, save_checkpoint_quantized, transform_model
+from model.slsq_util import get_slsq_static_quant_module_mappings
+
 
 __all__ = ['train_qat', 'validate', 'PerformanceScoreboard', 'train_qat_slsq']
 #torch.backends.quantized.engine = 'qnnpack'
@@ -52,15 +51,15 @@ def train_qat_slsq(train_loader, val_loader, test_loader,qat_model, teacher_mode
                                 criterion, optimizer, lr_scheduler, epoch, monitors, args, init_qparams, hard_pruning)
         qat_model.cpu().eval()
         transformed_model = transform_model(qat_model, args)
-        quantized_model = torch.ao.quantization.convert(transformed_model, inplace = False).to("cpu")
-        #quantized_model = torch.ao.quantization.convert(qat_model, inplace = False).to("cpu")
-        quantized_model.eval()
+        transformed_model.apply(hard_pruning_mode)
+        torch.ao.quantization.convert(transformed_model, mapping = get_slsq_static_quant_module_mappings(),inplace = True).to("cpu")
         print("validation quantized model on cpu")
-
-        v_top1, v_top5, v_loss = validate_slsq(val_loader, transformed_model.cpu().eval(), criterion, epoch, monitors, args, quantized = True, sparse_model = False)
-        print(v_top1, v_top5)
+        
+        qat_model.apply(hard_pruning_mode)
+        v_top1, v_top5, v_loss = validate_slsq(val_loader, qat_model.eval(), criterion, epoch, monitors, args, quantized = True, sparse_model = False)
         qat_model.to(args.device_type)
-        v_top1, v_top5, v_loss = validate_slsq(val_loader, quantized_model, criterion, epoch, monitors, args, quantized = True, sparse_model = True)
+        v_top1, v_top5, v_loss = validate_slsq(val_loader, transformed_model.eval(), criterion, epoch, monitors, args, quantized = True, sparse_model = True)
+        qat_model.apply(soft_pruning_mode)
         #tbmonitor.writer.add_scalars('Train_vs_Validation/Loss', {'train': t_loss, 'val': v_loss}, epoch)
         #tbmonitor.writer.add_scalars('Train_vs_Validation/Top1', {'train': t_top1, 'val': v_top1}, epoch)
         #tbmonitor.writer.add_scalars('Train_vs_Validation/Top5', {'train': t_top5, 'val': v_top5}, epoch)
@@ -68,7 +67,7 @@ def train_qat_slsq(train_loader, val_loader, test_loader,qat_model, teacher_mode
         perf_scoreboard.update(v_top1, v_top5, epoch)
         is_best = perf_scoreboard.is_best(epoch)
         
-        save_checkpoint_quantized(epoch, args.arch, transformed_model, quantized_model, {'top1' : v_top1, 'top5' : v_top5}, is_best, args.name, args.log_dir)
+        save_checkpoint_quantized(epoch, args.arch, qat_model, transformed_model, {'top1' : v_top1, 'top5' : v_top5}, is_best, args.name, args.log_dir)
     logger.info('>>>>>> Epoch -1 (final model evaluation)')
     validate_slsq(test_loader, quantized_model, criterion, -1, monitors, args, quantized = True)
 
@@ -137,7 +136,6 @@ def train_one_epoch_slsq_with_distillation(train_loader, qat_model, teacher_mode
         qat_model.apply(hard_pruning_mode)
     else:
         qat_model.apply(soft_pruning_mode)
-    
     losses = AverageMeter()
     top1 = AverageMeter()
     top5 = AverageMeter()
@@ -174,10 +172,10 @@ def train_one_epoch_slsq_with_distillation(train_loader, qat_model, teacher_mode
                 if hasattr(m, "soft_mask") and m.soft_mask is not None:
                     masking_loss_list.append(m.soft_mask.mean())
             if masking_loss_list != []:
-                masking_loss = torch.linalg.norm(torch.stack(masking_loss_list), dim = 0, ord = 2)
-            print(masking_loss_list)
+                #masking_loss = torch.linalg.norm(torch.stack(masking_loss_list), dim = 0, ord = 2)
+                masking_loss = (torch.stack(masking_loss_list) ** 2).mean()
             print("{:.8f}".format(masking_loss))
-            loss += masking_loss * 0.3
+            loss += masking_loss * 10
         acc1, acc5 = accuracy(outputs.data, targets.data, topk=(1, 5))
         losses.update(loss.item(), inputs.size(0))
         top1.update(acc1.item(), inputs.size(0))
@@ -188,11 +186,12 @@ def train_one_epoch_slsq_with_distillation(train_loader, qat_model, teacher_mode
 
         if lr_scheduler is not None:
             lr_scheduler.step(epoch=epoch, batch=batch_idx)
-
+        
         optimizer.zero_grad()
         loss.backward()
         optimizer.step()
         
+
         batch_time.update(time.time() - end_time)
         end_time = time.time()
         
@@ -227,7 +226,6 @@ def train_one_epoch_qat(train_loader, qat_model, criterion, optimizer, lr_schedu
     optimizer = optimizer
     lr_scheduler = lr_scheduler
     end_time = time.time()
-    
     for batch_idx, (inputs, targets) in enumerate(train_loader):
         if epoch == 0 and init_qparams == True and batch_idx == 0:
             qat_model.apply(init_mode)
@@ -242,8 +240,6 @@ def train_one_epoch_qat(train_loader, qat_model, criterion, optimizer, lr_schedu
 
         if epoch == 0 and init_qparams == True and batch_idx == 10:
             qat_model.apply(training_mode)
-            print(qat_model)
-            input()
 
         if lr_scheduler is not None:
             lr_scheduler.step(epoch=epoch, batch=batch_idx)
@@ -329,22 +325,31 @@ def validate_slsq(data_loader, model, criterion, epoch, monitors, args, quantize
                     total_numel += weight_numel
                     print(n, sparsity)
         else:
+            print(model)
+            input()
             for n,m in model.named_modules():
-                if ("first" in n):
+                '''
+                if ("first" in n) and hasattr(m, "weight"):
                     weight_zero = (m.weight == 0).sum()
                     weight_numel = m.weight.numel()
                     sparsity = weight_zero / weight_numel
                     total_zero += weight_zero
                     total_numel += weight_numel
                     print(n, sparsity)
-                elif hasattr(m, "weight"):
-                    weight_zero = (m.weight() == 0.).sum()
+                '''
+                '''
+                if hasattr(m, "weight") and not ("first" in n):
+                    print(n)
+                    print(m.weight())
+                    weight_zero = (m.weight() == 0.)
                     weight_numel = m.weight().numel()
                     sparsity = weight_zero / weight_numel
                     total_zero += weight_zero
                     total_numel += weight_numel
                     print(n, sparsity)
-        sparsity = total_zero / total_numel 
+                '''
+        #sparsity = total_zero / total_numel 
+        #print(total_zero, total_numel)
 
     logger.info('==> Top1: %.3f    Top5: %.3f    Loss: %.3f\n', top1.avg, top5.avg, losses.avg)
     logger.info('==> Sparsity : %.3f\n', sparsity)

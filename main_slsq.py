@@ -43,7 +43,7 @@ def main():
 
     qat_model,teacher_model = prepare_qat_model(model_name = args.arch, pre_trained = True, mode = args.mode, distillation = True)
     criterion = torch.nn.CrossEntropyLoss().to(args.device_type)
-
+    
     optimizer = torch.optim.AdamW(qat_model.parameters(), lr = args.optimizer.learning_rate, 
                                 weight_decay = args.optimizer.weight_decay)
     lr_scheduler = util.lr_scheduler(optimizer, batch_size = train_loader.batch_size, 
