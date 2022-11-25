@@ -1,0 +1,60 @@
+Files already downloaded and verified
+Files already downloaded and verified
+********************pre-trained*****************
+INFO - Dataset `cifar10` size:
+          Training Set = 50000 (196)
+        Validation Set = 10000 (40)
+              Test Set = 10000 (40)
+INFO - Created `MobileNetv2` model
+          Use pre-trained model = True
+/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/ao/quantization/observer.py:214: UserWarning: Please use quant_min and quant_max to specify the range for observers.                     reduce_range will be deprecated in a future release of PyTorch.
+  warnings.warn(
+INFO - Optimizer: AdamW (
+           Parameter Group 0
+               amsgrad: False
+               betas: (0.9, 0.999)
+               capturable: False
+               eps: 1e-08
+               foreach: None
+               lr: 0.0005
+               maximize: False
+               weight_decay: 0.0005
+           )
+INFO - LR scheduler: `CosineWarmRestartsLr`
+    Update per batch: False
+             Group 0: 0.0005
+*************soft_pruning_mode*******************
+INFO - >>>>>> Epoch   0
+INFO - Training: 50000 samples (256 per mini-batch)
+Traceback (most recent call last):
+  File "main_slsq.py", line 79, in <module>
+    main()
+  File "main_slsq.py", line 64, in main
+    trainer.train_qat_slsq(train_loader, val_loader, test_loader,qat_model, teacher_model,criterion,
+  File "/home/ilena7440/LSQ_FakeQuant/trainer/process.py", line 52, in train_qat_slsq
+    t_top1, t_top5, t_loss = train_one_epoch_slsq(train_loader, qat_model,
+  File "/home/ilena7440/LSQ_FakeQuant/trainer/process.py", line 146, in train_one_epoch_slsq
+    outputs = qat_model(inputs)
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/ilena7440/LSQ_FakeQuant/model/mobilenet_cifar10.py", line 140, in forward
+    x = self.features(x)
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/nn/modules/container.py", line 204, in forward
+    input = module(input)
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/ilena7440/LSQ_FakeQuant/model/mobilenet_cifar10.py", line 93, in forward
+    return self.skip_add.add(x, self.conv(x))
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/nn/modules/container.py", line 204, in forward
+    input = module(input)
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1208, in _call_impl
+    result = forward_call(*input, **kwargs)
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/nn/intrinsic/qat/modules/conv_fused.py", line 584, in forward
+    return F.relu(ConvBn2d._forward(self, input))
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/nn/functional.py", line 1457, in relu
+    result = torch.relu(input)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 12.00 MiB (GPU 0; 23.65 GiB total capacity; 715.71 MiB already allocated; 13.62 MiB free; 724.00 MiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF

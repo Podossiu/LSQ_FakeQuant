@@ -35,7 +35,7 @@ def save_checkpoint_quantized(epoch, arch, qat_model, quantized_model = None, ex
         msg += 'save quantized models...' 
         pt_inp = t.randn((1, 3, 224, 224))
         t.jit.save(t.jit.trace(quantized_model, pt_inp), os.path.join(output_dir, scripted_quantized_model_file))
-        t.onnx.export(quantized_model, pt_inp, os.path.join(output_dir, scripted_quantized_model_file+'.onnx'), verbose = True)
+        t.onnx.export(quantized_model, pt_inp, os.path.join(output_dir, scripted_quantized_model_file+'.onnx'), verbose = False)
     logger.info(msg)
 
 def save_checkpoint(epoch, arch, model, extras=None, is_best=None, name=None, output_dir='.'):

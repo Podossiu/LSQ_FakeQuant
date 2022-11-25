@@ -3,13 +3,13 @@ import logging
 from .resnet import *
 from .resnet_cifar import *
 from .mobilenet import *
+from .mobilenet_cifar10 import *
 from quan import *
 import copy
 import json
 from .once_for_all import *
-def create_model(model_name = "resnet", pre_trained = True):
+def create_model(args, model_name = "resnet", pre_trained = True):
     logger = logging.getLogger()
-
     model = None
     if model_name == 'resnet18' or model_name == 'resnet':
         model = resnet18(pretrained=pre_trained)
@@ -35,7 +35,9 @@ def create_model(model_name = "resnet", pre_trained = True):
     elif model_name == 'resnet1202':
         model = resnet1202(pretrained=pre_trained)
     
-    if model_name == 'MobileNetv2' or model_name == 'mobilenetv2':
+    if (model_name == 'MobileNetv2' or 'mobilenetv2') and args.dataloader.dataset == "cifar10":
+        model = mobilenetv2_cifar10(pre_trained = pre_trained)
+    elif model_name == 'MobileNetv2' or model_name == 'mobilenetv2':
         model = mobilenetv2(pretrained = pre_trained)
     elif model_name == 'mobilenetv2_0.1':
         model = mobilenetv2_01(pretrained=pre_trained)
@@ -67,8 +69,8 @@ def create_model(model_name = "resnet", pre_trained = True):
 
     return model
 
-def prepare_qat_model(model_name = 'resnet', pre_trained = True, mode = "lsq", distillation = False):
-    model = create_model(model_name, pre_trained)
+def prepare_qat_model(args, model_name = 'resnet', pre_trained = True, mode = "lsq", distillation = False):
+    model = create_model(args, model_name, pre_trained)
     if distillation:
         teacher_model = copy.deepcopy(model)
     if mode == "lsq":
@@ -105,5 +107,5 @@ def prepare_qat_model(model_name = 'resnet', pre_trained = True, mode = "lsq", d
                     torch.ao.quantization.prepare_qat(m1, inplace = True)
     if distillation:
         return model, teacher_model
-    return model
+    return model, None
 

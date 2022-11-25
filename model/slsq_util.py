@@ -228,7 +228,7 @@ class _slsq_ConvNd(WeightedQuantizedModule):
         weight_post_process(mod.weight)
         assert weight_post_process.dtype == torch.qint8, \
             'Weight observer must have a dtype of qint8'
-        qweight = _quantize_weight(weight_post_process(mod.weight.float()), weight_post_process)
+        qweight = _quantize_weight(weight_post_process(mod.weight).float(), weight_post_process)
         # the __init__ call used is the one from derived classes and not the one from _ConvNd
         qconv = cls(mod.in_channels, mod.out_channels, mod.kernel_size,
                     mod.stride, mod.padding, mod.dilation, mod.groups,
