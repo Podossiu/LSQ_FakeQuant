@@ -491,6 +491,7 @@ class S_LSQFakeQuantize(FakeQuantizeBase):
                 IS_QSCHEME_PER_TENSOR(self.qscheme), \
                 'Only per channel and per tensor quantization are fake quantize' + ' got qscheme : ' + str(self.qscheme)
         self.is_per_channel = IS_QSCHEME_PER_CHANNEL(self.qscheme)
+        self.register_buffer('eps', torch.tensor([torch.finfo(torch.float32).eps]))
 
     @torch.jit.export
     def calculate_qparams(self):
@@ -538,10 +539,11 @@ class S_LSQFakeQuantize(FakeQuantizeBase):
             quantized_x = X
         if self.fake_quant_enabled[0] == 1:
             #self.p.data.clamp_(torch.tensor([0], dtype = self.p.dtype).to(self.p.device), self.c.data)
-            self.p.data.clamp_(torch.zeros_like(self.p), self.c.data)
+            self.p.data.clamp_(min = self.eps.item(), max=self.c.data.item())
             x_numel = (X.abs() >= self.p).float().sum().detach()
-            c_grad_scale = (self.quant_max / x_numel) ** 0.5 * (self.c / (self.c - self.p)).detach() * self.quant_max
-            p_grad_scale = (self.quant_max / x_numel) ** 0.5 * ((self.p+1e-20) / (self.c - self.p)).detach() 
+            c_grad_scale = (self.quant_max / x_numel) ** 0.5 * (self.c / (self.c - self.p + self.eps)).detach() * self.quant_max
+            p_grad_scale = (self.quant_max / x_numel) ** 0.5 * (self.p / (self.c - self.p + self.eps)).detach() 
+            
             c_scale = self.grad_scale(self.c, c_grad_scale)
             p_scale = self.grad_scale(self.p, p_grad_scale)
             

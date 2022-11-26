@@ -1,0 +1,39 @@
+2022-11-25 07:30:45,801 - INFO  - Log file for this run: /home/ilena7440/LSQ_FakeQuant/out/88_20221125-073045/88_20221125-073045.log
+2022-11-25 07:30:52,659 - INFO  - Dataset `cifar10` size:
+          Training Set = 50000 (196)
+        Validation Set = 10000 (40)
+              Test Set = 10000 (40)
+2022-11-25 07:30:52,756 - INFO  - Created `MobileNetv2` model
+          Use pre-trained model = True
+2022-11-25 07:30:53,441 - INFO  - Optimizer: AdamW (
+           Parameter Group 0
+               amsgrad: False
+               betas: (0.9, 0.999)
+               capturable: False
+               eps: 1e-08
+               foreach: None
+               lr: 0.0005
+               maximize: False
+               weight_decay: 4e-05
+           )
+2022-11-25 07:30:53,441 - INFO  - LR scheduler: `CosineWarmRestartsLr`
+    Update per batch: True
+             Group 0: 0.0005
+
+2022-11-25 07:30:56,006 - INFO  - >>>>>> Epoch   0
+2022-11-25 07:30:56,008 - INFO  - Training: 50000 samples (256 per mini-batch)
+2022-11-25 07:31:08,205 - INFO  - Training [0][   20/  196]   Loss 1.748031   Top1 39.277344   Top5 83.906250   BatchTime 0.609704   LR 0.000500   
+2022-11-25 07:31:18,376 - INFO  - Training [0][   40/  196]   Loss 1.679672   Top1 41.171875   Top5 85.468750   BatchTime 0.559137   LR 0.000500   
+2022-11-25 07:31:27,928 - INFO  - Training [0][   60/  196]   Loss 1.594833   Top1 44.140625   Top5 87.233073   BatchTime 0.531944   LR 0.000499   
+2022-11-25 07:31:36,910 - INFO  - Training [0][   80/  196]   Loss 1.532244   Top1 46.435547   Top5 88.266602   BatchTime 0.511237   LR 0.000498   
+2022-11-25 07:31:45,917 - INFO  - Training [0][  100/  196]   Loss 1.477511   Top1 48.445312   Top5 89.269531   BatchTime 0.499061   LR 0.000497   
+2022-11-25 07:31:57,466 - INFO  - Training [0][  120/  196]   Loss 1.430346   Top1 50.260417   Top5 89.983724   BatchTime 0.512122   LR 0.000495   
+2022-11-25 07:32:08,541 - INFO  - Training [0][  140/  196]   Loss 1.401348   Top1 51.289062   Top5 90.438058   BatchTime 0.518068   LR 0.000494   
+2022-11-25 07:32:19,751 - INFO  - Training [0][  160/  196]   Loss 1.379442   Top1 52.036133   Top5 90.771484   BatchTime 0.523370   LR 0.000492   
+2022-11-25 07:32:30,827 - INFO  - Training [0][  180/  196]   Loss 1.357036   Top1 52.801649   Top5 91.082899   BatchTime 0.526752   LR 0.000490   
+2022-11-25 07:32:39,770 - INFO  - ==> Top1: 53.478    Top5: 91.308    Loss: 1.338
+
+2022-11-25 07:32:39,946 - INFO  - Created `MobileNetv2` model
+          Use pre-trained model = False
+2022-11-25 07:32:42,024 - INFO  - Validation: 10000 samples (256 per mini-batch)
+2022-11-25 07:32:44,188 - INFO  - Validation [0][   20/   40]   Loss 0.906012   Top1 68.945312   Top5 96.855469   BatchTime 0.108112   

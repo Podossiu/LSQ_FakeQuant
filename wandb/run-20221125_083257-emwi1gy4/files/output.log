@@ -1,0 +1,17 @@
+Files already downloaded and verified
+Files already downloaded and verified
+INFO - Dataset `cifar10` size:
+          Training Set = 50000 (196)
+        Validation Set = 10000 (40)
+              Test Set = 10000 (40)
+********************pre-trained*****************
+INFO - Created `MobileNetv2` model
+          Use pre-trained model = True
+/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/ao/quantization/observer.py:214: UserWarning: Please use quant_min and quant_max to specify the range for observers.                     reduce_range will be deprecated in a future release of PyTorch.
+  warnings.warn(
+Traceback (most recent call last):
+  File "main_slsq.py", line 93, in <module>
+    main()
+  File "main_slsq.py", line 74, in main
+    teacher_model.cuda()
+AttributeError: 'NoneType' object has no attribute 'cuda'

@@ -1,0 +1,165 @@
+2022-11-25 08:42:59,122 INFO    StreamThr :20021 [internal.py:wandb_internal():90] W&B internal server running at pid: 20021, started at: 2022-11-25 08:42:59.121492
+2022-11-25 08:42:59,125 DEBUG   HandlerThread:20021 [handler.py:handle_request():141] handle_request: status
+2022-11-25 08:42:59,128 DEBUG   SenderThread:20021 [sender.py:send_request():316] send_request: status
+2022-11-25 08:42:59,130 DEBUG   SenderThread:20021 [sender.py:send():302] send: header
+2022-11-25 08:42:59,130 INFO    WriterThread:20021 [datastore.py:open_for_write():75] open: /home/ilena7440/LSQ_FakeQuant/wandb/run-20221125_084259-2ey0ttd9/run-2ey0ttd9.wandb
+2022-11-25 08:42:59,135 DEBUG   SenderThread:20021 [sender.py:send():302] send: run
+2022-11-25 08:42:59,663 DEBUG   HandlerThread:20021 [handler.py:handle_request():141] handle_request: check_version
+2022-11-25 08:42:59,666 INFO    SenderThread:20021 [dir_watcher.py:__init__():216] watching files in: /home/ilena7440/LSQ_FakeQuant/wandb/run-20221125_084259-2ey0ttd9/files
+2022-11-25 08:42:59,666 INFO    SenderThread:20021 [sender.py:_start_run_threads():913] run started: 2ey0ttd9 with start time 1669365779.114465
+2022-11-25 08:42:59,666 DEBUG   SenderThread:20021 [sender.py:send():302] send: summary
+2022-11-25 08:42:59,667 INFO    SenderThread:20021 [sender.py:_save_file():1156] saving file wandb-summary.json with policy end
+2022-11-25 08:42:59,667 DEBUG   SenderThread:20021 [sender.py:send_request():316] send_request: check_version
+2022-11-25 08:42:59,738 DEBUG   HandlerThread:20021 [handler.py:handle_request():141] handle_request: run_start
+2022-11-25 08:42:59,744 DEBUG   HandlerThread:20021 [meta.py:__init__():35] meta init
+2022-11-25 08:42:59,744 DEBUG   HandlerThread:20021 [meta.py:__init__():50] meta init done
+2022-11-25 08:42:59,744 DEBUG   HandlerThread:20021 [meta.py:probe():216] probe
+2022-11-25 08:42:59,751 DEBUG   HandlerThread:20021 [meta.py:_setup_git():206] setup git
+2022-11-25 08:42:59,772 DEBUG   HandlerThread:20021 [meta.py:_setup_git():213] setup git done
+2022-11-25 08:42:59,772 DEBUG   HandlerThread:20021 [meta.py:_save_pip():54] save pip
+2022-11-25 08:42:59,773 DEBUG   HandlerThread:20021 [meta.py:_save_pip():68] save pip done
+2022-11-25 08:42:59,773 DEBUG   HandlerThread:20021 [meta.py:probe():254] probe done
+2022-11-25 08:42:59,946 DEBUG   SenderThread:20021 [sender.py:send():302] send: files
+2022-11-25 08:42:59,946 INFO    SenderThread:20021 [sender.py:_save_file():1156] saving file wandb-metadata.json with policy now
+2022-11-25 08:42:59,955 DEBUG   HandlerThread:20021 [handler.py:handle_request():141] handle_request: stop_status
+2022-11-25 08:42:59,955 DEBUG   SenderThread:20021 [sender.py:send_request():316] send_request: stop_status
+2022-11-25 08:43:00,173 DEBUG   SenderThread:20021 [sender.py:send():302] send: telemetry
+2022-11-25 08:43:00,586 INFO    Thread-16 :20021 [upload_job.py:push():138] Uploaded file /tmp/tmpwi6t59s1wandb/3paxj9gm-wandb-metadata.json
+2022-11-25 08:43:00,669 INFO    Thread-12 :20021 [dir_watcher.py:_on_file_created():275] file/dir created: /home/ilena7440/LSQ_FakeQuant/wandb/run-20221125_084259-2ey0ttd9/files/output.log
+2022-11-25 08:43:00,670 INFO    Thread-12 :20021 [dir_watcher.py:_on_file_created():275] file/dir created: /home/ilena7440/LSQ_FakeQuant/wandb/run-20221125_084259-2ey0ttd9/files/requirements.txt
+2022-11-25 08:43:00,670 INFO    Thread-12 :20021 [dir_watcher.py:_on_file_created():275] file/dir created: /home/ilena7440/LSQ_FakeQuant/wandb/run-20221125_084259-2ey0ttd9/files/wandb-metadata.json
+2022-11-25 08:43:00,670 INFO    Thread-12 :20021 [dir_watcher.py:_on_file_created():275] file/dir created: /home/ilena7440/LSQ_FakeQuant/wandb/run-20221125_084259-2ey0ttd9/files/wandb-summary.json
+2022-11-25 08:43:02,668 INFO    Thread-12 :20021 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ_FakeQuant/wandb/run-20221125_084259-2ey0ttd9/files/output.log
+2022-11-25 08:43:04,669 INFO    Thread-12 :20021 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ_FakeQuant/wandb/run-20221125_084259-2ey0ttd9/files/output.log
+2022-11-25 08:43:06,670 INFO    Thread-12 :20021 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ_FakeQuant/wandb/run-20221125_084259-2ey0ttd9/files/output.log
+2022-11-25 08:43:08,670 INFO    Thread-12 :20021 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ_FakeQuant/wandb/run-20221125_084259-2ey0ttd9/files/output.log
+2022-11-25 08:43:10,671 INFO    Thread-12 :20021 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ_FakeQuant/wandb/run-20221125_084259-2ey0ttd9/files/output.log
+2022-11-25 08:43:12,672 INFO    Thread-12 :20021 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ_FakeQuant/wandb/run-20221125_084259-2ey0ttd9/files/output.log
+2022-11-25 08:43:14,673 INFO    Thread-12 :20021 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ_FakeQuant/wandb/run-20221125_084259-2ey0ttd9/files/output.log
+2022-11-25 08:43:15,176 DEBUG   HandlerThread:20021 [handler.py:handle_request():141] handle_request: stop_status
+2022-11-25 08:43:15,176 DEBUG   SenderThread:20021 [sender.py:send_request():316] send_request: stop_status
+2022-11-25 08:43:16,674 INFO    Thread-12 :20021 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ_FakeQuant/wandb/run-20221125_084259-2ey0ttd9/files/output.log
+2022-11-25 08:43:18,675 INFO    Thread-12 :20021 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ_FakeQuant/wandb/run-20221125_084259-2ey0ttd9/files/output.log
+2022-11-25 08:43:20,676 INFO    Thread-12 :20021 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ_FakeQuant/wandb/run-20221125_084259-2ey0ttd9/files/output.log
+2022-11-25 08:43:22,677 INFO    Thread-12 :20021 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ_FakeQuant/wandb/run-20221125_084259-2ey0ttd9/files/output.log
+2022-11-25 08:43:24,678 INFO    Thread-12 :20021 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ_FakeQuant/wandb/run-20221125_084259-2ey0ttd9/files/output.log
+2022-11-25 08:43:26,679 INFO    Thread-12 :20021 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ_FakeQuant/wandb/run-20221125_084259-2ey0ttd9/files/output.log
+2022-11-25 08:43:28,680 INFO    Thread-12 :20021 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ_FakeQuant/wandb/run-20221125_084259-2ey0ttd9/files/output.log
+2022-11-25 08:43:28,926 DEBUG   SenderThread:20021 [sender.py:send():302] send: stats
+2022-11-25 08:43:30,392 DEBUG   HandlerThread:20021 [handler.py:handle_request():141] handle_request: stop_status
+2022-11-25 08:43:30,393 DEBUG   SenderThread:20021 [sender.py:send_request():316] send_request: stop_status
+2022-11-25 08:43:30,680 INFO    Thread-12 :20021 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ_FakeQuant/wandb/run-20221125_084259-2ey0ttd9/files/config.yaml
+2022-11-25 08:43:30,681 INFO    Thread-12 :20021 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ_FakeQuant/wandb/run-20221125_084259-2ey0ttd9/files/output.log
+2022-11-25 08:43:32,681 INFO    Thread-12 :20021 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ_FakeQuant/wandb/run-20221125_084259-2ey0ttd9/files/output.log
+2022-11-25 08:43:34,683 INFO    Thread-12 :20021 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ_FakeQuant/wandb/run-20221125_084259-2ey0ttd9/files/output.log
+2022-11-25 08:43:36,684 INFO    Thread-12 :20021 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ_FakeQuant/wandb/run-20221125_084259-2ey0ttd9/files/output.log
+2022-11-25 08:43:38,685 INFO    Thread-12 :20021 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ_FakeQuant/wandb/run-20221125_084259-2ey0ttd9/files/output.log
+2022-11-25 08:43:40,685 INFO    Thread-12 :20021 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ_FakeQuant/wandb/run-20221125_084259-2ey0ttd9/files/output.log
+2022-11-25 08:43:42,686 INFO    Thread-12 :20021 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ_FakeQuant/wandb/run-20221125_084259-2ey0ttd9/files/output.log
+2022-11-25 08:43:44,687 INFO    Thread-12 :20021 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ_FakeQuant/wandb/run-20221125_084259-2ey0ttd9/files/output.log
+2022-11-25 08:43:45,613 DEBUG   HandlerThread:20021 [handler.py:handle_request():141] handle_request: stop_status
+2022-11-25 08:43:45,614 DEBUG   SenderThread:20021 [sender.py:send_request():316] send_request: stop_status
+2022-11-25 08:43:46,688 INFO    Thread-12 :20021 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ_FakeQuant/wandb/run-20221125_084259-2ey0ttd9/files/output.log
+2022-11-25 08:43:48,689 INFO    Thread-12 :20021 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ_FakeQuant/wandb/run-20221125_084259-2ey0ttd9/files/output.log
+2022-11-25 08:43:50,690 INFO    Thread-12 :20021 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ_FakeQuant/wandb/run-20221125_084259-2ey0ttd9/files/output.log
+2022-11-25 08:43:52,691 INFO    Thread-12 :20021 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ_FakeQuant/wandb/run-20221125_084259-2ey0ttd9/files/output.log
+2022-11-25 08:43:54,691 INFO    Thread-12 :20021 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ_FakeQuant/wandb/run-20221125_084259-2ey0ttd9/files/output.log
+2022-11-25 08:43:56,692 INFO    Thread-12 :20021 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ_FakeQuant/wandb/run-20221125_084259-2ey0ttd9/files/output.log
+2022-11-25 08:43:58,693 INFO    Thread-12 :20021 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ_FakeQuant/wandb/run-20221125_084259-2ey0ttd9/files/output.log
+2022-11-25 08:43:59,809 DEBUG   SenderThread:20021 [sender.py:send():302] send: stats
+2022-11-25 08:44:00,694 INFO    Thread-12 :20021 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ_FakeQuant/wandb/run-20221125_084259-2ey0ttd9/files/output.log
+2022-11-25 08:44:00,831 DEBUG   HandlerThread:20021 [handler.py:handle_request():141] handle_request: stop_status
+2022-11-25 08:44:00,831 DEBUG   SenderThread:20021 [sender.py:send_request():316] send_request: stop_status
+2022-11-25 08:44:02,695 INFO    Thread-12 :20021 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ_FakeQuant/wandb/run-20221125_084259-2ey0ttd9/files/output.log
+2022-11-25 08:44:04,696 INFO    Thread-12 :20021 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ_FakeQuant/wandb/run-20221125_084259-2ey0ttd9/files/output.log
+2022-11-25 08:44:06,697 INFO    Thread-12 :20021 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ_FakeQuant/wandb/run-20221125_084259-2ey0ttd9/files/output.log
+2022-11-25 08:44:08,698 INFO    Thread-12 :20021 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ_FakeQuant/wandb/run-20221125_084259-2ey0ttd9/files/output.log
+2022-11-25 08:44:10,698 INFO    Thread-12 :20021 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ_FakeQuant/wandb/run-20221125_084259-2ey0ttd9/files/output.log
+2022-11-25 08:44:11,415 DEBUG   HandlerThread:20021 [handler.py:handle_request():141] handle_request: partial_history
+2022-11-25 08:44:11,416 DEBUG   HandlerThread:20021 [handler.py:handle_request():141] handle_request: partial_history
+2022-11-25 08:44:11,417 DEBUG   SenderThread:20021 [sender.py:send():302] send: history
+2022-11-25 08:44:11,418 DEBUG   SenderThread:20021 [sender.py:send():302] send: summary
+2022-11-25 08:44:11,419 INFO    SenderThread:20021 [sender.py:_save_file():1156] saving file wandb-summary.json with policy end
+2022-11-25 08:44:11,419 DEBUG   SenderThread:20021 [sender.py:send():302] send: history
+2022-11-25 08:44:11,419 DEBUG   SenderThread:20021 [sender.py:send():302] send: summary
+2022-11-25 08:44:11,422 INFO    SenderThread:20021 [sender.py:_save_file():1156] saving file wandb-summary.json with policy end
+2022-11-25 08:44:11,699 INFO    Thread-12 :20021 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ_FakeQuant/wandb/run-20221125_084259-2ey0ttd9/files/wandb-summary.json
+2022-11-25 08:44:12,699 INFO    Thread-12 :20021 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ_FakeQuant/wandb/run-20221125_084259-2ey0ttd9/files/output.log
+2022-11-25 08:44:14,700 INFO    Thread-12 :20021 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ_FakeQuant/wandb/run-20221125_084259-2ey0ttd9/files/output.log
+2022-11-25 08:44:16,109 DEBUG   HandlerThread:20021 [handler.py:handle_request():141] handle_request: stop_status
+2022-11-25 08:44:16,110 DEBUG   SenderThread:20021 [sender.py:send_request():316] send_request: stop_status
+2022-11-25 08:44:16,701 INFO    Thread-12 :20021 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ_FakeQuant/wandb/run-20221125_084259-2ey0ttd9/files/output.log
+2022-11-25 08:44:18,702 INFO    Thread-12 :20021 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ_FakeQuant/wandb/run-20221125_084259-2ey0ttd9/files/output.log
+2022-11-25 08:44:20,702 INFO    Thread-12 :20021 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ_FakeQuant/wandb/run-20221125_084259-2ey0ttd9/files/output.log
+2022-11-25 08:44:22,703 INFO    Thread-12 :20021 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ_FakeQuant/wandb/run-20221125_084259-2ey0ttd9/files/output.log
+2022-11-25 08:44:24,704 INFO    Thread-12 :20021 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ_FakeQuant/wandb/run-20221125_084259-2ey0ttd9/files/output.log
+2022-11-25 08:44:26,558 DEBUG   SenderThread:20021 [sender.py:send():302] send: exit
+2022-11-25 08:44:26,558 INFO    SenderThread:20021 [sender.py:send_exit():438] handling exit code: 255
+2022-11-25 08:44:26,559 DEBUG   HandlerThread:20021 [handler.py:handle_request():141] handle_request: poll_exit
+2022-11-25 08:44:26,559 INFO    SenderThread:20021 [sender.py:send_exit():440] handling runtime: 86
+2022-11-25 08:44:26,560 INFO    SenderThread:20021 [sender.py:_save_file():1156] saving file wandb-summary.json with policy end
+2022-11-25 08:44:26,560 INFO    SenderThread:20021 [sender.py:send_exit():446] send defer
+2022-11-25 08:44:26,561 DEBUG   SenderThread:20021 [sender.py:send_request():316] send_request: poll_exit
+2022-11-25 08:44:26,561 DEBUG   HandlerThread:20021 [handler.py:handle_request():141] handle_request: defer
+2022-11-25 08:44:26,562 INFO    HandlerThread:20021 [handler.py:handle_request_defer():164] handle defer: 0
+2022-11-25 08:44:26,562 DEBUG   SenderThread:20021 [sender.py:send_request():316] send_request: defer
+2022-11-25 08:44:26,563 INFO    SenderThread:20021 [sender.py:send_request_defer():455] handle sender defer: 0
+2022-11-25 08:44:26,563 INFO    SenderThread:20021 [sender.py:transition_state():459] send defer: 1
+2022-11-25 08:44:26,563 DEBUG   HandlerThread:20021 [handler.py:handle_request():141] handle_request: defer
+2022-11-25 08:44:26,563 INFO    HandlerThread:20021 [handler.py:handle_request_defer():164] handle defer: 1
+2022-11-25 08:44:26,650 DEBUG   SenderThread:20021 [sender.py:send_request():316] send_request: defer
+2022-11-25 08:44:26,650 INFO    SenderThread:20021 [sender.py:send_request_defer():455] handle sender defer: 1
+2022-11-25 08:44:26,650 INFO    SenderThread:20021 [sender.py:transition_state():459] send defer: 2
+2022-11-25 08:44:26,651 DEBUG   SenderThread:20021 [sender.py:send():302] send: stats
+2022-11-25 08:44:26,652 DEBUG   HandlerThread:20021 [handler.py:handle_request():141] handle_request: defer
+2022-11-25 08:44:26,652 INFO    HandlerThread:20021 [handler.py:handle_request_defer():164] handle defer: 2
+2022-11-25 08:44:26,653 DEBUG   SenderThread:20021 [sender.py:send_request():316] send_request: defer
+2022-11-25 08:44:26,653 INFO    SenderThread:20021 [sender.py:send_request_defer():455] handle sender defer: 2
+2022-11-25 08:44:26,653 INFO    SenderThread:20021 [sender.py:transition_state():459] send defer: 3
+2022-11-25 08:44:26,653 DEBUG   HandlerThread:20021 [handler.py:handle_request():141] handle_request: defer
+2022-11-25 08:44:26,653 INFO    HandlerThread:20021 [handler.py:handle_request_defer():164] handle defer: 3
+2022-11-25 08:44:26,654 DEBUG   SenderThread:20021 [sender.py:send_request():316] send_request: defer
+2022-11-25 08:44:26,654 INFO    SenderThread:20021 [sender.py:send_request_defer():455] handle sender defer: 3
+2022-11-25 08:44:26,654 INFO    SenderThread:20021 [sender.py:transition_state():459] send defer: 4
+2022-11-25 08:44:26,654 DEBUG   HandlerThread:20021 [handler.py:handle_request():141] handle_request: defer
+2022-11-25 08:44:26,654 INFO    HandlerThread:20021 [handler.py:handle_request_defer():164] handle defer: 4
+2022-11-25 08:44:26,655 DEBUG   SenderThread:20021 [sender.py:send():302] send: summary
+2022-11-25 08:44:26,655 INFO    SenderThread:20021 [sender.py:_save_file():1156] saving file wandb-summary.json with policy end
+2022-11-25 08:44:26,656 DEBUG   SenderThread:20021 [sender.py:send_request():316] send_request: defer
+2022-11-25 08:44:26,656 INFO    SenderThread:20021 [sender.py:send_request_defer():455] handle sender defer: 4
+2022-11-25 08:44:26,656 INFO    SenderThread:20021 [sender.py:transition_state():459] send defer: 5
+2022-11-25 08:44:26,656 DEBUG   HandlerThread:20021 [handler.py:handle_request():141] handle_request: defer
+2022-11-25 08:44:26,656 INFO    HandlerThread:20021 [handler.py:handle_request_defer():164] handle defer: 5
+2022-11-25 08:44:26,656 DEBUG   SenderThread:20021 [sender.py:send_request():316] send_request: defer
+2022-11-25 08:44:26,657 INFO    SenderThread:20021 [sender.py:send_request_defer():455] handle sender defer: 5
+2022-11-25 08:44:26,657 INFO    SenderThread:20021 [sender.py:transition_state():459] send defer: 6
+2022-11-25 08:44:26,657 DEBUG   HandlerThread:20021 [handler.py:handle_request():141] handle_request: defer
+2022-11-25 08:44:26,657 INFO    HandlerThread:20021 [handler.py:handle_request_defer():164] handle defer: 6
+2022-11-25 08:44:26,657 DEBUG   SenderThread:20021 [sender.py:send_request():316] send_request: defer
+2022-11-25 08:44:26,657 INFO    SenderThread:20021 [sender.py:send_request_defer():455] handle sender defer: 6
+2022-11-25 08:44:26,663 DEBUG   HandlerThread:20021 [handler.py:handle_request():141] handle_request: poll_exit
+2022-11-25 08:44:26,705 INFO    Thread-12 :20021 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ_FakeQuant/wandb/run-20221125_084259-2ey0ttd9/files/wandb-summary.json
+2022-11-25 08:44:26,705 INFO    Thread-12 :20021 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ_FakeQuant/wandb/run-20221125_084259-2ey0ttd9/files/output.log
+2022-11-25 08:44:28,218 WARNING StreamThr :20021 [internal.py:is_dead():387] Internal process exiting, parent pid 19944 disappeared
+2022-11-25 08:44:28,218 ERROR   StreamThr :20021 [internal.py:wandb_internal():149] Internal process shutdown.
+2022-11-25 08:44:28,655 INFO    WriterThread:20021 [datastore.py:close():279] close: /home/ilena7440/LSQ_FakeQuant/wandb/run-20221125_084259-2ey0ttd9/run-2ey0ttd9.wandb
+2022-11-25 08:44:28,665 INFO    HandlerThread:20021 [handler.py:finish():810] shutting down handler
+2022-11-25 08:44:28,706 INFO    Thread-12 :20021 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ_FakeQuant/wandb/run-20221125_084259-2ey0ttd9/files/output.log
+2022-11-25 08:44:29,848 INFO    SenderThread:20021 [sender.py:transition_state():459] send defer: 7
+2022-11-25 08:44:29,848 INFO    SenderThread:20021 [sender.py:finish():1312] shutting down sender
+2022-11-25 08:44:29,849 INFO    SenderThread:20021 [dir_watcher.py:finish():362] shutting down directory watcher
+2022-11-25 08:44:30,706 INFO    Thread-12 :20021 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ_FakeQuant/wandb/run-20221125_084259-2ey0ttd9/files/output.log
+2022-11-25 08:44:30,707 INFO    SenderThread:20021 [dir_watcher.py:finish():392] scan: /home/ilena7440/LSQ_FakeQuant/wandb/run-20221125_084259-2ey0ttd9/files
+2022-11-25 08:44:30,708 INFO    SenderThread:20021 [dir_watcher.py:finish():406] scan save: /home/ilena7440/LSQ_FakeQuant/wandb/run-20221125_084259-2ey0ttd9/files/output.log output.log
+2022-11-25 08:44:30,708 INFO    SenderThread:20021 [dir_watcher.py:finish():406] scan save: /home/ilena7440/LSQ_FakeQuant/wandb/run-20221125_084259-2ey0ttd9/files/requirements.txt requirements.txt
+2022-11-25 08:44:30,709 INFO    SenderThread:20021 [dir_watcher.py:finish():406] scan save: /home/ilena7440/LSQ_FakeQuant/wandb/run-20221125_084259-2ey0ttd9/files/wandb-summary.json wandb-summary.json
+2022-11-25 08:44:30,709 INFO    SenderThread:20021 [dir_watcher.py:finish():406] scan save: /home/ilena7440/LSQ_FakeQuant/wandb/run-20221125_084259-2ey0ttd9/files/config.yaml config.yaml
+2022-11-25 08:44:30,716 INFO    SenderThread:20021 [dir_watcher.py:finish():406] scan save: /home/ilena7440/LSQ_FakeQuant/wandb/run-20221125_084259-2ey0ttd9/files/wandb-metadata.json wandb-metadata.json
+2022-11-25 08:44:30,724 INFO    SenderThread:20021 [file_pusher.py:finish():171] shutting down file pusher
+2022-11-25 08:44:30,724 INFO    SenderThread:20021 [file_pusher.py:join():176] waiting for file pusher
+2022-11-25 08:44:31,359 INFO    Thread-18 :20021 [upload_job.py:push():138] Uploaded file /home/ilena7440/LSQ_FakeQuant/wandb/run-20221125_084259-2ey0ttd9/files/requirements.txt
+2022-11-25 08:44:31,374 INFO    Thread-19 :20021 [upload_job.py:push():138] Uploaded file /home/ilena7440/LSQ_FakeQuant/wandb/run-20221125_084259-2ey0ttd9/files/wandb-summary.json
+2022-11-25 08:44:31,405 INFO    Thread-20 :20021 [upload_job.py:push():138] Uploaded file /home/ilena7440/LSQ_FakeQuant/wandb/run-20221125_084259-2ey0ttd9/files/config.yaml
+2022-11-25 08:44:31,625 INFO    Thread-17 :20021 [upload_job.py:push():138] Uploaded file /home/ilena7440/LSQ_FakeQuant/wandb/run-20221125_084259-2ey0ttd9/files/output.log
+2022-11-25 08:44:32,100 INFO    MainThread:20021 [internal.py:handle_exit():80] Internal process exited
+2022-11-25 08:44:32,101 WARNING MsgRouterThr:20021 [router.py:message_loop():73] EOFError seen in message_loop

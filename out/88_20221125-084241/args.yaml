@@ -1,0 +1,46 @@
+!!python/object:trainer.training_utils.training_arguments
+apex: false
+arch: MobileNetv2
+dataloader: !!python/object:trainer.training_utils.dataloader_arguments
+  batch_size: 256
+  dataset: cifar10
+  deterministic: true
+  num_classes: 10
+  path: /data
+  pin_memory: true
+  serialized: false
+  val_split: 0.0
+  workers: 16
+device_gpu:
+- 0
+device_type: cuda
+epochs: 70
+lamb: 0.5
+log_dir: !!python/object/apply:pathlib.PosixPath
+- /
+- home
+- ilena7440
+- LSQ_FakeQuant
+- out
+- 88_20221125-084241
+log_num_best_scores: 3
+log_print_freq: 20
+mode: slsq
+n_gpu: 1
+name: '88'
+optimizer: !!python/object:trainer.training_utils.optimizer_arguments
+  learning_rate: 0.005
+  momentum: 0.9
+  weight_decay: 4.0e-05
+output_dir: ./out
+pre_trained: true
+resume: false
+resume_path: ''
+scheduler: !!python/object:trainer.training_utils.scheduler_arguments
+  gamma: 0.1
+  milestones:
+  - 30
+  - 60
+  - 90
+  mode: multi_step
+  update_per_batch: true

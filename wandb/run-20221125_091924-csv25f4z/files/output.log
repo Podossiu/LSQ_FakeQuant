@@ -1,0 +1,24 @@
+
+Files already downloaded and verified
+Traceback (most recent call last):
+  File "main_slsq.py", line 91, in <module>
+    main()
+  File "main_slsq.py", line 54, in main
+    train_loader, val_loader, test_loader = util.load_data(args.dataloader)
+  File "/home/ilena7440/LSQ_FakeQuant/util/data_loader.py", line 67, in load_data
+    test_set = tv.datasets.CIFAR10(cfg.path, train=False, transform=val_transform, download=True)
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torchvision/datasets/cifar.py", line 65, in __init__
+    self.download()
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torchvision/datasets/cifar.py", line 136, in download
+    if self._check_integrity():
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torchvision/datasets/cifar.py", line 131, in _check_integrity
+    if not check_integrity(fpath, md5):
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torchvision/datasets/utils.py", line 87, in check_integrity
+    return check_md5(fpath, md5)
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torchvision/datasets/utils.py", line 79, in check_md5
+    return md5 == calculate_md5(fpath, **kwargs)
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torchvision/datasets/utils.py", line 73, in calculate_md5
+    for chunk in iter(lambda: f.read(chunk_size), b""):
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torchvision/datasets/utils.py", line 73, in <lambda>
+    for chunk in iter(lambda: f.read(chunk_size), b""):
+KeyboardInterrupt

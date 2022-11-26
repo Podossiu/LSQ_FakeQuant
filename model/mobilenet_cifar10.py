@@ -14,7 +14,7 @@ import math
 __all__ = ['mobilenetv2_cifar10']
 
 model_path = {
-        'mobilenetv2' : './model/mobilenetv2/cifar10_pretrained.pt'
+        'mobilenetv2' : './model/mobilenetv2/cifar10_pretrained.pth'
 }
 
 
@@ -181,7 +181,7 @@ def _mobilenetv2(arch, width_mult, pretrained, progress,**kwargs):
     model = MobileNetV2(width_mult = width_mult, **kwargs)
     if pretrained:
         print("********************pre-trained*****************")
-        state_dict = torch.load(model_path[arch])
+        state_dict = torch.load(model_path[arch])['net']
         new_state_dict = {}
         for (k1, v1), (k2,v2) in zip(state_dict.items(), model.state_dict().items()):
             new_state_dict[k2] = v1

@@ -1,0 +1,388 @@
+Files already downloaded and verified
+Files already downloaded and verified
+INFO - Dataset `cifar10` size:
+          Training Set = 50000 (196)
+        Validation Set = 10000 (40)
+              Test Set = 10000 (40)
+********************pre-trained*****************
+*************soft_pruning_mode*******************
+INFO - Created `MobileNetv2` model
+          Use pre-trained model = True
+/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/ao/quantization/observer.py:214: UserWarning: Please use quant_min and quant_max to specify the range for observers.                     reduce_range will be deprecated in a future release of PyTorch.
+  warnings.warn(
+INFO - Optimizer: AdamW (
+           Parameter Group 0
+               amsgrad: False
+               betas: (0.9, 0.999)
+               capturable: False
+               eps: 1e-08
+               foreach: None
+               lr: 0.005
+               maximize: False
+               weight_decay: 4e-05
+           )
+INFO - LR scheduler: `CosineWarmRestartsLr`
+    Update per batch: True
+             Group 0: 0.005
+INFO - >>>>>> Epoch   0
+INFO - Training: 50000 samples (256 per mini-batch)
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.95438832
+/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/nn/functional.py:1967: UserWarning: nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.
+  warnings.warn("nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.")
+0.95019758
+0.93537593
+0.92244011
+0.89831412
+0.88751376
+0.87769955
+0.87625659
+0.87762630
+0.87626505
+0.87440330
+INFO - Training [0][   20/  196]   Loss 1.619259   Top1 53.515625   Top5 89.238281   BatchTime 0.450533   LR 0.004999
+0.87231731
+0.86978048
+0.87030166
+0.87031162
+0.86958069
+0.86871195
+0.86749786
+0.86640704
+0.86499566
+0.85870117
+0.85030669
+0.84573364
+0.84094495
+0.83732480
+0.83580285
+0.83534461
+0.83554947
+0.83591485
+0.83606774
+0.83665890
+INFO - Training [0][   40/  196]   Loss 1.556868   Top1 52.050781   Top5 89.462891   BatchTime 0.425706   LR 0.004995
+0.83748651
+0.83712250
+0.83634239
+0.83478218
+0.83273464
+0.83272505
+0.83210599
+0.83183998
+0.83152843
+0.83152229
+0.83146900
+0.83147162
+0.83210665
+0.83214569
+0.83341205
+0.83650565
+0.83615518
+0.83601665
+0.83608663
+INFO - Training [0][   60/  196]   Loss 1.457479   Top1 54.511719   Top5 90.690104   BatchTime 0.420669   LR 0.004989
+0.83596569
+0.83597016
+0.83610207
+0.83641273
+0.83664697
+0.83712780
+0.83767229
+0.83821344
+0.83852893
+0.83893502
+0.83930105
+0.84042847
+0.84128094
+0.84226239
+0.84349519
+0.84478933
+0.84592414
+0.84757131
+0.84922498
+0.85079682
+INFO - Training [0][   80/  196]   Loss 1.394835   Top1 56.293945   Top5 91.611328   BatchTime 0.418959   LR 0.004980
+0.85196137
+0.85289496
+0.85360873
+0.85403991
+0.85422432
+0.85292000
+0.85315025
+0.85414720
+0.85299313
+0.85215849
+0.85207188
+0.85134095
+0.85021269
+0.84851676
+0.84937936
+0.84842354
+0.84733671
+0.84488076
+0.84451151
+0.84242553
+INFO - Training [0][  100/  196]   Loss 1.331915   Top1 58.164062   Top5 92.285156   BatchTime 0.415202   LR 0.004968
+0.83940524
+0.83378780
+0.83847106
+0.84188128
+0.84188360
+0.83468616
+0.83542246
+0.82884079
+0.81724459
+0.80604535
+0.80880409
+0.81122601
+0.81085241
+0.80972540
+0.80912119
+0.80836678
+0.80738807
+INFO - Training [0][  120/  196]   Loss 1.283267   Top1 59.778646   Top5 92.783203   BatchTime 0.402891   LR 0.004954
+0.80660075
+0.80455995
+0.80272251
+0.80092210
+0.79990155
+0.79751682
+0.79173952
+0.78998142
+0.78404284
+0.77243376
+0.76435423
+0.75993603
+0.76158726
+0.76595229
+0.77557832
+0.78151548
+0.78527111
+0.78899652
+0.79312479
+0.79332018
+0.79354548
+INFO - Training [0][  140/  196]   Loss 1.248174   Top1 60.823103   Top5 93.183594   BatchTime 0.386565   LR 0.004938
+0.79443407
+0.79514420
+0.79647332
+0.79803324
+0.80015862
+0.80205905
+0.80470639
+0.80673009
+0.80868775
+0.81030416
+0.81095886
+0.81002092
+0.79071629
+0.78660876
+0.78794605
+0.79016942
+0.79037100
+0.79561895
+0.79861170
+0.79928428
+0.79990536
+INFO - Training [0][  160/  196]   Loss 1.224345   Top1 61.518555   Top5 93.452148   BatchTime 0.387294   LR 0.004919
+0.80090380
+0.80356848
+0.80629987
+0.80793190
+0.80917579
+0.81081885
+0.81542975
+0.83034462
+0.83861095
+0.83868623
+0.83847094
+0.83844495
+0.83837658
+0.83806175
+0.83768106
+0.83737320
+0.83716226
+0.83703142
+0.83662599
+INFO - Training [0][  180/  196]   Loss 1.202071   Top1 62.233073   Top5 93.619792   BatchTime 0.390301   LR 0.004897
+0.83654487
+0.83649284
+0.83599573
+0.83517039
+0.83491325
+0.83531559
+0.83533746
+0.83536613
+0.83539486
+0.83537441
+0.83525175
+0.83513415
+0.83493960
+0.83469474
+0.83431560
+INFO - ==> Top1: 62.766    Top5: 93.774    Loss: 1.185
+INFO - Created `MobileNetv2` model
+          Use pre-trained model = False
+0.83371460
+0.83285832
+********************pre-trained*****************
+INFO - Validation: 10000 samples (256 per mini-batch)
+validation quantized model on cpu
+INFO - Validation [0][   20/   40]   Loss 0.729368   Top1 75.253906   Top5 98.300781   BatchTime 0.105864
+features.0.conv.0 tensor(0.5347)
+features.0.conv.3 tensor(0.3770)
+features.1.conv.0 tensor(0.0449)
+features.1.conv.3 tensor(0.0995)
+features.1.conv.6 tensor(0.0729)
+features.2.conv.0 tensor(0.0428)
+features.2.conv.3 tensor(0.0687)
+features.2.conv.6 tensor(0.1085)
+features.3.conv.0 tensor(0.0475)
+features.3.conv.3 tensor(0.0625)
+features.3.conv.6 tensor(0.0779)
+features.4.conv.0 tensor(0.0540)
+features.4.conv.3 tensor(0.0966)
+features.4.conv.6 tensor(0.1121)
+features.5.conv.0 tensor(0.0653)
+features.5.conv.3 tensor(0.0683)
+features.5.conv.6 tensor(0.1071)
+features.6.conv.0 tensor(0.0597)
+features.6.conv.3 tensor(0.0550)
+features.6.conv.6 tensor(0.0875)
+features.7.conv.0 tensor(0.0981)
+features.7.conv.3 tensor(0.0984)
+features.7.conv.6 tensor(0.1440)
+features.8.conv.0 tensor(0.1211)
+features.8.conv.3 tensor(0.0952)
+features.8.conv.6 tensor(0.1507)
+features.9.conv.0 tensor(0.1169)
+features.9.conv.3 tensor(0.1117)
+features.9.conv.6 tensor(0.1425)
+features.10.conv.0 tensor(0.0664)
+features.10.conv.3 tensor(0.0874)
+features.10.conv.6 tensor(0.1111)
+features.11.conv.0 tensor(0.1611)
+features.11.conv.3 tensor(0.0862)
+features.11.conv.6 tensor(0.4494)
+features.12.conv.0 tensor(0.2232)
+features.12.conv.3 tensor(0.0793)
+features.12.conv.6 tensor(0.6642)
+features.13.conv.0
+INFO - Validation [0][   40/   40]   Loss 0.728526   Top1 75.210000   Top5 98.300000   BatchTime 0.080060
+INFO - ==> Top1: 75.210    Top5: 98.300    Loss: 0.729
+INFO - ==> Sparsity : 0.305
+features.13.conv.0 tensor(0.1390)
+features.13.conv.3 tensor(0.1221)
+features.13.conv.6 tensor(0.1268)
+features.14.conv.0 tensor(0.8678)
+features.14.conv.3 tensor(0.0782)
+features.14.conv.6 tensor(0.8997)
+features.15.conv.0 tensor(0.8751)
+features.15.conv.3 tensor(0.0672)
+features.15.conv.6 tensor(0.2804)
+features.16.conv.0 tensor(0.0721)
+features.16.conv.3 tensor(0.0772)
+features.16.conv.6 tensor(0.1267)
+conv.0 tensor(0.0779)
+tensor(668368.) 2188896.0
+features.13.conv.0 tensor(0.1390)
+/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/onnx/_internal/jit_utils.py:258: UserWarning: The shape inference of prim::TupleConstruct type is missing, so it may result in wrong shape inference for the exported graph. Please consider adding it in symbolic function. (Triggered internally at ../torch/csrc/jit/passes/onnx/shape_type_inference.cpp:1884.)
+  _C._jit_pass_onnx_node_shape_type_inference(node, params_dict, opset_version)
+INFO - Saving checkpoint to:
+            Current: /home/ilena7440/LSQ_FakeQuant/out/88_20221125-084232/_checkpoint.pth.tar
+                Best: /home/ilena7440/LSQ_FakeQuant/out/88_20221125-084232/_best.pth.tar
+save quantized models...
+INFO - >>>>>> Epoch   1
+INFO - Training: 50000 samples (256 per mini-batch)
+features.13.conv.0 tensor(0.1390)
+features.13.conv.0 tensor(0.1390)
+features.13.conv.0 tensor(0.1390)
+features.13.conv.0 tensor(0.1390)
+INFO - Training [1][   20/  196]   Loss 0.986901   Top1 69.042969   Top5 94.648438   BatchTime 0.436989   LR 0.004853
+features.13.conv.0 tensor(0.1390)
+features.13.conv.0 tensor(0.1390)
+features.13.conv.0 tensor(0.1390)
+INFO - Training [1][   40/  196]   Loss 0.977769   Top1 68.896484   Top5 95.312500   BatchTime 0.407736   LR 0.004825
+features.13.conv.0 tensor(0.1390)
+features.13.conv.0 tensor(0.1390)
+features.13.conv.0 tensor(0.1390)
+features.13.conv.0 tensor(0.1390)
+INFO - Training [1][   60/  196]   Loss nan   Top1 50.299479   Top5 81.100260   BatchTime 0.396552   LR 0.004794
+features.13.conv.0 tensor(0.1390)
+features.13.conv.0 tensor(0.1390)
+features.13.conv.0 tensor(0.1390)
+features.13.conv.0 tensor(0.1390)
+INFO - Training [1][   80/  196]   Loss nan   Top1 40.229492   Top5 73.085938   BatchTime 0.386983   LR 0.004761
+features.13.conv.0 tensor(0.1390)
+features.13.conv.0 tensor(0.1390)
+features.13.conv.0 tensor(0.1390)
+INFO - Training [1][  100/  196]   Loss nan   Top1 34.027344   Top5 68.492188   BatchTime 0.380031   LR 0.004725
+features.13.conv.0 tensor(0.1390)
+features.13.conv.0 tensor(0.1390)
+features.13.conv.0 tensor(0.1390)
+INFO - Training [1][  120/  196]   Loss nan   Top1 29.938151   Top5 65.403646   BatchTime 0.362755   LR 0.004687
+features.13.conv.0 tensor(0.1390)
+features.13.conv.0 tensor(0.1390)
+features.13.conv.0 tensor(0.1390)
+INFO - Training [1][  140/  196]   Loss nan   Top1 27.061942   Top5 63.217076   BatchTime 0.348525   LR 0.004647
+features.13.conv.0 tensor(0.1390)
+features.13.conv.0 tensor(0.1390)
+features.13.conv.0 tensor(0.1390)
+INFO - Training [1][  160/  196]   Loss nan   Top1 24.892578   Top5 61.584473   BatchTime 0.348768   LR 0.004605
+features.13.conv.0 tensor(0.1390)
+features.13.conv.0 tensor(0.1390)
+features.13.conv.0 tensor(0.1390)
+features.13.conv.0 tensor(0.1390)
+INFO - Training [1][  180/  196]   Loss nan   Top1 23.259549   Top5 60.260417   BatchTime 0.349321   LR 0.004560
+features.13.conv.0 tensor(0.1390)
+features.13.conv.0 tensor(0.1390)
+INFO - ==> Top1: 22.158    Top5: 59.470    Loss: nan
+features.13.conv.0 tensor(0.1390)
+INFO - Created `MobileNetv2` model
+          Use pre-trained model = False
+INFO - Validation: 10000 samples (256 per mini-batch)
+features.13.conv.0 tensor(0.1390)
+INFO - Validation [1][   20/   40]   Loss 72.856718   Top1 10.253906   Top5 50.527344   BatchTime 0.108280
+Traceback (most recent call last):
+  File "main_slsq.py", line 91, in <module>
+    main()
+  File "main_slsq.py", line 77, in main
+    trainer.train_qat_slsq(train_loader, val_loader, test_loader,qat_model, teacher_model,criterion,
+  File "/home/ilena7440/LSQ_FakeQuant/trainer/process.py", line 64, in train_qat_slsq
+    v_top1, v_top5, v_loss = validate_slsq(val_loader, transformed_model.eval(), criterion, epoch, monitors, args, quantized = True, sparse_model = True)
+  File "/home/ilena7440/LSQ_FakeQuant/trainer/process.py", line 377, in validate_slsq
+    outputs = model(inputs)
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/ilena7440/LSQ_FakeQuant/model/mobilenet_cifar10.py", line 140, in forward
+    x = self.features(x)
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/nn/modules/container.py", line 204, in forward
+    input = module(input)
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/ilena7440/LSQ_FakeQuant/model/mobilenet_cifar10.py", line 93, in forward
+    return self.skip_add.add(x, self.conv(x))
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/nn/modules/container.py", line 204, in forward
+    input = module(input)
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/ilena7440/LSQ_FakeQuant/model/slsq_util.py", line 490, in forward
+    return ops.quantized.conv2d(
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/_ops.py", line 442, in __call__
+    return self._op(*args, **kwargs or {})
+KeyboardInterrupt

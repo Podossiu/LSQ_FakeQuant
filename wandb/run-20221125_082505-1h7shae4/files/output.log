@@ -1,0 +1,13 @@
+
+Files already downloaded and verified
+Files already downloaded and verified
+INFO - Dataset `cifar10` size:
+          Training Set = 50000 (196)
+        Validation Set = 10000 (40)
+              Test Set = 10000 (40)
+Traceback (most recent call last):
+  File "main_slsq.py", line 92, in <module>
+    main()
+  File "main_slsq.py", line 61, in main
+    qat_model,teacher_model = prepare_qat_model(model_name = args.arch, pre_trained = True, mode = args.mode, distillation = True)
+TypeError: prepare_qat_model() missing 1 required positional argument: 'args'

@@ -1,0 +1,509 @@
+Files already downloaded and verified
+Files already downloaded and verified
+INFO - Dataset `cifar10` size:
+          Training Set = 50000 (196)
+        Validation Set = 10000 (40)
+              Test Set = 10000 (40)
+INFO - Created `MobileNetv2` model
+          Use pre-trained model = True
+/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/ao/quantization/observer.py:214: UserWarning: Please use quant_min and quant_max to specify the range for observers.                     reduce_range will be deprecated in a future release of PyTorch.
+  warnings.warn(
+INFO - Optimizer: AdamW (
+           Parameter Group 0
+               amsgrad: False
+               betas: (0.9, 0.999)
+               capturable: False
+               eps: 1e-08
+               foreach: None
+               lr: 0.0005
+               maximize: False
+               weight_decay: 0.0005
+           )
+INFO - LR scheduler: `CosineWarmRestartsLr`
+    Update per batch: False
+             Group 0: 0.0005
+********************pre-trained*****************
+*************soft_pruning_mode*******************
+INFO - >>>>>> Epoch   0
+INFO - Training: 50000 samples (256 per mini-batch)
+0.00000000
+tensor(1.5008, device='cuda:0', grad_fn=<AddBackward0>)
+0.00000000
+tensor(1.0534, device='cuda:0', grad_fn=<AddBackward0>)
+0.00000000
+tensor(1.1081, device='cuda:0', grad_fn=<AddBackward0>)
+0.00000000
+tensor(1.1594, device='cuda:0', grad_fn=<AddBackward0>)
+0.00000000
+tensor(1.1512, device='cuda:0', grad_fn=<AddBackward0>)
+0.00000000
+tensor(1.0585, device='cuda:0', grad_fn=<AddBackward0>)
+/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/nn/functional.py:1967: UserWarning: nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.
+  warnings.warn("nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.")
+0.00000000
+tensor(1.1889, device='cuda:0', grad_fn=<AddBackward0>)
+0.00000000
+tensor(1.0687, device='cuda:0', grad_fn=<AddBackward0>)
+0.00000000
+tensor(1.1349, device='cuda:0', grad_fn=<AddBackward0>)
+0.00000000
+tensor(1.1068, device='cuda:0', grad_fn=<AddBackward0>)
+0.00000000
+tensor(1.0958, device='cuda:0', grad_fn=<AddBackward0>)
+0.96277386
+tensor(1.7723, device='cuda:0', grad_fn=<AddBackward0>)
+0.96268803
+tensor(2.3402, device='cuda:0', grad_fn=<AddBackward0>)
+0.96071589
+tensor(1.5924, device='cuda:0', grad_fn=<AddBackward0>)
+0.94112509
+tensor(1.5068, device='cuda:0', grad_fn=<AddBackward0>)
+0.89903229
+tensor(1.4087, device='cuda:0', grad_fn=<AddBackward0>)
+0.89919049
+tensor(1.4048, device='cuda:0', grad_fn=<AddBackward0>)
+0.90446705
+tensor(1.2340, device='cuda:0', grad_fn=<AddBackward0>)
+0.90141952
+tensor(1.3196, device='cuda:0', grad_fn=<AddBackward0>)
+0.89808518
+tensor(1.1790, device='cuda:0', grad_fn=<AddBackward0>)
+0.89518106
+tensor(1.3366, device='cuda:0', grad_fn=<AddBackward0>)
+INFO - Training [0][   20/  196]   Loss 1.319232   Top1 55.996094   Top5 90.234375   BatchTime 0.336616   LR 0.000500
+0.89270020
+tensor(1.3077, device='cuda:0', grad_fn=<AddBackward0>)
+0.89057755
+tensor(1.2288, device='cuda:0', grad_fn=<AddBackward0>)
+0.88941348
+tensor(1.1589, device='cuda:0', grad_fn=<AddBackward0>)
+0.88888180
+tensor(1.2540, device='cuda:0', grad_fn=<AddBackward0>)
+0.88864851
+tensor(1.1267, device='cuda:0', grad_fn=<AddBackward0>)
+0.88805389
+tensor(1.1872, device='cuda:0', grad_fn=<AddBackward0>)
+0.88772964
+tensor(1.3229, device='cuda:0', grad_fn=<AddBackward0>)
+0.88472748
+tensor(1.0850, device='cuda:0', grad_fn=<AddBackward0>)
+0.88746631
+tensor(1.1550, device='cuda:0', grad_fn=<AddBackward0>)
+0.88692153
+tensor(1.1509, device='cuda:0', grad_fn=<AddBackward0>)
+0.88662738
+tensor(1.1951, device='cuda:0', grad_fn=<AddBackward0>)
+0.88676202
+tensor(1.1472, device='cuda:0', grad_fn=<AddBackward0>)
+0.88678932
+tensor(1.1529, device='cuda:0', grad_fn=<AddBackward0>)
+0.88696641
+tensor(1.1181, device='cuda:0', grad_fn=<AddBackward0>)
+0.88400942
+tensor(1.1984, device='cuda:0', grad_fn=<AddBackward0>)
+0.88431728
+tensor(1.1816, device='cuda:0', grad_fn=<AddBackward0>)
+INFO - Training [0][   40/  196]   Loss 1.252325   Top1 57.861328   Top5 92.441406   BatchTime 0.297536   LR 0.000500
+0.88370043
+tensor(1.1887, device='cuda:0', grad_fn=<AddBackward0>)
+0.88257593
+tensor(1.1393, device='cuda:0', grad_fn=<AddBackward0>)
+0.88168955
+tensor(1.0731, device='cuda:0', grad_fn=<AddBackward0>)
+0.87996852
+tensor(1.0637, device='cuda:0', grad_fn=<AddBackward0>)
+0.87921977
+tensor(1.2131, device='cuda:0', grad_fn=<AddBackward0>)
+0.87891734
+tensor(1.1542, device='cuda:0', grad_fn=<AddBackward0>)
+0.87854815
+tensor(1.0463, device='cuda:0', grad_fn=<AddBackward0>)
+0.87779534
+tensor(1.0985, device='cuda:0', grad_fn=<AddBackward0>)
+0.87766087
+tensor(1.0600, device='cuda:0', grad_fn=<AddBackward0>)
+0.87727702
+tensor(1.1477, device='cuda:0', grad_fn=<AddBackward0>)
+0.87700707
+tensor(1.0455, device='cuda:0', grad_fn=<AddBackward0>)
+0.87715918
+tensor(1.2875, device='cuda:0', grad_fn=<AddBackward0>)
+0.88063008
+tensor(1.0181, device='cuda:0', grad_fn=<AddBackward0>)
+0.88016796
+tensor(0.9542, device='cuda:0', grad_fn=<AddBackward0>)
+0.87951267
+tensor(0.9804, device='cuda:0', grad_fn=<AddBackward0>)
+0.87911153
+tensor(1.1021, device='cuda:0', grad_fn=<AddBackward0>)
+0.87838650
+tensor(1.0362, device='cuda:0', grad_fn=<AddBackward0>)
+0.87802070
+tensor(1.0173, device='cuda:0', grad_fn=<AddBackward0>)
+0.87808955
+tensor(1.0030, device='cuda:0', grad_fn=<AddBackward0>)
+0.87801057
+tensor(0.9622, device='cuda:0', grad_fn=<AddBackward0>)
+0.87803566
+tensor(0.9758, device='cuda:0', grad_fn=<AddBackward0>)
+0.87813413
+tensor(1.0739, device='cuda:0', grad_fn=<AddBackward0>)
+0.87831426
+tensor(1.0547, device='cuda:0', grad_fn=<AddBackward0>)
+0.87836266
+tensor(0.9292, device='cuda:0', grad_fn=<AddBackward0>)
+INFO - Training [0][   60/  196]   Loss 1.189789   Top1 59.947917   Top5 93.522135   BatchTime 0.281822   LR 0.000500
+0.87809932
+tensor(1.0305, device='cuda:0', grad_fn=<AddBackward0>)
+0.87787169
+tensor(1.0319, device='cuda:0', grad_fn=<AddBackward0>)
+0.87771958
+tensor(1.0153, device='cuda:0', grad_fn=<AddBackward0>)
+0.87752569
+tensor(1.0914, device='cuda:0', grad_fn=<AddBackward0>)
+0.87722808
+tensor(0.9859, device='cuda:0', grad_fn=<AddBackward0>)
+0.87678063
+tensor(0.9878, device='cuda:0', grad_fn=<AddBackward0>)
+0.87634850
+tensor(1.1391, device='cuda:0', grad_fn=<AddBackward0>)
+0.87583137
+tensor(0.9923, device='cuda:0', grad_fn=<AddBackward0>)
+0.87571526
+tensor(0.9972, device='cuda:0', grad_fn=<AddBackward0>)
+0.87512261
+tensor(0.9299, device='cuda:0', grad_fn=<AddBackward0>)
+0.87505895
+tensor(1.0343, device='cuda:0', grad_fn=<AddBackward0>)
+0.87447357
+tensor(1.0230, device='cuda:0', grad_fn=<AddBackward0>)
+0.87417370
+tensor(0.9364, device='cuda:0', grad_fn=<AddBackward0>)
+0.87386036
+tensor(0.9981, device='cuda:0', grad_fn=<AddBackward0>)
+0.87325013
+tensor(1.0053, device='cuda:0', grad_fn=<AddBackward0>)
+0.87238789
+tensor(0.8914, device='cuda:0', grad_fn=<AddBackward0>)
+INFO - Training [0][   80/  196]   Loss 1.141678   Top1 61.650391   Top5 94.287109   BatchTime 0.273715   LR 0.000500
+0.87212634
+tensor(0.9009, device='cuda:0', grad_fn=<AddBackward0>)
+0.87168241
+tensor(1.0901, device='cuda:0', grad_fn=<AddBackward0>)
+0.87122422
+tensor(0.9368, device='cuda:0', grad_fn=<AddBackward0>)
+0.87120420
+tensor(0.9376, device='cuda:0', grad_fn=<AddBackward0>)
+0.87097371
+tensor(0.8991, device='cuda:0', grad_fn=<AddBackward0>)
+0.87082887
+tensor(0.8264, device='cuda:0', grad_fn=<AddBackward0>)
+0.87108439
+tensor(0.9611, device='cuda:0', grad_fn=<AddBackward0>)
+0.87084347
+tensor(0.8072, device='cuda:0', grad_fn=<AddBackward0>)
+0.87104911
+tensor(0.8495, device='cuda:0', grad_fn=<AddBackward0>)
+0.87085420
+tensor(1.0313, device='cuda:0', grad_fn=<AddBackward0>)
+0.87093502
+tensor(0.8480, device='cuda:0', grad_fn=<AddBackward0>)
+0.87101364
+tensor(1.0170, device='cuda:0', grad_fn=<AddBackward0>)
+0.87100762
+tensor(0.8839, device='cuda:0', grad_fn=<AddBackward0>)
+0.87139678
+tensor(0.8412, device='cuda:0', grad_fn=<AddBackward0>)
+0.87109363
+tensor(0.7984, device='cuda:0', grad_fn=<AddBackward0>)
+0.87123460
+tensor(0.8486, device='cuda:0', grad_fn=<AddBackward0>)
+0.87120229
+tensor(1.0425, device='cuda:0', grad_fn=<AddBackward0>)
+0.87136447
+tensor(0.9154, device='cuda:0', grad_fn=<AddBackward0>)
+0.87138033
+tensor(0.9221, device='cuda:0', grad_fn=<AddBackward0>)
+0.87149274
+tensor(0.9852, device='cuda:0', grad_fn=<AddBackward0>)
+0.87149107
+tensor(0.8741, device='cuda:0', grad_fn=<AddBackward0>)
+0.87144351
+tensor(0.9774, device='cuda:0', grad_fn=<AddBackward0>)
+0.87150133
+tensor(0.9421, device='cuda:0', grad_fn=<AddBackward0>)
+0.87138391
+tensor(0.9076, device='cuda:0', grad_fn=<AddBackward0>)
+INFO - Training [0][  100/  196]   Loss 1.095426   Top1 63.324219   Top5 94.921875   BatchTime 0.268970   LR 0.000500
+0.87126476
+tensor(0.9087, device='cuda:0', grad_fn=<AddBackward0>)
+0.87139088
+tensor(0.9246, device='cuda:0', grad_fn=<AddBackward0>)
+0.87120759
+tensor(0.7974, device='cuda:0', grad_fn=<AddBackward0>)
+0.87079722
+tensor(1.0174, device='cuda:0', grad_fn=<AddBackward0>)
+0.87075031
+tensor(0.9716, device='cuda:0', grad_fn=<AddBackward0>)
+0.87053245
+tensor(0.9570, device='cuda:0', grad_fn=<AddBackward0>)
+0.86981517
+tensor(0.9501, device='cuda:0', grad_fn=<AddBackward0>)
+0.86966103
+tensor(0.9259, device='cuda:0', grad_fn=<AddBackward0>)
+0.86921269
+tensor(0.9238, device='cuda:0', grad_fn=<AddBackward0>)
+0.86891389
+tensor(0.8805, device='cuda:0', grad_fn=<AddBackward0>)
+0.86846679
+tensor(0.8246, device='cuda:0', grad_fn=<AddBackward0>)
+0.86844176
+tensor(0.8462, device='cuda:0', grad_fn=<AddBackward0>)
+0.86831051
+tensor(0.9434, device='cuda:0', grad_fn=<AddBackward0>)
+0.86792308
+tensor(0.8457, device='cuda:0', grad_fn=<AddBackward0>)
+0.86787337
+tensor(0.9791, device='cuda:0', grad_fn=<AddBackward0>)
+0.86792588
+tensor(0.8337, device='cuda:0', grad_fn=<AddBackward0>)
+INFO - Training [0][  120/  196]   Loss 1.063543   Top1 64.394531   Top5 95.289714   BatchTime 0.266992   LR 0.000500
+0.86756080
+tensor(0.9163, device='cuda:0', grad_fn=<AddBackward0>)
+0.86719006
+tensor(0.9197, device='cuda:0', grad_fn=<AddBackward0>)
+0.86699879
+tensor(0.8092, device='cuda:0', grad_fn=<AddBackward0>)
+0.86724907
+tensor(0.7625, device='cuda:0', grad_fn=<AddBackward0>)
+0.86697924
+tensor(0.8522, device='cuda:0', grad_fn=<AddBackward0>)
+0.86656553
+tensor(0.9710, device='cuda:0', grad_fn=<AddBackward0>)
+0.86606061
+tensor(0.7542, device='cuda:0', grad_fn=<AddBackward0>)
+0.86556602
+tensor(0.8398, device='cuda:0', grad_fn=<AddBackward0>)
+0.86527985
+tensor(0.7649, device='cuda:0', grad_fn=<AddBackward0>)
+0.86525559
+tensor(0.8259, device='cuda:0', grad_fn=<AddBackward0>)
+0.86473542
+tensor(0.7826, device='cuda:0', grad_fn=<AddBackward0>)
+0.86439127
+tensor(0.8181, device='cuda:0', grad_fn=<AddBackward0>)
+0.86441827
+tensor(0.8484, device='cuda:0', grad_fn=<AddBackward0>)
+0.86408436
+tensor(0.7479, device='cuda:0', grad_fn=<AddBackward0>)
+0.86369860
+tensor(0.8333, device='cuda:0', grad_fn=<AddBackward0>)
+0.86359292
+tensor(0.7639, device='cuda:0', grad_fn=<AddBackward0>)
+0.86322325
+tensor(0.8146, device='cuda:0', grad_fn=<AddBackward0>)
+0.86305100
+tensor(0.7719, device='cuda:0', grad_fn=<AddBackward0>)
+0.86316264
+tensor(0.7900, device='cuda:0', grad_fn=<AddBackward0>)
+0.86287308
+tensor(0.8062, device='cuda:0', grad_fn=<AddBackward0>)
+0.86301279
+tensor(0.9219, device='cuda:0', grad_fn=<AddBackward0>)
+0.86282897
+tensor(0.8494, device='cuda:0', grad_fn=<AddBackward0>)
+INFO - Training [0][  140/  196]   Loss 1.027737   Top1 65.605469   Top5 95.633371   BatchTime 0.266800   LR 0.000500
+0.86278635
+tensor(0.7394, device='cuda:0', grad_fn=<AddBackward0>)
+0.86262071
+tensor(0.9328, device='cuda:0', grad_fn=<AddBackward0>)
+0.86225951
+tensor(0.8856, device='cuda:0', grad_fn=<AddBackward0>)
+0.86206031
+tensor(0.8272, device='cuda:0', grad_fn=<AddBackward0>)
+0.86175102
+tensor(0.7954, device='cuda:0', grad_fn=<AddBackward0>)
+0.86155927
+tensor(0.8189, device='cuda:0', grad_fn=<AddBackward0>)
+0.86127841
+tensor(0.9201, device='cuda:0', grad_fn=<AddBackward0>)
+0.86122608
+tensor(0.9090, device='cuda:0', grad_fn=<AddBackward0>)
+0.86117870
+tensor(0.8572, device='cuda:0', grad_fn=<AddBackward0>)
+0.86073762
+tensor(0.8884, device='cuda:0', grad_fn=<AddBackward0>)
+0.86046165
+tensor(0.8068, device='cuda:0', grad_fn=<AddBackward0>)
+0.86020941
+tensor(0.8546, device='cuda:0', grad_fn=<AddBackward0>)
+0.86023283
+tensor(0.7361, device='cuda:0', grad_fn=<AddBackward0>)
+0.86045241
+tensor(0.9235, device='cuda:0', grad_fn=<AddBackward0>)
+0.86015826
+tensor(0.6779, device='cuda:0', grad_fn=<AddBackward0>)
+0.85999900
+tensor(0.8223, device='cuda:0', grad_fn=<AddBackward0>)
+INFO - Training [0][  160/  196]   Loss 1.003612   Top1 66.450195   Top5 95.837402   BatchTime 0.264759   LR 0.000500
+0.85976273
+tensor(0.8896, device='cuda:0', grad_fn=<AddBackward0>)
+0.85925621
+tensor(0.7891, device='cuda:0', grad_fn=<AddBackward0>)
+0.85870242
+tensor(0.8241, device='cuda:0', grad_fn=<AddBackward0>)
+0.85877162
+tensor(0.6560, device='cuda:0', grad_fn=<AddBackward0>)
+0.85867763
+tensor(0.8799, device='cuda:0', grad_fn=<AddBackward0>)
+0.85859275
+tensor(0.8767, device='cuda:0', grad_fn=<AddBackward0>)
+0.85850495
+tensor(0.7515, device='cuda:0', grad_fn=<AddBackward0>)
+0.85821140
+tensor(0.8998, device='cuda:0', grad_fn=<AddBackward0>)
+0.85811746
+tensor(0.9351, device='cuda:0', grad_fn=<AddBackward0>)
+0.85799688
+tensor(0.7791, device='cuda:0', grad_fn=<AddBackward0>)
+0.85796428
+tensor(0.8688, device='cuda:0', grad_fn=<AddBackward0>)
+0.85752714
+tensor(0.8868, device='cuda:0', grad_fn=<AddBackward0>)
+0.85737038
+tensor(0.8520, device='cuda:0', grad_fn=<AddBackward0>)
+0.85761696
+tensor(0.8032, device='cuda:0', grad_fn=<AddBackward0>)
+0.85753024
+tensor(0.8123, device='cuda:0', grad_fn=<AddBackward0>)
+0.85740072
+tensor(0.9079, device='cuda:0', grad_fn=<AddBackward0>)
+0.85685033
+tensor(0.8465, device='cuda:0', grad_fn=<AddBackward0>)
+0.85680568
+tensor(0.8692, device='cuda:0', grad_fn=<AddBackward0>)
+0.85677856
+tensor(0.7970, device='cuda:0', grad_fn=<AddBackward0>)
+0.85689890
+tensor(0.7952, device='cuda:0', grad_fn=<AddBackward0>)
+0.85711396
+tensor(0.8255, device='cuda:0', grad_fn=<AddBackward0>)
+0.85683984
+tensor(0.8379, device='cuda:0', grad_fn=<AddBackward0>)
+0.85669553
+tensor(0.8370, device='cuda:0', grad_fn=<AddBackward0>)
+0.85633683
+tensor(0.8469, device='cuda:0', grad_fn=<AddBackward0>)
+0.85622078
+tensor(0.8826, device='cuda:0', grad_fn=<AddBackward0>)
+INFO - Training [0][  180/  196]   Loss 0.986049   Top1 66.922743   Top5 96.037326   BatchTime 0.263024   LR 0.000500
+0.85639012
+tensor(0.8062, device='cuda:0', grad_fn=<AddBackward0>)
+0.85623705
+tensor(0.7055, device='cuda:0', grad_fn=<AddBackward0>)
+0.85615754
+tensor(0.8839, device='cuda:0', grad_fn=<AddBackward0>)
+0.85600621
+tensor(0.8078, device='cuda:0', grad_fn=<AddBackward0>)
+0.85624146
+tensor(0.9150, device='cuda:0', grad_fn=<AddBackward0>)
+0.85592037
+tensor(0.9182, device='cuda:0', grad_fn=<AddBackward0>)
+0.85607880
+tensor(0.7862, device='cuda:0', grad_fn=<AddBackward0>)
+0.85593253
+tensor(0.9095, device='cuda:0', grad_fn=<AddBackward0>)
+0.85612482
+tensor(0.7859, device='cuda:0', grad_fn=<AddBackward0>)
+0.85618728
+tensor(0.6873, device='cuda:0', grad_fn=<AddBackward0>)
+0.85643959
+tensor(0.7474, device='cuda:0', grad_fn=<AddBackward0>)
+0.85659504
+tensor(0.7220, device='cuda:0', grad_fn=<AddBackward0>)
+0.85661614
+tensor(0.9792, device='cuda:0', grad_fn=<AddBackward0>)
+0.85694122
+tensor(0.8610, device='cuda:0', grad_fn=<AddBackward0>)
+0.85721612
+tensor(0.6806, device='cuda:0', grad_fn=<AddBackward0>)
+0.85686481
+tensor(0.6158, device='cuda:0', grad_fn=<AddBackward0>)
+INFO - ==> Top1: 67.386    Top5: 96.186    Loss: 0.972
+INFO - Created `MobileNetv2` model
+          Use pre-trained model = False
+INFO - Validation: 10000 samples (256 per mini-batch)
+********************pre-trained*****************
+validation quantized model on cpu
+INFO - Validation [0][   20/   40]   Loss 0.911755   Top1 70.019531   Top5 97.441406   BatchTime 0.119397
+INFO - Validation [0][   40/   40]   Loss 0.900712   Top1 69.850000   Top5 97.710000   BatchTime 0.087223
+Traceback (most recent call last):
+  File "main_slsq.py", line 79, in <module>
+    main()
+  File "main_slsq.py", line 64, in main
+    trainer.train_qat_slsq(train_loader, val_loader, test_loader,qat_model, teacher_model,criterion,
+  File "/home/ilena7440/LSQ_FakeQuant/trainer/process.py", line 63, in train_qat_slsq
+    v_top1, v_top5, v_loss = validate_slsq(val_loader, transformed_model.eval(), criterion, epoch, monitors, args, quantized = True, sparse_model = True)
+  File "/home/ilena7440/LSQ_FakeQuant/trainer/process.py", line 395, in validate_slsq
+    wandb.log(sparsity)
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/wandb/sdk/wandb_run.py", line 289, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/wandb/sdk/wandb_run.py", line 255, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/wandb/sdk/wandb_run.py", line 1591, in log
+    self._log(data=data, step=step, commit=commit)
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/wandb/sdk/wandb_run.py", line 1370, in _log
+    raise ValueError("wandb.log must be passed a dictionary")
+ValueError: wandb.log must be passed a dictionary
+features.0.conv.0 tensor(0.2951)
+features.0.conv.3 tensor(0.1367)
+features.1.conv.0 tensor(0.0501)
+features.1.conv.3 tensor(0.0799)
+features.1.conv.6 tensor(0.0816)
+features.2.conv.0 tensor(0.1513)
+features.2.conv.3 tensor(0.3380)
+features.2.conv.6 tensor(0.2164)
+features.3.conv.0 tensor(0.0741)
+features.3.conv.3 tensor(0.0787)
+features.3.conv.6 tensor(0.1085)
+features.4.conv.0 tensor(0.1283)
+features.4.conv.3 tensor(0.3131)
+features.4.conv.6 tensor(0.1860)
+features.5.conv.0 tensor(0.3887)
+features.5.conv.3 tensor(0.4369)
+features.5.conv.6 tensor(0.1017)
+features.6.conv.0 tensor(0.0506)
+features.6.conv.3 tensor(0.0712)
+features.6.conv.6 tensor(0.0811)
+features.7.conv.0 tensor(0.2572)
+features.7.conv.3 tensor(0.4508)
+features.7.conv.6 tensor(0.1852)
+features.8.conv.0 tensor(0.4437)
+features.8.conv.3 tensor(0.5373)
+features.8.conv.6 tensor(0.1355)
+features.9.conv.0 tensor(0.4952)
+features.9.conv.3 tensor(0.5686)
+features.9.conv.6 tensor(0.1229)
+features.10.conv.0 tensor(0.0900)
+features.10.conv.3 tensor(0.1215)
+features.10.conv.6 tensor(0.1054)
+features.11.conv.0 tensor(0.5567)
+features.11.conv.3 tensor(0.6462)
+features.11.conv.6 tensor(0.1766)
+features.12.conv.0 tensor(0.5855)
+features.12.conv.3 tensor(0.6721)
+features.12.conv.6 tensor(0.1516)
+features.13.conv.0 tensor(0.3591)
+features.13.conv.3 tensor(0.4603)
+features.13.conv.6 tensor(0.0892)
+features.14.conv.0 tensor(0.7376)
+features.14.conv.3 tensor(0.8181)
+features.14.conv.6 tensor(0.0778)
+features.15.conv.0 tensor(0.7647)
+features.15.conv.3 tensor(0.8391)
+features.15.conv.6 tensor(0.7404)
+features.16.conv.0 tensor(0.4716)
+features.16.conv.3 tensor(0.8201)
+features.16.conv.6 tensor(0.0558)
+conv.0 tensor(0.0627)
+tensor(674618.) 2188896.0

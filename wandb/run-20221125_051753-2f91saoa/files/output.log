@@ -1,0 +1,158 @@
+Files already downloaded and verified
+Files already downloaded and verified
+INFO - Dataset `cifar10` size:
+          Training Set = 50000 (196)
+        Validation Set = 10000 (40)
+              Test Set = 10000 (40)
+INFO - Created `MobileNetv2` model
+          Use pre-trained model = True
+/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/ao/quantization/observer.py:214: UserWarning: Please use quant_min and quant_max to specify the range for observers.                     reduce_range will be deprecated in a future release of PyTorch.
+  warnings.warn(
+INFO - Optimizer: AdamW (
+           Parameter Group 0
+               amsgrad: False
+               betas: (0.9, 0.999)
+               capturable: False
+               eps: 1e-08
+               foreach: None
+               lr: 0.0005
+               maximize: False
+               weight_decay: 0.0005
+           )
+INFO - LR scheduler: `CosineWarmRestartsLr`
+    Update per batch: True
+             Group 0: 0.0005
+********************pre-trained*****************
+*************hard_pruning_mode*******************
+INFO - >>>>>> Epoch   0
+INFO - Training: 50000 samples (256 per mini-batch)
+tensor(2.3131, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(2.2603, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(2.0686, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(1.8523, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(1.5174, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(1.5606, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(1.5005, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(1.4383, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(1.5754, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(1.4540, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(1.4119, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(1.4683, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(1.3868, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(1.3733, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(1.3888, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(1.2566, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(1.4677, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(1.2856, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(1.2005, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(1.1168, device='cuda:0', grad_fn=<NllLossBackward0>)
+INFO - Training [0][   20/  196]   Loss 1.544849   Top1 45.312500   Top5 88.671875   BatchTime 0.385387   LR 0.000500
+tensor(1.1808, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(1.1729, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(1.2438, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(1.3462, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(1.2388, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(1.2117, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(1.1801, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(1.1791, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(1.2185, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(1.1524, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(1.2499, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(1.1158, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(1.1281, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(1.1357, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(1.2500, device='cuda:0', grad_fn=<NllLossBackward0>)
+INFO - Training [0][   40/  196]   Loss 1.365107   Top1 52.060547   Top5 91.542969   BatchTime 0.319270   LR 0.000500
+tensor(1.1392, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(1.2080, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(1.1313, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(1.0729, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(1.1521, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(1.0032, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(1.0947, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(1.0121, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(1.0727, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(1.1181, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(1.0642, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(1.0551, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(0.9736, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(1.0672, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(1.0244, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(1.0440, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(1.0972, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(1.0735, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(0.9726, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(0.9651, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(0.9640, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(0.9676, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(1.1080, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(0.9529, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(1.0343, device='cuda:0', grad_fn=<NllLossBackward0>)
+INFO - Training [0][   60/  196]   Loss 1.254482   Top1 56.393229   Top5 93.046875   BatchTime 0.295556   LR 0.000499
+tensor(1.0115, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(1.0092, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(0.9368, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(0.9456, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(0.9997, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(0.9475, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(1.0067, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(0.9958, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(0.9568, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(0.9788, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(0.9300, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(0.9704, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(0.9362, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(0.9267, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(1.0676, device='cuda:0', grad_fn=<NllLossBackward0>)
+INFO - Training [0][   80/  196]   Loss 1.184049   Top1 58.955078   Top5 93.974609   BatchTime 0.284763   LR 0.000498
+tensor(0.9308, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(0.9790, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(1.0727, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(0.8036, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(1.0496, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(1.0205, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(0.8340, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(0.9742, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(0.9690, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(0.9190, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(0.9674, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(0.8499, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(0.7833, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(0.8832, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(1.0413, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(0.9450, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(1.0296, device='cuda:0', grad_fn=<NllLossBackward0>)
+Traceback (most recent call last):
+  File "main_slsq.py", line 79, in <module>
+    main()
+  File "main_slsq.py", line 75, in main
+    trainer.train_qat_slsq(train_loader, val_loader, test_loader, qat_model, teacher_model, criterion,
+  File "/home/ilena7440/LSQ_FakeQuant/trainer/process.py", line 51, in train_qat_slsq
+    t_top1, t_top5, t_loss = train_one_epoch_slsq(train_loader, qat_model,
+  File "/home/ilena7440/LSQ_FakeQuant/trainer/process.py", line 145, in train_one_epoch_slsq
+    outputs = qat_model(inputs)
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/ilena7440/LSQ_FakeQuant/model/mobilenet_cifar10.py", line 140, in forward
+    x = self.features(x)
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/nn/modules/container.py", line 204, in forward
+    input = module(input)
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/ilena7440/LSQ_FakeQuant/model/mobilenet_cifar10.py", line 95, in forward
+    return self.conv(x)
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/nn/modules/container.py", line 204, in forward
+    input = module(input)
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1211, in _call_impl
+    hook_result = hook(self, input, result)
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/ao/quantization/quantize.py", line 117, in _observer_forward_hook
+    return self.activation_post_process(output)
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/ilena7440/LSQ_FakeQuant/quan/observer.py", line 177, in forward
+    X = torch._fake_quantize_learnable_per_tensor_affine(
+KeyboardInterrupt

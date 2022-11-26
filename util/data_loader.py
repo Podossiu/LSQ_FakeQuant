@@ -5,8 +5,7 @@ import torch as t
 import torch.utils.data
 import torchvision as tv
 from sklearn.model_selection import train_test_split
-
-
+from .autoaugment import CIFAR10Policy, ImageNetPolicy
 def __balance_val_split(dataset, val_split=0.):
     targets = np.array(dataset.targets)
     train_indices, val_indices = train_test_split(
@@ -36,6 +35,7 @@ def load_data(cfg):
         train_transform = tv.transforms.Compose([
             tv.transforms.RandomResizedCrop(224),
             tv.transforms.RandomHorizontalFlip(),
+            ImageNetPolicy(),
             tv.transforms.ToTensor(),
             tv_normalize
         ])
@@ -53,16 +53,16 @@ def load_data(cfg):
 
     elif cfg.dataset == 'cifar10':
         train_transform = tv.transforms.Compose([
+            tv.transforms.RandomCrop(32, padding = 4, fill = 128),
             tv.transforms.RandomHorizontalFlip(),
-            tv.transforms.RandomCrop(32, 4),
+            CIFAR10Policy(),
             tv.transforms.ToTensor(),
-            tv_normalize
+            tv_normalize,
         ])
         val_transform = tv.transforms.Compose([
             tv.transforms.ToTensor(),
-            tv_normalize
+            tv_normalize,
         ])
-
         train_set = tv.datasets.CIFAR10(cfg.path, train=True, transform=train_transform, download=True)
         test_set = tv.datasets.CIFAR10(cfg.path, train=False, transform=val_transform, download=True)
 

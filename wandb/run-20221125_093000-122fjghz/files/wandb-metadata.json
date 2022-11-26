@@ -1,0 +1,24 @@
+{
+    "os": "Linux-4.15.0-167-generic-x86_64-with-glibc2.27",
+    "python": "3.8.0",
+    "heartbeatAt": "2022-11-25T09:30:00.869948",
+    "startedAt": "2022-11-25T09:30:00.278746",
+    "docker": null,
+    "gpu": "TITAN V",
+    "gpu_count": 2,
+    "cpu_count": 32,
+    "cuda": "10.0.130",
+    "args": [],
+    "state": "running",
+    "program": "main_slsq.py",
+    "codePath": "main_slsq.py",
+    "git": {
+        "remote": "https://github.com/Podossiu/LSQ_FakeQuant.git",
+        "commit": "bab3f170ad7cdf61e9ee77dbf362d69c259933fa"
+    },
+    "email": "ilena7440@naver.com",
+    "root": "/home/ilena7440/LSQ_FakeQuant",
+    "host": "eslab14",
+    "username": "ilena7440",
+    "executable": "/home/ilena7440/qilbertenv/bin/python3"
+}

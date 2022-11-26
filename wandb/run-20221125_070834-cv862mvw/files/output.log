@@ -1,0 +1,155 @@
+Files already downloaded and verified
+Files already downloaded and verified
+INFO - Dataset `cifar10` size:
+          Training Set = 50000 (196)
+        Validation Set = 10000 (40)
+              Test Set = 10000 (40)
+INFO - Created `MobileNetv2` model
+          Use pre-trained model = True
+/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/ao/quantization/observer.py:214: UserWarning: Please use quant_min and quant_max to specify the range for observers.                     reduce_range will be deprecated in a future release of PyTorch.
+  warnings.warn(
+INFO - Optimizer: AdamW (
+           Parameter Group 0
+               amsgrad: False
+               betas: (0.9, 0.999)
+               capturable: False
+               eps: 1e-08
+               foreach: None
+               lr: 0.005
+               maximize: False
+               weight_decay: 4e-05
+           )
+INFO - LR scheduler: `CosineWarmRestartsLr`
+    Update per batch: True
+             Group 0: 0.005
+********************pre-trained*****************
+*************soft_pruning_mode*******************
+INFO - >>>>>> Epoch   0
+INFO - Training: 50000 samples (256 per mini-batch)
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/nn/functional.py:1967: UserWarning: nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.
+  warnings.warn("nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.")
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.96119982
+0.96122324
+0.96054143
+0.96020657
+INFO - Training [0][   20/  196]   Loss 2.269094   Top1 13.183594   Top5 57.070312   BatchTime 0.336319   LR 0.004999
+0.96042407
+0.96038777
+0.96107459
+0.96086514
+0.96105361
+0.96136642
+0.96181667
+0.96146190
+0.96143979
+0.95979029
+0.95689952
+0.95376372
+0.95123839
+0.94831645
+0.94572717
+0.94367844
+0.94205284
+0.94270188
+0.94263816
+0.94141436
+0.94031280
+0.93872523
+INFO - Training [0][   40/  196]   Loss 2.290670   Top1 11.464844   Top5 53.544922   BatchTime 0.300538   LR 0.004995
+0.93679601
+0.93473953
+0.93278283
+0.93065602
+0.92907602
+0.92693377
+0.92450780
+0.92380744
+0.92208058
+0.92069292
+0.92037040
+0.92000467
+0.91881102
+0.91762096
+0.91677201
+0.91616338
+0.91553205
+0.91481286
+0.91385370
+0.91313916
+0.91284525
+0.91191751
+0.91128010
+INFO - Training [0][   60/  196]   Loss 2.297315   Top1 10.989583   Top5 52.454427   BatchTime 0.290664   LR 0.004989
+0.91093636
+0.91064197
+0.91036969
+0.90993023
+0.90965122
+0.90952325
+0.90899330
+0.90870506
+0.90856695
+0.90831715
+0.90831256
+0.90809399
+nan
+nan
+nan
+nan
+INFO - Training [0][   80/  196]   Loss nan   Top1 10.600586   Top5 51.577148   BatchTime 0.284576   LR 0.004980
+nan
+nan
+nan
+nan
+nan
+nan
+nan
+nan
+Traceback (most recent call last):
+nan
+nan
+nan
+  File "main_slsq.py", line 91, in <module>
+    main()
+  File "main_slsq.py", line 77, in main
+    trainer.train_qat_slsq(train_loader, val_loader, test_loader,qat_model, teacher_model,criterion,
+  File "/home/ilena7440/LSQ_FakeQuant/trainer/process.py", line 53, in train_qat_slsq
+    t_top1, t_top5, t_loss = train_one_epoch_slsq(train_loader, qat_model,
+  File "/home/ilena7440/LSQ_FakeQuant/trainer/process.py", line 154, in train_one_epoch_slsq
+    outputs = qat_model(inputs)
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/ilena7440/LSQ_FakeQuant/model/mobilenet_cifar10.py", line 140, in forward
+    x = self.features(x)
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/nn/modules/container.py", line 204, in forward
+    input = module(input)
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/ilena7440/LSQ_FakeQuant/model/mobilenet_cifar10.py", line 95, in forward
+    return self.conv(x)
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/nn/modules/container.py", line 204, in forward
+    input = module(input)
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1211, in _call_impl
+    hook_result = hook(self, input, result)
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/ao/quantization/quantize.py", line 117, in _observer_forward_hook
+    return self.activation_post_process(output)
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/ilena7440/LSQ_FakeQuant/quan/observer.py", line 162, in forward
+    if self.fake_quant_enabled[0] == 1:
+KeyboardInterrupt

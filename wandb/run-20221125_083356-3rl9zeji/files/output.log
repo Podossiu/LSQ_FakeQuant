@@ -1,0 +1,1465 @@
+Files already downloaded and verified
+Files already downloaded and verified
+INFO - Dataset `cifar10` size:
+          Training Set = 50000 (196)
+        Validation Set = 10000 (40)
+              Test Set = 10000 (40)
+********************pre-trained*****************
+INFO - Created `MobileNetv2` model
+          Use pre-trained model = True
+/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/ao/quantization/observer.py:214: UserWarning: Please use quant_min and quant_max to specify the range for observers.                     reduce_range will be deprecated in a future release of PyTorch.
+  warnings.warn(
+INFO - Optimizer: AdamW (
+           Parameter Group 0
+               amsgrad: False
+               betas: (0.9, 0.999)
+               capturable: False
+               eps: 1e-08
+               foreach: None
+               lr: 0.0005
+               maximize: False
+               weight_decay: 4e-05
+           )
+INFO - LR scheduler: `CosineWarmRestartsLr`
+    Update per batch: True
+             Group 0: 0.0005
+INFO - >>>>>> Epoch   0
+INFO - Training: 50000 samples (256 per mini-batch)
+*************soft_pruning_mode*******************
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/nn/functional.py:1967: UserWarning: nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.
+  warnings.warn("nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.")
+0.00000000
+0.00000000
+0.95377898
+0.95421904
+0.95426315
+0.95435917
+0.95426762
+0.95451313
+0.95454633
+0.95467234
+0.95486766
+INFO - Training [0][   20/  196]   Loss 1.912260   Top1 61.933594   Top5 90.332031   BatchTime 0.461598   LR 0.000500
+0.95495069
+0.95502168
+0.95497298
+0.95487350
+0.95480448
+0.95470947
+0.95464480
+0.95466191
+0.95459747
+0.95459712
+0.95448327
+0.95440358
+0.95432371
+0.95427459
+0.95429188
+0.95430833
+0.95439529
+0.95455527
+0.95460016
+INFO - Training [0][   40/  196]   Loss 1.825201   Top1 54.785156   Top5 88.857422   BatchTime 0.438499   LR 0.000500
+0.95466661
+0.95461810
+0.95450795
+0.95439869
+0.95422721
+0.95398319
+0.95364445
+0.95335758
+0.95311201
+0.95285147
+0.95250839
+0.95227468
+0.95206308
+0.95181912
+0.95154417
+0.95117605
+0.95078725
+0.95042777
+0.94999897
+0.94794464
+0.94733024
+0.94699478
+INFO - Training [0][   60/  196]   Loss 1.687487   Top1 54.348958   Top5 89.394531   BatchTime 0.447326   LR 0.000499
+0.94657671
+0.94609880
+0.94558579
+0.94518906
+0.94482815
+0.94434220
+0.94372964
+0.94349897
+0.94341898
+0.94331473
+0.94296086
+0.94255739
+0.94245678
+0.94230664
+0.94214630
+0.94216323
+0.94217545
+0.94200301
+0.94182497
+INFO - Training [0][   80/  196]   Loss 1.600592   Top1 54.497070   Top5 89.985352   BatchTime 0.462212   LR 0.000498
+0.94174892
+0.94154918
+0.94136047
+0.94112360
+0.94078404
+0.94054878
+0.94036597
+0.94000536
+0.93965876
+0.93934113
+0.93916863
+0.93888491
+0.93853503
+0.93805176
+0.93746883
+0.93581569
+0.93369263
+0.93292046
+0.93211651
+0.92999655
+INFO - Training [0][  100/  196]   Loss 1.531044   Top1 55.097656   Top5 90.566406   BatchTime 0.470708   LR 0.000497
+0.92734516
+0.92637938
+0.92583680
+0.92640823
+0.92606896
+0.92551100
+0.92523581
+0.92456973
+0.92361057
+0.92263514
+0.92143071
+0.92020476
+0.91872823
+0.91735154
+0.91645664
+0.91569924
+0.91457963
+0.91427052
+0.91391999
+INFO - Training [0][  120/  196]   Loss 1.477156   Top1 55.826823   Top5 91.038411   BatchTime 0.463371   LR 0.000495
+0.91360158
+0.91316307
+0.91248155
+0.91189444
+0.91145808
+0.91111553
+0.91078925
+0.91043925
+0.91014600
+0.90987670
+0.90964496
+0.90948814
+0.90902418
+0.90881205
+0.90836972
+0.90793902
+0.90760928
+0.90748090
+0.90754366
+INFO - Training [0][  140/  196]   Loss 1.438524   Top1 56.369978   Top5 91.397879   BatchTime 0.473227   LR 0.000494
+0.90730906
+0.90704012
+0.90677977
+0.90668178
+0.90643013
+0.90619546
+0.90609664
+0.90595490
+0.90562904
+0.90554202
+0.90539229
+0.90516752
+0.90512264
+0.90506881
+0.90501785
+0.90467793
+0.90428042
+0.90428787
+0.90417403
+0.90393186
+0.90303707
+INFO - Training [0][  160/  196]   Loss 1.410632   Top1 56.723633   Top5 91.572266   BatchTime 0.485020   LR 0.000492
+0.90255231
+0.90261841
+0.90259379
+0.90236306
+0.90235054
+0.90231776
+0.90212876
+0.90190190
+0.90103203
+0.90120274
+0.90137696
+0.90120095
+0.90085024
+0.90065306
+0.90040189
+0.90025741
+0.89998460
+0.89993411
+0.90021038
+0.90005696
+0.89935619
+0.89860278
+INFO - Training [0][  180/  196]   Loss 1.382325   Top1 57.167969   Top5 91.716580   BatchTime 0.493594   LR 0.000490
+0.89798325
+0.89761120
+0.89725071
+0.89692324
+0.89677042
+0.89655292
+0.89628214
+0.89601237
+0.89576203
+0.89553797
+0.89522862
+0.89495522
+0.89477342
+0.89456975
+0.89446521
+INFO - ==> Top1: 57.736    Top5: 91.918    Loss: 1.356
+INFO - Created `MobileNetv2` model
+          Use pre-trained model = False
+********************pre-trained*****************
+validation quantized model on cpu
+INFO - Validation: 10000 samples (256 per mini-batch)
+INFO - Validation [0][   20/   40]   Loss 0.838703   Top1 71.933594   Top5 97.910156   BatchTime 0.117771
+INFO - Validation [0][   40/   40]   Loss 0.839994   Top1 71.540000   Top5 97.790000   BatchTime 0.089472
+INFO - ==> Top1: 71.540    Top5: 97.790    Loss: 0.840
+INFO - ==> Sparsity : 0.157
+INFO - Scoreboard best 1 ==> Epoch [0][Top1: 71.540   Top5: 97.790]
+features.0.conv.0 tensor(0.5903)
+features.0.conv.3 tensor(0.3340)
+features.1.conv.0 tensor(0.0456)
+features.1.conv.3 tensor(0.0799)
+features.1.conv.6 tensor(0.0712)
+features.2.conv.0 tensor(0.0498)
+features.2.conv.3 tensor(0.0579)
+features.2.conv.6 tensor(0.0836)
+features.3.conv.0 tensor(0.2080)
+features.3.conv.3 tensor(0.0509)
+features.3.conv.6 tensor(0.0632)
+features.4.conv.0 tensor(0.0601)
+features.4.conv.3 tensor(0.0822)
+features.4.conv.6 tensor(0.1097)
+features.5.conv.0 tensor(0.0723)
+features.5.conv.3 tensor(0.0625)
+features.5.conv.6 tensor(0.1221)
+features.6.conv.0 tensor(0.0591)
+features.6.conv.3 tensor(0.0382)
+features.6.conv.6 tensor(0.0920)
+features.7.conv.0 tensor(0.0863)
+features.7.conv.3 tensor(0.0920)
+features.7.conv.6 tensor(0.1652)
+features.8.conv.0 tensor(0.0956)
+features.8.conv.3 tensor(0.0822)
+features.8.conv.6 tensor(0.1986)
+features.9.conv.0 tensor(0.1384)
+features.9.conv.3 tensor(0.0969)
+features.9.conv.6 tensor(0.1842)
+features.10.conv.0 tensor(0.0872)
+features.10.conv.3 tensor(0.0799)
+features.10.conv.6 tensor(0.1251)
+features.11.conv.0 tensor(0.1255)
+features.11.conv.3 tensor(0.0596)
+features.11.conv.6 tensor(0.2318)
+features.12.conv.0 tensor(0.3238)
+features.12.conv.3 tensor(0.0633)
+features.12.conv.6 tensor(0.2736)
+features.13.conv.0 tensor(0.1313)
+features.13.conv.3 tensor(0.0965)
+features.13.conv.6 tensor(0.2789)
+features.14.conv.0 tensor(0.0370)
+features.14.conv.3 tensor(0.0743)
+features.14.conv.6 tensor(0.1570)
+features.15.conv.0 tensor(0.6615)
+features.15.conv.3 tensor(0.0794)
+features.15.conv.6 tensor(0.1540)
+features.16.conv.0 tensor(0.0518)
+features.16.conv.3 tensor(0.0843)
+features.16.conv.6 tensor(0.1116)
+conv.0 tensor(0.0553)
+tensor(344506.) 2188896.0
+/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/onnx/_internal/jit_utils.py:258: UserWarning: The shape inference of prim::TupleConstruct type is missing, so it may result in wrong shape inference for the exported graph. Please consider adding it in symbolic function. (Triggered internally at ../torch/csrc/jit/passes/onnx/shape_type_inference.cpp:1884.)
+  _C._jit_pass_onnx_node_shape_type_inference(node, params_dict, opset_version)
+INFO - Saving checkpoint to:
+            Current: /home/ilena7440/LSQ_FakeQuant/out/88_20221125-083355/_checkpoint.pth.tar
+                Best: /home/ilena7440/LSQ_FakeQuant/out/88_20221125-083355/_best.pth.tar
+save quantized models...
+INFO - >>>>>> Epoch   1
+INFO - Training: 50000 samples (256 per mini-batch)
+0.89437497
+0.89428061
+0.89457166
+0.89536887
+0.89537895
+0.89516258
+0.89489520
+0.89457279
+0.89437449
+0.89424127
+0.89400136
+0.89376748
+0.89364636
+0.89357114
+0.89346492
+0.89329201
+0.89305365
+0.89275056
+0.89281273
+0.89256096
+INFO - Training [1][   20/  196]   Loss 1.105051   Top1 63.496094   Top5 93.496094   BatchTime 0.499205   LR 0.000485
+0.89213496
+0.89162242
+0.89111817
+0.89065224
+0.89021546
+0.88976222
+0.88947523
+0.88918608
+0.88892710
+0.88858032
+0.88824737
+0.88793981
+0.88760644
+0.88736242
+0.88710392
+0.88689017
+0.88660163
+0.88632035
+0.88612616
+0.88594949
+INFO - Training [1][   40/  196]   Loss 1.092056   Top1 63.906250   Top5 93.886719   BatchTime 0.454564   LR 0.000482
+0.88581616
+0.88571489
+0.88561064
+0.88546103
+0.88518047
+0.88490665
+0.88460159
+0.88426375
+0.88325149
+0.88297248
+0.88299191
+0.88281679
+0.88263714
+0.88234979
+0.88216668
+0.88219476
+0.88204408
+INFO - Training [1][   60/  196]   Loss 1.085922   Top1 63.860677   Top5 94.029948   BatchTime 0.423395   LR 0.000479
+0.88170898
+0.88160515
+0.88155818
+0.88127142
+0.88096797
+0.88079721
+0.88069618
+0.88049680
+0.88031346
+0.88012004
+0.87997502
+0.87989223
+0.87981468
+0.87981838
+0.87980449
+0.87941933
+0.87916565
+0.87899017
+0.87872785
+0.87855566
+0.87839937
+0.87806660
+0.87784517
+0.87770236
+INFO - Training [1][   80/  196]   Loss 1.076575   Top1 64.096680   Top5 94.287109   BatchTime 0.423361   LR 0.000476
+0.87766188
+0.87745541
+0.87719828
+0.87688160
+0.87662917
+0.87644094
+0.87629497
+0.87616211
+0.87602109
+0.87598062
+0.87589318
+0.87573540
+0.87554234
+0.87543356
+0.87525368
+0.87503803
+0.87486982
+0.87487155
+0.87492687
+0.87500644
+INFO - Training [1][  100/  196]   Loss 1.062127   Top1 64.605469   Top5 94.425781   BatchTime 0.417181   LR 0.000473
+0.87509501
+0.87519133
+0.87526989
+0.87539458
+0.87545741
+0.87569112
+0.87605804
+0.87782425
+0.87748551
+0.87733436
+0.87724030
+0.87707573
+0.87693983
+0.87670833
+0.87657231
+0.87645787
+0.87629735
+0.87604302
+0.87586701
+INFO - Training [1][  120/  196]   Loss 1.048844   Top1 64.983724   Top5 94.635417   BatchTime 0.419432   LR 0.000469
+0.87546885
+0.87505460
+0.87462956
+0.87416261
+0.87379318
+0.87337571
+0.87303168
+0.87284523
+0.87260312
+0.87243450
+0.87213629
+0.87185931
+0.87157911
+0.87122232
+0.87094772
+0.87065327
+0.87043381
+0.87014192
+0.86983812
+0.86969161
+0.86956733
+INFO - Training [1][  140/  196]   Loss 1.040522   Top1 65.306920   Top5 94.729353   BatchTime 0.425232   LR 0.000465
+0.86936975
+0.86915374
+0.86899465
+0.86881644
+0.86868429
+0.86848295
+0.86831456
+0.86829448
+0.86826378
+0.86822981
+0.86826187
+0.86832947
+0.86839265
+0.86850542
+0.86855066
+0.86863041
+0.86876154
+0.86883193
+INFO - Training [1][  160/  196]   Loss 1.035427   Top1 65.478516   Top5 94.765625   BatchTime 0.429199   LR 0.000460
+0.86893135
+0.86905372
+0.86915714
+0.86924183
+0.86939979
+0.86945748
+0.86954463
+0.86964530
+0.86962825
+0.86966592
+0.86955214
+0.86945385
+0.86944425
+0.87068146
+0.87073684
+0.87080806
+0.87071770
+0.87063056
+0.87053221
+0.87049580
+0.87054956
+0.87064081
+INFO - Training [1][  180/  196]   Loss 1.022285   Top1 65.944010   Top5 94.837240   BatchTime 0.432015   LR 0.000456
+0.87065107
+0.87058663
+0.87084830
+0.87101275
+0.87118965
+0.87118441
+0.87122566
+0.87123752
+0.87128013
+0.87129325
+0.87144697
+0.87154680
+0.87158072
+INFO - ==> Top1: 66.106    Top5: 94.898    Loss: 1.016
+INFO - Created `MobileNetv2` model
+          Use pre-trained model = False
+0.87183529
+0.87163949
+********************pre-trained*****************
+INFO - Validation: 10000 samples (256 per mini-batch)
+validation quantized model on cpu
+INFO - Validation [1][   20/   40]   Loss 0.603496   Top1 79.375000   Top5 98.671875   BatchTime 0.126498
+INFO - Validation [1][   40/   40]   Loss 0.599091   Top1 79.340000   Top5 98.810000   BatchTime 0.093159
+INFO - ==> Top1: 79.340    Top5: 98.810    Loss: 0.599
+INFO - ==> Sparsity : 0.173
+INFO - Scoreboard best 1 ==> Epoch [1][Top1: 79.340   Top5: 98.810]
+INFO - Scoreboard best 2 ==> Epoch [0][Top1: 71.540   Top5: 97.790]
+features.0.conv.0 tensor(0.5799)
+features.0.conv.3 tensor(0.3652)
+features.1.conv.0 tensor(0.0436)
+features.1.conv.3 tensor(0.0914)
+features.1.conv.6 tensor(0.0690)
+features.2.conv.0 tensor(0.0506)
+features.2.conv.3 tensor(0.0556)
+features.2.conv.6 tensor(0.0891)
+features.3.conv.0 tensor(0.1939)
+features.3.conv.3 tensor(0.0478)
+features.3.conv.6 tensor(0.0662)
+features.4.conv.0 tensor(0.0602)
+features.4.conv.3 tensor(0.0828)
+features.4.conv.6 tensor(0.1134)
+features.5.conv.0 tensor(0.0685)
+features.5.conv.3 tensor(0.0648)
+features.5.conv.6 tensor(0.1216)
+features.6.conv.0 tensor(0.0601)
+features.6.conv.3 tensor(0.0359)
+features.6.conv.6 tensor(0.0948)
+features.7.conv.0 tensor(0.0957)
+features.7.conv.3 tensor(0.0900)
+features.7.conv.6 tensor(0.2079)
+features.8.conv.0 tensor(0.1044)
+features.8.conv.3 tensor(0.0825)
+features.8.conv.6 tensor(0.2722)
+features.9.conv.0 tensor(0.1396)
+features.9.conv.3 tensor(0.0998)
+features.9.conv.6 tensor(0.2437)
+features.10.conv.0 tensor(0.0874)
+features.10.conv.3 tensor(0.0810)
+features.10.conv.6 tensor(0.1968)
+features.11.conv.0 tensor(0.1421)
+features.11.conv.3 tensor(0.0596)
+features.11.conv.6 tensor(0.3518)
+features.12.conv.0 tensor(0.3222)
+features.12.conv.3 tensor(0.0650)
+features.12.conv.6 tensor(0.3757)
+features.13.conv.0 tensor(0.1376)
+features.13.conv.3 tensor(0.0974)
+features.13.conv.6 tensor(0.3335)
+features.14.conv.0 tensor(0.0413)
+features.14.conv.3 tensor(0.0778)
+features.14.conv.6 tensor(0.1683)
+features.15.conv.0 tensor(0.6794)
+features.15.conv.3 tensor(0.0794)
+features.15.conv.6 tensor(0.1654)
+features.16.conv.0 tensor(0.0560)
+features.16.conv.3 tensor(0.0847)
+features.16.conv.6 tensor(0.1140)
+conv.0 tensor(0.0567)
+tensor(379400.) 2188896.0
+INFO - Saving checkpoint to:
+            Current: /home/ilena7440/LSQ_FakeQuant/out/88_20221125-083355/_checkpoint.pth.tar
+                Best: /home/ilena7440/LSQ_FakeQuant/out/88_20221125-083355/_best.pth.tar
+save quantized models...
+INFO - >>>>>> Epoch   2
+INFO - Training: 50000 samples (256 per mini-batch)
+0.87157297
+0.87143731
+0.87132800
+0.87107581
+0.87091029
+0.87073529
+0.87060964
+0.87045318
+0.87043679
+0.87042576
+0.87041014
+0.87030292
+0.87019598
+0.87028378
+0.87012279
+0.86996597
+0.86973304
+INFO - Training [2][   20/  196]   Loss 0.952513   Top1 67.890625   Top5 94.746094   BatchTime 0.516778   LR 0.000448
+0.86962223
+0.86950195
+0.86945164
+0.86939812
+0.86942428
+0.86944342
+0.86942309
+0.86943424
+0.86932594
+0.86912566
+0.86900884
+0.86888468
+0.86854732
+0.86810791
+0.86790693
+0.86783737
+0.86762619
+0.86725235
+0.86685383
+0.86660790
+0.86648536
+0.86634445
+0.86611432
+0.86596400
+INFO - Training [2][   40/  196]   Loss 0.944958   Top1 68.134766   Top5 95.166016   BatchTime 0.470989   LR 0.000443
+0.86585921
+0.86567599
+0.86544961
+0.86526901
+0.86512631
+0.86486274
+0.86461312
+0.86448276
+0.86423194
+0.86408186
+0.86398888
+0.86391938
+0.86373305
+0.86364633
+0.86368036
+0.86367941
+0.86353749
+INFO - Training [2][   60/  196]   Loss 0.937243   Top1 68.333333   Top5 95.462240   BatchTime 0.431554   LR 0.000437
+0.86348599
+0.86347675
+0.86350685
+0.86358106
+0.86363357
+0.86369359
+0.86366409
+0.86362225
+0.86365813
+0.86361885
+0.86373150
+0.86381000
+0.86393553
+0.86395127
+0.86405784
+0.86387765
+0.86384028
+0.86370897
+0.86361080
+INFO - Training [2][   80/  196]   Loss 0.927392   Top1 68.691406   Top5 95.712891   BatchTime 0.430136   LR 0.000432
+0.86352968
+0.86343920
+0.86305863
+0.86296529
+0.86298639
+0.86300182
+0.86291873
+0.86302185
+0.86385030
+0.86480284
+0.86459732
+0.86442477
+0.86418056
+0.86389756
+0.86361492
+0.86328381
+0.86303353
+0.86284781
+0.86280137
+0.86283505
+0.86292189
+INFO - Training [2][  100/  196]   Loss 0.915265   Top1 69.250000   Top5 95.757812   BatchTime 0.420499   LR 0.000426
+0.86303353
+0.86312503
+0.86322486
+0.86326599
+0.86323577
+0.86319429
+0.86319053
+0.86311930
+0.86305338
+0.86300659
+0.86293948
+0.86295342
+0.86297286
+0.86305124
+0.86317807
+0.86319500
+0.86320734
+0.86313820
+0.86308724
+0.86305517
+INFO - Training [2][  120/  196]   Loss 0.907844   Top1 69.557292   Top5 95.836589   BatchTime 0.417551   LR 0.000421
+0.86300218
+0.86295557
+0.86300987
+0.86294019
+0.86297268
+0.86287880
+0.86285394
+0.86271745
+0.86263132
+0.86247230
+0.86233860
+0.86228949
+0.86218196
+0.86214304
+0.86229372
+0.86241913
+0.86235839
+0.86241823
+0.86241430
+0.86244547
+0.86240125
+0.86235023
+INFO - Training [2][  140/  196]   Loss 0.904829   Top1 69.592634   Top5 95.898438   BatchTime 0.422208   LR 0.000415
+0.86226624
+0.86208606
+0.86190289
+0.86170715
+0.86166048
+0.86170924
+0.86147314
+0.86145604
+0.86133361
+0.86124110
+0.86117691
+0.86120725
+0.86130309
+0.86139029
+0.86156797
+0.86166281
+0.86171222
+0.86179179
+INFO - Training [2][  160/  196]   Loss 0.906434   Top1 69.599609   Top5 95.895996   BatchTime 0.426074   LR 0.000409
+0.86178517
+0.86181134
+0.86186814
+0.86188561
+0.86197686
+0.86201966
+0.86195475
+0.86202204
+0.86189377
+0.86172187
+0.86160648
+0.86146092
+0.86132580
+0.86119044
+0.86108953
+0.86097842
+0.86094332
+0.86076725
+0.86060804
+0.86041498
+0.86013842
+0.86000097
+INFO - Training [2][  180/  196]   Loss 0.901863   Top1 69.791667   Top5 95.868056   BatchTime 0.428491   LR 0.000402
+0.85986573
+0.85975975
+0.85955572
+0.85925764
+0.85881662
+0.85852623
+0.85831589
+0.85824013
+0.85816723
+0.85807437
+0.85786730
+0.85766757
+0.85743904
+0.85735327
+0.85717648
+0.85700345
+********************pre-trained*****************
+INFO - ==> Top1: 70.028    Top5: 95.902    Loss: 0.897
+INFO - Created `MobileNetv2` model
+          Use pre-trained model = False
+validation quantized model on cpu
+INFO - Validation: 10000 samples (256 per mini-batch)
+INFO - Validation [2][   20/   40]   Loss 0.710459   Top1 75.566406   Top5 98.222656   BatchTime 0.122574
+INFO - Validation [2][   40/   40]   Loss 0.717600   Top1 75.710000   Top5 98.270000   BatchTime 0.089077
+INFO - ==> Top1: 75.710    Top5: 98.270    Loss: 0.718
+INFO - ==> Sparsity : 0.186
+INFO - Scoreboard best 1 ==> Epoch [1][Top1: 79.340   Top5: 98.810]
+INFO - Scoreboard best 2 ==> Epoch [2][Top1: 75.710   Top5: 98.270]
+INFO - Scoreboard best 3 ==> Epoch [0][Top1: 71.540   Top5: 97.790]
+features.0.conv.0 tensor(0.5729)
+features.0.conv.3 tensor(0.3574)
+features.1.conv.0 tensor(0.0397)
+features.1.conv.3 tensor(0.0914)
+features.1.conv.6 tensor(0.0699)
+features.2.conv.0 tensor(0.0530)
+features.2.conv.3 tensor(0.0586)
+features.2.conv.6 tensor(0.0923)
+features.3.conv.0 tensor(0.1849)
+features.3.conv.3 tensor(0.0525)
+features.3.conv.6 tensor(0.0655)
+features.4.conv.0 tensor(0.0583)
+features.4.conv.3 tensor(0.0833)
+features.4.conv.6 tensor(0.1175)
+features.5.conv.0 tensor(0.0708)
+features.5.conv.3 tensor(0.0671)
+features.5.conv.6 tensor(0.1240)
+features.6.conv.0 tensor(0.0620)
+features.6.conv.3 tensor(0.0382)
+features.6.conv.6 tensor(0.0965)
+features.7.conv.0 tensor(0.0944)
+features.7.conv.3 tensor(0.0920)
+features.7.conv.6 tensor(0.2329)
+features.8.conv.0 tensor(0.1102)
+features.8.conv.3 tensor(0.0810)
+features.8.conv.6 tensor(0.2668)
+features.9.conv.0 tensor(0.1421)
+features.9.conv.3 tensor(0.1021)
+features.9.conv.6 tensor(0.2873)
+features.10.conv.0 tensor(0.0890)
+features.10.conv.3 tensor(0.0828)
+features.10.conv.6 tensor(0.1852)
+features.11.conv.0 tensor(0.1521)
+features.11.conv.3 tensor(0.0621)
+features.11.conv.6 tensor(0.3768)
+features.12.conv.0 tensor(0.4066)
+features.12.conv.3 tensor(0.0681)
+features.12.conv.6 tensor(0.4579)
+features.13.conv.0 tensor(0.1460)
+features.13.conv.3 tensor(0.0972)
+features.13.conv.6 tensor(0.3607)
+features.14.conv.0 tensor(0.0466)
+features.14.conv.3 tensor(0.0731)
+features.14.conv.6 tensor(0.1775)
+features.15.conv.0 tensor(0.7133)
+features.15.conv.3 tensor(0.0762)
+features.15.conv.6 tensor(0.1870)
+features.16.conv.0 tensor(0.0571)
+features.16.conv.3 tensor(0.0900)
+features.16.conv.6 tensor(0.1152)
+conv.0 tensor(0.0573)
+tensor(406440.) 2188896.0
+INFO - Saving checkpoint to:
+            Current: /home/ilena7440/LSQ_FakeQuant/out/88_20221125-083355/_checkpoint.pth.tar
+INFO - >>>>>> Epoch   3
+INFO - Training: 50000 samples (256 per mini-batch)
+0.85677212
+0.85663003
+0.85647666
+0.85645384
+0.85633206
+0.85615277
+0.85604239
+0.85593015
+0.85584134
+0.85569859
+0.85565042
+0.85559988
+0.85563874
+0.85646147
+0.85653073
+0.85640925
+INFO - Training [3][   20/  196]   Loss 0.900877   Top1 69.726562   Top5 95.937500   BatchTime 0.522142   LR 0.000391
+0.85627985
+0.85627770
+0.85632944
+0.85637039
+0.85634649
+0.85625625
+0.85609567
+0.85602051
+0.85601288
+0.85613847
+0.85617107
+0.85617203
+0.85618377
+0.85614288
+0.85617709
+0.85605115
+0.85596871
+0.85585326
+0.85567033
+0.85550714
+0.85535264
+0.85528076
+INFO - Training [3][   40/  196]   Loss 0.879545   Top1 70.468750   Top5 95.898438   BatchTime 0.487024   LR 0.000384
+0.85524243
+0.85529023
+0.85529292
+0.85529000
+0.85521889
+0.85531259
+0.85535568
+0.85534418
+0.85528970
+0.85524368
+0.85508084
+0.85500646
+0.85498208
+0.85492301
+0.85493839
+0.85491556
+0.85493684
+0.85498339
+0.85510296
+INFO - Training [3][   60/  196]   Loss 0.866331   Top1 71.009115   Top5 96.067708   BatchTime 0.496573   LR 0.000377
+0.85522294
+0.85535848
+0.85553885
+0.85568243
+0.85578382
+0.85592562
+0.85616553
+0.85636801
+0.85653979
+0.85670763
+0.85685199
+0.85695738
+0.85709524
+0.85720158
+0.85731775
+0.85738611
+0.85748214
+0.85755068
+0.85758770
+0.85761708
+0.85766309
+INFO - Training [3][   80/  196]   Loss 0.858591   Top1 71.391602   Top5 96.245117   BatchTime 0.467188   LR 0.000370
+0.85771316
+0.85770988
+0.85776240
+0.85783398
+0.85785586
+0.85782498
+0.85780627
+0.85780126
+0.85773915
+0.85762542
+0.85751921
+0.85739613
+0.85730594
+0.85727441
+0.85714453
+0.85692364
+0.85674822
+0.85656750
+0.85637081
+0.85597420
+INFO - Training [3][  100/  196]   Loss 0.849994   Top1 71.628906   Top5 96.273438   BatchTime 0.453606   LR 0.000363
+0.85571313
+0.85540670
+0.85518986
+0.85503346
+0.85476619
+0.85442954
+0.85419250
+0.85363346
+0.85281527
+0.85189474
+0.85089964
+0.85094810
+0.85080844
+0.85005528
+0.84901989
+0.84826201
+0.84711123
+0.84650713
+0.84583586
+0.84577692
+0.84521240
+INFO - Training [3][  120/  196]   Loss 0.839727   Top1 72.057292   Top5 96.412760   BatchTime 0.425322   LR 0.000356
+0.84450603
+0.84364313
+0.84260136
+0.84164286
+0.84054953
+0.84084874
+0.84100229
+0.84108531
+0.84102434
+0.84097219
+0.84079087
+0.84062862
+0.84036165
+0.84014827
+0.83988917
+0.83948284
+0.83907396
+0.83848387
+0.83783638
+0.83704811
+0.83689380
+INFO - Training [3][  140/  196]   Loss 0.835388   Top1 72.346540   Top5 96.481585   BatchTime 0.406465   LR 0.000348
+0.83688051
+0.83699852
+0.83710861
+0.83716720
+0.83720082
+0.83729303
+0.83740985
+0.83753228
+0.83755589
+0.83753932
+0.83765501
+0.83773196
+0.83771998
+0.83774316
+0.83780432
+0.83784282
+0.83788103
+INFO - Training [3][  160/  196]   Loss 0.837322   Top1 72.321777   Top5 96.445312   BatchTime 0.400191   LR 0.000341
+0.83791929
+0.83792889
+0.83785826
+0.83784467
+0.83782381
+0.83780652
+0.83778453
+0.83769119
+0.83767074
+0.83773637
+0.83774477
+0.83772969
+0.83775413
+0.83762324
+0.83752477
+0.83749074
+0.83752030
+0.83740103
+0.83731699
+0.83723497
+0.83724123
+INFO - Training [3][  180/  196]   Loss 0.834097   Top1 72.426215   Top5 96.432292   BatchTime 0.397336   LR 0.000333
+0.83726937
+0.83717042
+0.83702052
+0.83682114
+0.83659899
+0.83634681
+0.83618504
+0.83572310
+0.83509278
+0.83469814
+0.83418465
+0.83375889
+0.83413035
+0.83399147
+0.83452946
+0.83475542
+INFO - ==> Top1: 72.618    Top5: 96.480    Loss: 0.829
+INFO - Created `MobileNetv2` model
+          Use pre-trained model = False
+0.83500659
+0.83533186
+********************pre-trained*****************
+INFO - Validation: 10000 samples (256 per mini-batch)
+validation quantized model on cpu
+INFO - Validation [3][   20/   40]   Loss 0.625965   Top1 78.515625   Top5 98.769531   BatchTime 0.114303
+INFO - Validation [3][   40/   40]   Loss 0.611381   Top1 79.150000   Top5 98.920000   BatchTime 0.085179
+INFO - ==> Top1: 79.150    Top5: 98.920    Loss: 0.611
+INFO - ==> Sparsity : 0.251
+INFO - Scoreboard best 1 ==> Epoch [1][Top1: 79.340   Top5: 98.810]
+INFO - Scoreboard best 2 ==> Epoch [3][Top1: 79.150   Top5: 98.920]
+INFO - Scoreboard best 3 ==> Epoch [2][Top1: 75.710   Top5: 98.270]
+INFO - Saving checkpoint to:
+            Current: /home/ilena7440/LSQ_FakeQuant/out/88_20221125-083355/_checkpoint.pth.tar
+INFO - >>>>>> Epoch   4
+INFO - Training: 50000 samples (256 per mini-batch)
+features.0.conv.0 tensor(0.5660)
+features.0.conv.3 tensor(0.3672)
+features.1.conv.0 tensor(0.0430)
+features.1.conv.3 tensor(0.0891)
+features.1.conv.6 tensor(0.0720)
+features.2.conv.0 tensor(0.0535)
+features.2.conv.3 tensor(0.0594)
+features.2.conv.6 tensor(0.0926)
+features.3.conv.0 tensor(0.1800)
+features.3.conv.3 tensor(0.0540)
+features.3.conv.6 tensor(0.0688)
+features.4.conv.0 tensor(0.0614)
+features.4.conv.3 tensor(0.0810)
+features.4.conv.6 tensor(0.1169)
+features.5.conv.0 tensor(0.0692)
+features.5.conv.3 tensor(0.0648)
+features.5.conv.6 tensor(0.1356)
+features.6.conv.0 tensor(0.0625)
+features.6.conv.3 tensor(0.0376)
+features.6.conv.6 tensor(0.0975)
+features.7.conv.0 tensor(0.0960)
+features.7.conv.3 tensor(0.0917)
+features.7.conv.6 tensor(0.2224)
+features.8.conv.0 tensor(0.1132)
+features.8.conv.3 tensor(0.0816)
+features.8.conv.6 tensor(0.2730)
+features.9.conv.0 tensor(0.1484)
+features.9.conv.3 tensor(0.0969)
+features.9.conv.6 tensor(0.2994)
+features.10.conv.0 tensor(0.0902)
+features.10.conv.3 tensor(0.0816)
+features.10.conv.6 tensor(0.1787)
+features.11.conv.0 tensor(0.1710)
+features.11.conv.3 tensor(0.0619)
+features.11.conv.6 tensor(0.3962)
+features.12.conv.0 tensor(0.4296)
+features.12.conv.3 tensor(0.0666)
+features.12.conv.6 tensor(0.4799)
+features.13.conv.0 tensor(0.1586)
+features.13.conv.3 tensor(0.0976)
+features.13.conv.6 tensor(0.3874)
+features.14.conv.0 tensor(0.0511)
+features.14.conv.3 tensor(0.0699)
+features.14.conv.6 tensor(0.6332)
+features.15.conv.0 tensor(0.7228)
+features.15.conv.3 tensor(0.0744)
+features.15.conv.6 tensor(0.1879)
+features.16.conv.0 tensor(0.0572)
+features.16.conv.3 tensor(0.0897)
+features.16.conv.6 tensor(0.1161)
+conv.0 tensor(0.2082)
+tensor(548865.) 2188896.0
+0.83562696
+0.83573037
+0.83580446
+0.83584261
+0.83614975
+0.83633411
+0.83639562
+0.83652163
+0.83661675
+0.83673108
+0.83673668
+0.83671653
+0.83673626
+0.83672357
+0.83668792
+0.83672667
+0.83676821
+0.83675343
+INFO - Training [4][   20/  196]   Loss 0.827699   Top1 72.910156   Top5 95.898438   BatchTime 0.504496   LR 0.000320
+0.83669019
+0.83674943
+0.83685690
+0.83696228
+0.83699661
+0.83710092
+0.83722043
+0.83738804
+0.83755779
+0.83760005
+0.83767515
+0.83769852
+0.83759153
+0.83753353
+0.83743364
+0.83730584
+0.83717847
+0.83712113
+0.83715314
+0.83707041
+0.83695894
+0.83690256
+INFO - Training [4][   40/  196]   Loss 0.820509   Top1 72.958984   Top5 96.142578   BatchTime 0.478678   LR 0.000312
+0.83683908
+0.83689946
+0.83690786
+0.83691037
+0.83696681
+0.83696681
+0.83694917
+0.83690476
+0.83697218
+0.83718002
+0.83733195
+0.83746243
+0.83769220
+0.83786416
+0.83805460
+0.83808559
+0.83821541
+INFO - Training [4][   60/  196]   Loss 0.808779   Top1 73.300781   Top5 96.406250   BatchTime 0.477395   LR 0.000304
+0.83821535
+0.83831191
+0.83827019
+0.83829224
+0.83836716
+0.83841944
+0.83848774
+0.83849686
+0.83857435
+0.83860260
+0.83858293
+0.83863020
+0.83867908
+0.83872885
+0.83881718
+0.83884084
+0.83892125
+0.83889067
+0.83891934
+0.83889550
+0.83889353
+0.83885980
+0.83876765
+INFO - Training [4][   80/  196]   Loss 0.806555   Top1 73.457031   Top5 96.547852   BatchTime 0.467446   LR 0.000296
+0.83875215
+0.83866167
+0.83863014
+0.83862877
+0.83858538
+0.83857483
+0.83857447
+0.83857304
+0.83861935
+0.83867919
+0.83872843
+0.83875984
+0.83877212
+0.83881176
+0.83877593
+0.83879018
+0.83875102
+0.83874089
+INFO - Training [4][  100/  196]   Loss 0.794943   Top1 73.847656   Top5 96.625000   BatchTime 0.462938   LR 0.000289
+0.83863294
+0.83857870
+0.83851546
+0.83844650
+0.83844280
+0.83836216
+0.83831620
+0.83821774
+0.83809417
+0.83802277
+0.83805496
+0.83798993
+0.83784539
+0.83768946
+0.83756346
+0.83744919
+0.83736789
+0.83723474
+INFO - Training [4][  120/  196]   Loss 0.786324   Top1 74.156901   Top5 96.767578   BatchTime 0.458261   LR 0.000281
+0.83715081
+0.83705789
+0.83695436
+0.83693254
+0.83690315
+0.83684134
+0.83678192
+0.83668774
+0.83659315
+0.83656931
+0.83652097
+0.83651787
+0.83654529
+0.83662301
+0.83664083
+0.83654410
+0.83655173
+0.83650905
+0.83650482
+0.83643758
+0.83638811
+0.83632517
+0.83623415
+0.83612376
+0.83600765
+INFO - Training [4][  140/  196]   Loss 0.782300   Top1 74.310826   Top5 96.841518   BatchTime 0.450148   LR 0.000273
+0.83589357
+0.83575255
+0.83564931
+0.83557969
+0.83540672
+0.83523279
+0.83504319
+0.83492392
+0.83488601
+0.83481455
+0.83463591
+0.83431864
+0.83363104
+0.83268118
+0.83225137
+0.83146793
+0.83046389
+0.82902306
+INFO - Training [4][  160/  196]   Loss 0.787139   Top1 74.152832   Top5 96.823730   BatchTime 0.448555   LR 0.000265
+0.82813859
+0.82777888
+0.82678467
+0.82549423
+0.82392412
+0.82223409
+0.82056683
+0.82152432
+0.82264537
+0.82321024
+0.82368016
+0.82423121
+0.82437903
+0.82456106
+0.82472712
+0.82485425
+0.82473588
+0.82432300
+INFO - Training [4][  180/  196]   Loss 0.782857   Top1 74.223090   Top5 96.833767   BatchTime 0.448618   LR 0.000257
+0.82404876
+0.82424313
+0.82447189
+0.82470953
+0.82472187
+0.82469994
+0.82470793
+0.82471502
+0.82456207
+0.82457113
+0.82467699
+0.82471901
+0.82466590
+0.82467484
+0.82467133
+0.82452351
+0.82446033
+0.82438815
+INFO - ==> Top1: 74.382    Top5: 96.878    Loss: 0.778
+INFO - Created `MobileNetv2` model
+          Use pre-trained model = False
+0.82423896
+********************pre-trained*****************
+INFO - Validation: 10000 samples (256 per mini-batch)
+validation quantized model on cpu
+INFO - Validation [4][   20/   40]   Loss 0.577508   Top1 80.839844   Top5 98.671875   BatchTime 0.116907
+INFO - Validation [4][   40/   40]   Loss 0.567347   Top1 80.760000   Top5 98.930000   BatchTime 0.086417
+INFO - ==> Top1: 80.760    Top5: 98.930    Loss: 0.567
+INFO - ==> Sparsity : 0.259
+INFO - Scoreboard best 1 ==> Epoch [4][Top1: 80.760   Top5: 98.930]
+INFO - Scoreboard best 2 ==> Epoch [1][Top1: 79.340   Top5: 98.810]
+INFO - Scoreboard best 3 ==> Epoch [3][Top1: 79.150   Top5: 98.920]
+features.0.conv.0 tensor(0.5660)
+features.0.conv.3 tensor(0.3652)
+features.1.conv.0 tensor(0.0404)
+features.1.conv.3 tensor(0.0903)
+features.1.conv.6 tensor(0.0686)
+features.2.conv.0 tensor(0.0515)
+features.2.conv.3 tensor(0.0563)
+features.2.conv.6 tensor(0.0920)
+features.3.conv.0 tensor(0.1782)
+features.3.conv.3 tensor(0.0486)
+features.3.conv.6 tensor(0.0679)
+features.4.conv.0 tensor(0.0625)
+features.4.conv.3 tensor(0.0816)
+features.4.conv.6 tensor(0.1287)
+features.5.conv.0 tensor(0.0667)
+features.5.conv.3 tensor(0.0637)
+features.5.conv.6 tensor(0.1436)
+features.6.conv.0 tensor(0.0645)
+features.6.conv.3 tensor(0.0388)
+features.6.conv.6 tensor(0.0972)
+features.7.conv.0 tensor(0.0967)
+features.7.conv.3 tensor(0.0929)
+features.7.conv.6 tensor(0.2181)
+features.8.conv.0 tensor(0.1198)
+features.8.conv.3 tensor(0.0810)
+features.8.conv.6 tensor(0.2876)
+features.9.conv.0 tensor(0.1486)
+features.9.conv.3 tensor(0.0998)
+features.9.conv.6 tensor(0.3522)
+features.10.conv.0 tensor(0.0886)
+features.10.conv.3 tensor(0.0816)
+features.10.conv.6 tensor(0.1766)
+features.11.conv.0 tensor(0.1755)
+features.11.conv.3 tensor(0.0627)
+features.11.conv.6 tensor(0.4000)
+features.12.conv.0 tensor(0.4538)
+features.12.conv.3 tensor(0.0671)
+features.12.conv.6 tensor(0.4778)
+features.13.conv.0 tensor(0.1606)
+features.13.conv.3 tensor(0.0959)
+features.13.conv.6 tensor(0.3884)
+features.14.conv.0 tensor(0.4752)
+features.14.conv.3 tensor(0.0726)
+features.14.conv.6 tensor(0.6470)
+features.15.conv.0 tensor(0.7356)
+features.15.conv.3 tensor(0.0755)
+features.15.conv.6 tensor(0.2220)
+features.16.conv.0 tensor(0.0588)
+features.16.conv.3 tensor(0.0892)
+features.16.conv.6 tensor(0.1175)
+conv.0 tensor(0.0624)
+tensor(567927.) 2188896.0
+INFO - Saving checkpoint to:
+            Current: /home/ilena7440/LSQ_FakeQuant/out/88_20221125-083355/_checkpoint.pth.tar
+                Best: /home/ilena7440/LSQ_FakeQuant/out/88_20221125-083355/_best.pth.tar
+save quantized models...
+INFO - >>>>>> Epoch   5
+INFO - Training: 50000 samples (256 per mini-batch)
+0.82413751
+0.82405496
+0.82406479
+0.82397383
+0.82385486
+0.82381350
+0.82356977
+0.82351452
+0.82345814
+0.82337564
+0.82323158
+0.82305586
+0.82280874
+0.82266265
+0.82250518
+0.82227147
+0.82215744
+0.82199603
+0.82178128
+0.82162625
+INFO - Training [5][   20/  196]   Loss 0.755439   Top1 74.550781   Top5 96.914062   BatchTime 0.480336   LR 0.000242
+0.82150501
+0.82142413
+0.82134211
+0.82121468
+0.82101214
+Traceback (most recent call last):
+  File "main_slsq.py", line 91, in <module>
+    main()
+  File "main_slsq.py", line 77, in main
+    trainer.train_qat_slsq(train_loader, val_loader, test_loader,qat_model, teacher_model,criterion,
+  File "/home/ilena7440/LSQ_FakeQuant/trainer/process.py", line 53, in train_qat_slsq
+    t_top1, t_top5, t_loss = train_one_epoch_slsq(train_loader, qat_model,
+  File "/home/ilena7440/LSQ_FakeQuant/trainer/process.py", line 154, in train_one_epoch_slsq
+    outputs = qat_model(inputs)
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/ilena7440/LSQ_FakeQuant/model/mobilenet_cifar10.py", line 140, in forward
+    x = self.features(x)
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/nn/modules/container.py", line 204, in forward
+    input = module(input)
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/ilena7440/LSQ_FakeQuant/model/mobilenet_cifar10.py", line 93, in forward
+    return self.skip_add.add(x, self.conv(x))
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/nn/modules/container.py", line 204, in forward
+    input = module(input)
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1211, in _call_impl
+    hook_result = hook(self, input, result)
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/ao/quantization/quantize.py", line 117, in _observer_forward_hook
+    return self.activation_post_process(output)
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/ilena7440/LSQ_FakeQuant/quan/observer.py", line 153, in forward
+    if self.observer_enabled[0] == 1:
+KeyboardInterrupt

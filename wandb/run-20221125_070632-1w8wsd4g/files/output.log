@@ -1,0 +1,108 @@
+Files already downloaded and verified
+Files already downloaded and verified
+INFO - Dataset `cifar10` size:
+          Training Set = 50000 (196)
+        Validation Set = 10000 (40)
+              Test Set = 10000 (40)
+INFO - Created `MobileNetv2` model
+          Use pre-trained model = True
+/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/ao/quantization/observer.py:214: UserWarning: Please use quant_min and quant_max to specify the range for observers.                     reduce_range will be deprecated in a future release of PyTorch.
+  warnings.warn(
+INFO - Optimizer: AdamW (
+           Parameter Group 0
+               amsgrad: False
+               betas: (0.9, 0.999)
+               capturable: False
+               eps: 1e-08
+               foreach: None
+               lr: 0.005
+               maximize: False
+               weight_decay: 4e-05
+           )
+INFO - LR scheduler: `CosineWarmRestartsLr`
+    Update per batch: True
+             Group 0: 0.005
+********************pre-trained*****************
+*************soft_pruning_mode*******************
+INFO - >>>>>> Epoch   0
+INFO - Training: 50000 samples (256 per mini-batch)
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/nn/functional.py:1967: UserWarning: nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.
+  warnings.warn("nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.")
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.96119982
+0.96323150
+0.96086961
+0.96066242
+0.95466995
+0.93623269
+0.92369461
+0.91288400
+0.90453005
+0.89685833
+0.88730723
+0.87818974
+INFO - Training [0][   20/  196]   Loss 2.270308   Top1 13.398438   Top5 58.046875   BatchTime 0.336788   LR 0.004999
+0.86818975
+0.85712248
+0.84763259
+0.83976972
+0.83188438
+0.82382596
+0.81559467
+0.80706531
+0.79878819
+0.79047549
+0.78149480
+0.77236670
+0.76476747
+0.75587463
+0.74686486
+INFO - Training [0][   40/  196]   Loss 2.293048   Top1 11.914062   Top5 53.984375   BatchTime 0.308453   LR 0.004995
+0.73718035
+0.72884434
+0.72065216
+0.71223545
+0.69466603
+0.68263751
+0.67373520
+0.66502374
+0.65651184
+0.64692265
+0.63778120
+0.62805659
+0.61790353
+0.60650575
+nan
+nan
+nan
+nan
+nan
+nan
+nan
+INFO - Training [0][   60/  196]   Loss nan   Top1 11.412760   Top5 52.604167   BatchTime 0.298270   LR 0.004989
+Traceback (most recent call last):
+  File "main_slsq.py", line 91, in <module>
+    main()
+  File "main_slsq.py", line 77, in main
+    trainer.train_qat_slsq(train_loader, val_loader, test_loader,qat_model, teacher_model,criterion,
+  File "/home/ilena7440/LSQ_FakeQuant/trainer/process.py", line 53, in train_qat_slsq
+    t_top1, t_top5, t_loss = train_one_epoch_slsq(train_loader, qat_model,
+  File "/home/ilena7440/LSQ_FakeQuant/trainer/process.py", line 186, in train_one_epoch_slsq
+    loss.backward()
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/_tensor.py", line 487, in backward
+    torch.autograd.backward(
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/autograd/__init__.py", line 197, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+KeyboardInterrupt
+nan
+nan

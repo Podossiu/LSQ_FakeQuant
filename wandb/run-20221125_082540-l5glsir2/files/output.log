@@ -1,0 +1,18 @@
+
+Files already downloaded and verified
+Files already downloaded and verified
+********************pre-trained*****************
+INFO - Dataset `cifar10` size:
+          Training Set = 50000 (196)
+        Validation Set = 10000 (40)
+              Test Set = 10000 (40)
+INFO - Created `MobileNetv2` model
+          Use pre-trained model = True
+/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/ao/quantization/observer.py:214: UserWarning: Please use quant_min and quant_max to specify the range for observers.                     reduce_range will be deprecated in a future release of PyTorch.
+  warnings.warn(
+Traceback (most recent call last):
+  File "main_slsq.py", line 92, in <module>
+    main()
+  File "main_slsq.py", line 73, in main
+    trainer.validate(val_loader, teacher_model, criterion, -1, monitors, args, quantized = False)
+AttributeError: module 'trainer' has no attribute 'validate'

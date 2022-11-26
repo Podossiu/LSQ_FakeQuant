@@ -1,0 +1,54 @@
+
+Files already downloaded and verified
+Files already downloaded and verified
+********************pre-trained*****************
+INFO - Dataset `cifar10` size:
+          Training Set = 50000 (196)
+        Validation Set = 10000 (40)
+              Test Set = 10000 (40)
+INFO - Created `MobileNetv2` model
+          Use pre-trained model = True
+/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/ao/quantization/observer.py:214: UserWarning: Please use quant_min and quant_max to specify the range for observers.                     reduce_range will be deprecated in a future release of PyTorch.
+  warnings.warn(
+INFO - Validation: 10000 samples (256 per mini-batch)
+INFO - Validation [   20/   40]   Loss 1.525223   Top1 49.824219   Top5 89.375000   BatchTime 0.147375
+INFO - Validation [   40/   40]   Loss 1.520558   Top1 50.160000   Top5 89.390000   BatchTime 0.082243
+INFO - ==> Top1: 50.160    Top5: 89.390    Loss: 1.521
+INFO - Optimizer: AdamW (
+           Parameter Group 0
+               amsgrad: False
+               betas: (0.9, 0.999)
+               capturable: False
+               eps: 1e-08
+               foreach: None
+               lr: 0.0005
+               maximize: False
+               weight_decay: 4e-05
+           )
+INFO - LR scheduler: `CosineWarmRestartsLr`
+    Update per batch: True
+             Group 0: 0.0005
+*************soft_pruning_mode*******************
+INFO - >>>>>> Epoch   0
+INFO - Training: 50000 samples (256 per mini-batch)
+/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/nn/functional.py:1967: UserWarning: nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.
+  warnings.warn("nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.")
+0.00000000
+0.95034587
+0.86468178
+0.86233479
+0.85184985
+Traceback (most recent call last):
+  File "main_slsq.py", line 94, in <module>
+    main()
+  File "main_slsq.py", line 80, in main
+    trainer.train_qat_slsq(train_loader, val_loader, test_loader,qat_model, teacher_model,criterion,
+  File "/home/ilena7440/LSQ_FakeQuant/trainer/process.py", line 50, in train_qat_slsq
+    t_top1, t_top5, t_loss = train_one_epoch_slsq_with_distillation(train_loader, qat_model, teacher_model,
+  File "/home/ilena7440/LSQ_FakeQuant/trainer/process.py", line 269, in train_one_epoch_slsq_with_distillation
+    loss.backward()
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/_tensor.py", line 487, in backward
+    torch.autograd.backward(
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/autograd/__init__.py", line 197, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+KeyboardInterrupt

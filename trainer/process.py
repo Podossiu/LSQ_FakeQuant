@@ -6,6 +6,7 @@ from quan import *
 import torch
 from util import AverageMeter, save_checkpoint_quantized, transform_model
 from model.slsq_util import get_slsq_static_quant_module_mappings
+import torch.cuda.amp as amp
 import wandb
 
 __all__ = ['train_qat', 'validate', 'PerformanceScoreboard', 'train_qat_slsq']
@@ -123,6 +124,9 @@ def train_one_epoch_slsq(train_loader, qat_model, criterion, optimizer, lr_sched
         qat_model.apply(hard_pruning_mode)
     else:
         qat_model.apply(soft_pruning_mode)
+    
+    scaler = amp.GradScaler(enabled = args.apex)
+
     losses = AverageMeter()
     top1 = AverageMeter()
     top5 = AverageMeter()
@@ -143,8 +147,13 @@ def train_one_epoch_slsq(train_loader, qat_model, criterion, optimizer, lr_sched
         inputs = inputs.to(args.device_type)
         targets = targets.to(args.device_type)
 
-        outputs = qat_model(inputs)
+        if args.apex:
+            with amp.autocast():
+                outputs = qat_model(inputs)
+        else:
+            outputs = qat_model(inputs)
         loss = criterion(outputs, targets)
+
         if not hard_pruning:
             masking_loss = 0.
             masking_loss_list = []
@@ -156,7 +165,7 @@ def train_one_epoch_slsq(train_loader, qat_model, criterion, optimizer, lr_sched
             print("{:.8f}".format(masking_loss))
             masking_loss = masking_loss * args.lamb
             loss = loss + masking_loss
-        print(loss)
+
         acc1, acc5 = accuracy(outputs.data, targets.data, topk=(1, 5))
         losses.update(loss.item(), inputs.size(0))
         top1.update(acc1.item(), inputs.size(0))
@@ -167,10 +176,15 @@ def train_one_epoch_slsq(train_loader, qat_model, criterion, optimizer, lr_sched
 
         if lr_scheduler is not None:
             lr_scheduler.step(epoch=epoch, batch=batch_idx)
-        
+
         optimizer.zero_grad()
-        loss.backward()
-        optimizer.step()
+        if args.apex:
+            scaler.scale(loss).backward()
+            scaler.step(optimizer)
+            scaler.update()
+        else:
+            loss.backward()
+            optimizer.step()
         
 
         batch_time.update(time.time() - end_time)
@@ -392,8 +406,9 @@ def validate_slsq(data_loader, model, criterion, epoch, monitors, args, quantize
                     print(n, sparsity)
             sparsity = total_zero / total_numel 
             print(total_zero, total_numel)
-    wandb.log(sparsity)
-    wandb.log(top1.avg)
+    import wandb;
+    wandb.log({"sparsity" : sparsity})
+    wandb.log({"v_top1":top1.avg})
     logger.info('==> Top1: %.3f    Top5: %.3f    Loss: %.3f\n', top1.avg, top5.avg, losses.avg)
     logger.info('==> Sparsity : %.3f\n', sparsity)
     return top1.avg, top5.avg, losses.avg

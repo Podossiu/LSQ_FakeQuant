@@ -1,0 +1,53 @@
+2022-11-25 09:19:48,762 - INFO  - Log file for this run: /home/ilena7440/LSQ_FakeQuant/out/88_20221125-091948/88_20221125-091948.log
+2022-11-25 09:19:52,830 - INFO  - Dataset `cifar10` size:
+          Training Set = 50000 (196)
+        Validation Set = 10000 (40)
+              Test Set = 10000 (40)
+2022-11-25 09:19:54,594 - INFO  - Created `MobileNetv2` model
+          Use pre-trained model = True
+2022-11-25 09:19:55,261 - INFO  - Optimizer: AdamW (
+           Parameter Group 0
+               amsgrad: False
+               betas: (0.9, 0.999)
+               capturable: False
+               eps: 1e-08
+               foreach: None
+               lr: 0.005
+               maximize: False
+               weight_decay: 4e-05
+           )
+2022-11-25 09:19:55,261 - INFO  - LR scheduler: `CosineWarmRestartsLr`
+    Update per batch: True
+             Group 0: 0.005
+
+2022-11-25 09:19:55,560 - INFO  - >>>>>> Epoch   0
+2022-11-25 09:19:55,562 - INFO  - Training: 50000 samples (256 per mini-batch)
+2022-11-25 09:20:04,693 - INFO  - Training [0][   20/  196]   Loss 1.617165   Top1 53.769531   Top5 89.238281   BatchTime 0.456481   LR 0.004999   
+2022-11-25 09:20:12,655 - INFO  - Training [0][   40/  196]   Loss 1.543151   Top1 52.753906   Top5 89.638672   BatchTime 0.427218   LR 0.004995   
+2022-11-25 09:20:20,870 - INFO  - Training [0][   60/  196]   Loss 1.453205   Top1 54.511719   Top5 90.677083   BatchTime 0.421763   LR 0.004989   
+2022-11-25 09:20:28,929 - INFO  - Training [0][   80/  196]   Loss 1.382449   Top1 56.533203   Top5 91.640625   BatchTime 0.417060   LR 0.004980   
+2022-11-25 09:20:37,101 - INFO  - Training [0][  100/  196]   Loss 1.326930   Top1 58.218750   Top5 92.316406   BatchTime 0.415371   LR 0.004968   
+2022-11-25 09:20:44,903 - INFO  - Training [0][  120/  196]   Loss 1.280253   Top1 59.798177   Top5 92.822266   BatchTime 0.411155   LR 0.004954   
+2022-11-25 09:20:53,009 - INFO  - Training [0][  140/  196]   Loss 1.248320   Top1 60.856585   Top5 93.180804   BatchTime 0.410318   LR 0.004938   
+2022-11-25 09:21:00,694 - INFO  - Training [0][  160/  196]   Loss 1.226075   Top1 61.542969   Top5 93.383789   BatchTime 0.407063   LR 0.004919   
+2022-11-25 09:21:06,981 - INFO  - Training [0][  180/  196]   Loss nan   Top1 60.249566   Top5 92.120226   BatchTime 0.396757   LR 0.004897   
+2022-11-25 09:21:11,418 - INFO  - ==> Top1: 56.326    Top5: 88.796    Loss: nan
+
+2022-11-25 09:21:11,605 - INFO  - Created `MobileNetv2` model
+          Use pre-trained model = False
+2022-11-25 09:21:13,210 - INFO  - Validation: 10000 samples (256 per mini-batch)
+2022-11-25 09:21:15,375 - INFO  - Validation [0][   20/   40]   Loss 5.589599   Top1 10.253906   Top5 50.488281   BatchTime 0.108195   
+2022-11-25 09:21:16,389 - INFO  - Validation [0][   40/   40]   Loss 5.617839   Top1 10.000000   Top5 50.000000   BatchTime 0.079454   
+2022-11-25 09:21:16,590 - INFO  - ==> Top1: 10.000    Top5: 50.000    Loss: 5.618
+
+2022-11-25 09:21:16,590 - INFO  - ==> Sparsity : 0.153
+
+2022-11-25 09:21:16,591 - INFO  - Scoreboard best 1 ==> Epoch [0][Top1: 10.000   Top5: 50.000]
+2022-11-25 09:21:22,036 - INFO  - Saving checkpoint to:
+            Current: /home/ilena7440/LSQ_FakeQuant/out/88_20221125-091948/_checkpoint.pth.tar
+                Best: /home/ilena7440/LSQ_FakeQuant/out/88_20221125-091948/_best.pth.tar
+save quantized models...
+2022-11-25 09:21:22,038 - INFO  - >>>>>> Epoch   1
+2022-11-25 09:21:22,040 - INFO  - Training: 50000 samples (256 per mini-batch)
+2022-11-25 09:21:30,560 - INFO  - Training [1][   20/  196]   Loss nan   Top1 9.316406   Top5 49.082031   BatchTime 0.425837   LR 0.004853   
+2022-11-25 09:21:37,500 - INFO  - Training [1][   40/  196]   Loss nan   Top1 9.667969   Top5 49.667969   BatchTime 0.386422   LR 0.004825   

@@ -1,0 +1,27 @@
+2022-11-25 07:07:21,149 - INFO  - Log file for this run: /home/ilena7440/LSQ_FakeQuant/out/88_20221125-070721/88_20221125-070721.log
+2022-11-25 07:07:25,598 - INFO  - Dataset `cifar10` size:
+          Training Set = 50000 (196)
+        Validation Set = 10000 (40)
+              Test Set = 10000 (40)
+2022-11-25 07:07:25,717 - INFO  - Created `MobileNetv2` model
+          Use pre-trained model = True
+2022-11-25 07:07:26,471 - INFO  - Optimizer: AdamW (
+           Parameter Group 0
+               amsgrad: False
+               betas: (0.9, 0.999)
+               capturable: False
+               eps: 1e-08
+               foreach: None
+               lr: 0.0005
+               maximize: False
+               weight_decay: 4e-05
+           )
+2022-11-25 07:07:26,471 - INFO  - LR scheduler: `CosineWarmRestartsLr`
+    Update per batch: True
+             Group 0: 0.0005
+
+2022-11-25 07:07:28,268 - INFO  - >>>>>> Epoch   0
+2022-11-25 07:07:28,271 - INFO  - Training: 50000 samples (256 per mini-batch)
+2022-11-25 07:07:34,871 - INFO  - Training [0][   20/  196]   Loss 1.752371   Top1 38.867188   Top5 84.003906   BatchTime 0.329879   LR 0.000500   
+2022-11-25 07:07:40,151 - INFO  - Training [0][   40/  196]   Loss 1.683268   Top1 41.367188   Top5 85.673828   BatchTime 0.296958   LR 0.000500   
+2022-11-25 07:07:45,161 - INFO  - Training [0][   60/  196]   Loss 1.600473   Top1 44.127604   Top5 87.213542   BatchTime 0.281461   LR 0.000499   

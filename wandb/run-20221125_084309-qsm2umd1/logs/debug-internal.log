@@ -1,0 +1,103 @@
+2022-11-25 08:43:09,301 INFO    StreamThr :20788 [internal.py:wandb_internal():90] W&B internal server running at pid: 20788, started at: 2022-11-25 08:43:09.301011
+2022-11-25 08:43:09,304 DEBUG   HandlerThread:20788 [handler.py:handle_request():141] handle_request: status
+2022-11-25 08:43:09,305 DEBUG   SenderThread:20788 [sender.py:send_request():316] send_request: status
+2022-11-25 08:43:09,307 DEBUG   SenderThread:20788 [sender.py:send():302] send: header
+2022-11-25 08:43:09,307 INFO    WriterThread:20788 [datastore.py:open_for_write():75] open: /home/ilena7440/LSQ_FakeQuant/wandb/run-20221125_084309-qsm2umd1/run-qsm2umd1.wandb
+2022-11-25 08:43:09,317 DEBUG   SenderThread:20788 [sender.py:send():302] send: run
+2022-11-25 08:43:09,782 DEBUG   HandlerThread:20788 [handler.py:handle_request():141] handle_request: check_version
+2022-11-25 08:43:09,785 INFO    SenderThread:20788 [dir_watcher.py:__init__():216] watching files in: /home/ilena7440/LSQ_FakeQuant/wandb/run-20221125_084309-qsm2umd1/files
+2022-11-25 08:43:09,785 INFO    SenderThread:20788 [sender.py:_start_run_threads():913] run started: qsm2umd1 with start time 1669365789.292729
+2022-11-25 08:43:09,785 DEBUG   SenderThread:20788 [sender.py:send():302] send: summary
+2022-11-25 08:43:09,785 INFO    SenderThread:20788 [sender.py:_save_file():1156] saving file wandb-summary.json with policy end
+2022-11-25 08:43:09,786 DEBUG   SenderThread:20788 [sender.py:send_request():316] send_request: check_version
+2022-11-25 08:43:09,860 DEBUG   HandlerThread:20788 [handler.py:handle_request():141] handle_request: run_start
+2022-11-25 08:43:09,867 DEBUG   HandlerThread:20788 [meta.py:__init__():35] meta init
+2022-11-25 08:43:09,867 DEBUG   HandlerThread:20788 [meta.py:__init__():50] meta init done
+2022-11-25 08:43:09,867 DEBUG   HandlerThread:20788 [meta.py:probe():216] probe
+2022-11-25 08:43:09,874 DEBUG   HandlerThread:20788 [meta.py:_setup_git():206] setup git
+2022-11-25 08:43:09,893 DEBUG   HandlerThread:20788 [meta.py:_setup_git():213] setup git done
+2022-11-25 08:43:09,893 DEBUG   HandlerThread:20788 [meta.py:_save_pip():54] save pip
+2022-11-25 08:43:09,894 DEBUG   HandlerThread:20788 [meta.py:_save_pip():68] save pip done
+2022-11-25 08:43:09,894 DEBUG   HandlerThread:20788 [meta.py:probe():254] probe done
+2022-11-25 08:43:10,120 DEBUG   SenderThread:20788 [sender.py:send():302] send: files
+2022-11-25 08:43:10,121 INFO    SenderThread:20788 [sender.py:_save_file():1156] saving file wandb-metadata.json with policy now
+2022-11-25 08:43:10,130 DEBUG   HandlerThread:20788 [handler.py:handle_request():141] handle_request: stop_status
+2022-11-25 08:43:10,130 DEBUG   SenderThread:20788 [sender.py:send_request():316] send_request: stop_status
+2022-11-25 08:43:10,256 DEBUG   HandlerThread:20788 [handler.py:handle_request():141] handle_request: poll_exit
+2022-11-25 08:43:10,343 DEBUG   SenderThread:20788 [sender.py:send():302] send: telemetry
+2022-11-25 08:43:10,346 DEBUG   SenderThread:20788 [sender.py:send():302] send: exit
+2022-11-25 08:43:10,346 INFO    SenderThread:20788 [sender.py:send_exit():438] handling exit code: 255
+2022-11-25 08:43:10,346 INFO    SenderThread:20788 [sender.py:send_exit():440] handling runtime: 0
+2022-11-25 08:43:10,347 INFO    SenderThread:20788 [sender.py:_save_file():1156] saving file wandb-summary.json with policy end
+2022-11-25 08:43:10,347 INFO    SenderThread:20788 [sender.py:send_exit():446] send defer
+2022-11-25 08:43:10,347 DEBUG   SenderThread:20788 [sender.py:send_request():316] send_request: poll_exit
+2022-11-25 08:43:10,348 DEBUG   HandlerThread:20788 [handler.py:handle_request():141] handle_request: defer
+2022-11-25 08:43:10,348 INFO    HandlerThread:20788 [handler.py:handle_request_defer():164] handle defer: 0
+2022-11-25 08:43:10,349 DEBUG   SenderThread:20788 [sender.py:send_request():316] send_request: defer
+2022-11-25 08:43:10,349 INFO    SenderThread:20788 [sender.py:send_request_defer():455] handle sender defer: 0
+2022-11-25 08:43:10,349 INFO    SenderThread:20788 [sender.py:transition_state():459] send defer: 1
+2022-11-25 08:43:10,352 DEBUG   HandlerThread:20788 [handler.py:handle_request():141] handle_request: defer
+2022-11-25 08:43:10,354 INFO    HandlerThread:20788 [handler.py:handle_request_defer():164] handle defer: 1
+2022-11-25 08:43:10,428 DEBUG   SenderThread:20788 [sender.py:send_request():316] send_request: defer
+2022-11-25 08:43:10,428 INFO    SenderThread:20788 [sender.py:send_request_defer():455] handle sender defer: 1
+2022-11-25 08:43:10,428 INFO    SenderThread:20788 [sender.py:transition_state():459] send defer: 2
+2022-11-25 08:43:10,429 DEBUG   SenderThread:20788 [sender.py:send():302] send: stats
+2022-11-25 08:43:10,429 DEBUG   HandlerThread:20788 [handler.py:handle_request():141] handle_request: defer
+2022-11-25 08:43:10,429 INFO    HandlerThread:20788 [handler.py:handle_request_defer():164] handle defer: 2
+2022-11-25 08:43:10,430 DEBUG   SenderThread:20788 [sender.py:send_request():316] send_request: defer
+2022-11-25 08:43:10,430 INFO    SenderThread:20788 [sender.py:send_request_defer():455] handle sender defer: 2
+2022-11-25 08:43:10,430 INFO    SenderThread:20788 [sender.py:transition_state():459] send defer: 3
+2022-11-25 08:43:10,430 DEBUG   HandlerThread:20788 [handler.py:handle_request():141] handle_request: defer
+2022-11-25 08:43:10,430 INFO    HandlerThread:20788 [handler.py:handle_request_defer():164] handle defer: 3
+2022-11-25 08:43:10,430 DEBUG   SenderThread:20788 [sender.py:send_request():316] send_request: defer
+2022-11-25 08:43:10,431 INFO    SenderThread:20788 [sender.py:send_request_defer():455] handle sender defer: 3
+2022-11-25 08:43:10,431 INFO    SenderThread:20788 [sender.py:transition_state():459] send defer: 4
+2022-11-25 08:43:10,431 DEBUG   HandlerThread:20788 [handler.py:handle_request():141] handle_request: defer
+2022-11-25 08:43:10,431 INFO    HandlerThread:20788 [handler.py:handle_request_defer():164] handle defer: 4
+2022-11-25 08:43:10,431 DEBUG   SenderThread:20788 [sender.py:send():302] send: summary
+2022-11-25 08:43:10,432 INFO    SenderThread:20788 [sender.py:_save_file():1156] saving file wandb-summary.json with policy end
+2022-11-25 08:43:10,432 DEBUG   SenderThread:20788 [sender.py:send_request():316] send_request: defer
+2022-11-25 08:43:10,432 INFO    SenderThread:20788 [sender.py:send_request_defer():455] handle sender defer: 4
+2022-11-25 08:43:10,432 INFO    SenderThread:20788 [sender.py:transition_state():459] send defer: 5
+2022-11-25 08:43:10,433 DEBUG   HandlerThread:20788 [handler.py:handle_request():141] handle_request: defer
+2022-11-25 08:43:10,433 INFO    HandlerThread:20788 [handler.py:handle_request_defer():164] handle defer: 5
+2022-11-25 08:43:10,433 DEBUG   SenderThread:20788 [sender.py:send_request():316] send_request: defer
+2022-11-25 08:43:10,433 INFO    SenderThread:20788 [sender.py:send_request_defer():455] handle sender defer: 5
+2022-11-25 08:43:10,449 DEBUG   HandlerThread:20788 [handler.py:handle_request():141] handle_request: poll_exit
+2022-11-25 08:43:10,670 INFO    SenderThread:20788 [sender.py:transition_state():459] send defer: 6
+2022-11-25 08:43:10,671 DEBUG   SenderThread:20788 [sender.py:send_request():316] send_request: poll_exit
+2022-11-25 08:43:10,671 DEBUG   HandlerThread:20788 [handler.py:handle_request():141] handle_request: defer
+2022-11-25 08:43:10,671 INFO    HandlerThread:20788 [handler.py:handle_request_defer():164] handle defer: 6
+2022-11-25 08:43:10,672 DEBUG   SenderThread:20788 [sender.py:send_request():316] send_request: defer
+2022-11-25 08:43:10,672 INFO    SenderThread:20788 [sender.py:send_request_defer():455] handle sender defer: 6
+2022-11-25 08:43:10,746 INFO    Thread-16 :20788 [upload_job.py:push():138] Uploaded file /tmp/tmp7p0lb6gvwandb/510q3oqg-wandb-metadata.json
+2022-11-25 08:43:10,773 DEBUG   HandlerThread:20788 [handler.py:handle_request():141] handle_request: poll_exit
+2022-11-25 08:43:10,786 INFO    Thread-12 :20788 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ_FakeQuant/wandb/run-20221125_084309-qsm2umd1/files/config.yaml
+2022-11-25 08:43:10,787 INFO    Thread-12 :20788 [dir_watcher.py:_on_file_created():275] file/dir created: /home/ilena7440/LSQ_FakeQuant/wandb/run-20221125_084309-qsm2umd1/files/requirements.txt
+2022-11-25 08:43:10,787 INFO    Thread-12 :20788 [dir_watcher.py:_on_file_created():275] file/dir created: /home/ilena7440/LSQ_FakeQuant/wandb/run-20221125_084309-qsm2umd1/files/wandb-metadata.json
+2022-11-25 08:43:10,787 INFO    Thread-12 :20788 [dir_watcher.py:_on_file_created():275] file/dir created: /home/ilena7440/LSQ_FakeQuant/wandb/run-20221125_084309-qsm2umd1/files/output.log
+2022-11-25 08:43:10,787 INFO    Thread-12 :20788 [dir_watcher.py:_on_file_created():275] file/dir created: /home/ilena7440/LSQ_FakeQuant/wandb/run-20221125_084309-qsm2umd1/files/wandb-summary.json
+2022-11-25 08:43:12,354 INFO    SenderThread:20788 [sender.py:transition_state():459] send defer: 7
+2022-11-25 08:43:12,354 DEBUG   SenderThread:20788 [sender.py:send_request():316] send_request: poll_exit
+2022-11-25 08:43:12,355 DEBUG   HandlerThread:20788 [handler.py:handle_request():141] handle_request: defer
+2022-11-25 08:43:12,356 INFO    HandlerThread:20788 [handler.py:handle_request_defer():164] handle defer: 7
+2022-11-25 08:43:12,356 DEBUG   SenderThread:20788 [sender.py:send_request():316] send_request: defer
+2022-11-25 08:43:12,356 INFO    SenderThread:20788 [sender.py:send_request_defer():455] handle sender defer: 7
+2022-11-25 08:43:12,356 INFO    SenderThread:20788 [dir_watcher.py:finish():362] shutting down directory watcher
+2022-11-25 08:43:12,457 DEBUG   HandlerThread:20788 [handler.py:handle_request():141] handle_request: poll_exit
+2022-11-25 08:43:12,786 INFO    Thread-12 :20788 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ_FakeQuant/wandb/run-20221125_084309-qsm2umd1/files/output.log
+2022-11-25 08:43:12,787 INFO    SenderThread:20788 [dir_watcher.py:finish():392] scan: /home/ilena7440/LSQ_FakeQuant/wandb/run-20221125_084309-qsm2umd1/files
+2022-11-25 08:43:12,787 INFO    SenderThread:20788 [dir_watcher.py:finish():406] scan save: /home/ilena7440/LSQ_FakeQuant/wandb/run-20221125_084309-qsm2umd1/files/output.log output.log
+2022-11-25 08:43:12,788 INFO    SenderThread:20788 [dir_watcher.py:finish():406] scan save: /home/ilena7440/LSQ_FakeQuant/wandb/run-20221125_084309-qsm2umd1/files/requirements.txt requirements.txt
+2022-11-25 08:43:12,788 INFO    SenderThread:20788 [dir_watcher.py:finish():406] scan save: /home/ilena7440/LSQ_FakeQuant/wandb/run-20221125_084309-qsm2umd1/files/wandb-summary.json wandb-summary.json
+2022-11-25 08:43:12,793 INFO    SenderThread:20788 [dir_watcher.py:finish():406] scan save: /home/ilena7440/LSQ_FakeQuant/wandb/run-20221125_084309-qsm2umd1/files/config.yaml config.yaml
+2022-11-25 08:43:12,805 INFO    SenderThread:20788 [dir_watcher.py:finish():406] scan save: /home/ilena7440/LSQ_FakeQuant/wandb/run-20221125_084309-qsm2umd1/files/wandb-metadata.json wandb-metadata.json
+2022-11-25 08:43:12,805 INFO    SenderThread:20788 [sender.py:transition_state():459] send defer: 8
+2022-11-25 08:43:12,805 DEBUG   SenderThread:20788 [sender.py:send_request():316] send_request: poll_exit
+2022-11-25 08:43:12,806 DEBUG   HandlerThread:20788 [handler.py:handle_request():141] handle_request: defer
+2022-11-25 08:43:12,807 INFO    HandlerThread:20788 [handler.py:handle_request_defer():164] handle defer: 8
+2022-11-25 08:43:12,808 DEBUG   SenderThread:20788 [sender.py:send_request():316] send_request: defer
+2022-11-25 08:43:12,808 INFO    SenderThread:20788 [sender.py:send_request_defer():455] handle sender defer: 8
+2022-11-25 08:43:12,808 INFO    SenderThread:20788 [file_pusher.py:finish():171] shutting down file pusher
+2022-11-25 08:43:13,353 INFO    MainThread:20788 [internal.py:handle_exit():80] Internal process exited
+2022-11-25 08:43:13,354 WARNING MsgRouterThr:20788 [router.py:message_loop():73] EOFError seen in message_loop

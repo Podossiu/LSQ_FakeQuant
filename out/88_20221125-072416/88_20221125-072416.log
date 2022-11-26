@@ -1,0 +1,1225 @@
+2022-11-25 07:24:16,121 - INFO  - Log file for this run: /home/ilena7440/LSQ_FakeQuant/out/88_20221125-072416/88_20221125-072416.log
+2022-11-25 07:24:20,871 - INFO  - Dataset `cifar10` size:
+          Training Set = 50000 (196)
+        Validation Set = 10000 (40)
+              Test Set = 10000 (40)
+2022-11-25 07:24:20,987 - INFO  - Created `MobileNetv2` model
+          Use pre-trained model = True
+2022-11-25 07:24:21,839 - INFO  - Optimizer: AdamW (
+           Parameter Group 0
+               amsgrad: False
+               betas: (0.9, 0.999)
+               capturable: False
+               eps: 1e-08
+               foreach: None
+               lr: 0.0005
+               maximize: False
+               weight_decay: 4e-05
+           )
+2022-11-25 07:24:21,840 - INFO  - LR scheduler: `CosineWarmRestartsLr`
+    Update per batch: True
+             Group 0: 0.0005
+
+2022-11-25 07:24:24,382 - INFO  - >>>>>> Epoch   0
+2022-11-25 07:24:24,384 - INFO  - Training: 50000 samples (256 per mini-batch)
+2022-11-25 07:24:34,340 - INFO  - Training [0][   20/  196]   Loss 1.748031   Top1 39.277344   Top5 83.906250   BatchTime 0.497655   LR 0.000500   
+2022-11-25 07:24:42,732 - INFO  - Training [0][   40/  196]   Loss 1.679672   Top1 41.171875   Top5 85.468750   BatchTime 0.458632   LR 0.000500   
+2022-11-25 07:24:51,259 - INFO  - Training [0][   60/  196]   Loss 1.594833   Top1 44.140625   Top5 87.233073   BatchTime 0.447867   LR 0.000499   
+2022-11-25 07:24:59,532 - INFO  - Training [0][   80/  196]   Loss 1.532244   Top1 46.435547   Top5 88.266602   BatchTime 0.439321   LR 0.000498   
+2022-11-25 07:25:06,391 - INFO  - Training [0][  100/  196]   Loss 1.477511   Top1 48.445312   Top5 89.269531   BatchTime 0.420043   LR 0.000497   
+2022-11-25 07:25:13,673 - INFO  - Training [0][  120/  196]   Loss 1.430346   Top1 50.260417   Top5 89.983724   BatchTime 0.410721   LR 0.000495   
+2022-11-25 07:25:21,931 - INFO  - Training [0][  140/  196]   Loss 1.401348   Top1 51.289062   Top5 90.438058   BatchTime 0.411027   LR 0.000494   
+2022-11-25 07:25:30,870 - INFO  - Training [0][  160/  196]   Loss 1.379442   Top1 52.036133   Top5 90.771484   BatchTime 0.415515   LR 0.000492   
+2022-11-25 07:25:39,092 - INFO  - Training [0][  180/  196]   Loss 1.357036   Top1 52.801649   Top5 91.082899   BatchTime 0.415026   LR 0.000490   
+2022-11-25 07:25:45,796 - INFO  - ==> Top1: 53.478    Top5: 91.308    Loss: 1.338
+
+2022-11-25 07:25:45,970 - INFO  - Created `MobileNetv2` model
+          Use pre-trained model = False
+2022-11-25 07:25:47,420 - INFO  - Validation: 10000 samples (256 per mini-batch)
+2022-11-25 07:25:49,837 - INFO  - Validation [0][   20/   40]   Loss 0.906012   Top1 68.945312   Top5 96.855469   BatchTime 0.120737   
+2022-11-25 07:25:50,937 - INFO  - Validation [0][   40/   40]   Loss 0.904762   Top1 68.840000   Top5 97.040000   BatchTime 0.087876   
+2022-11-25 07:25:51,147 - INFO  - ==> Top1: 68.840    Top5: 97.040    Loss: 0.905
+
+2022-11-25 07:25:51,147 - INFO  - ==> Sparsity : 0.357
+
+2022-11-25 07:25:51,148 - INFO  - Scoreboard best 1 ==> Epoch [0][Top1: 68.840   Top5: 97.040]
+2022-11-25 07:25:56,199 - INFO  - Saving checkpoint to:
+            Current: /home/ilena7440/LSQ_FakeQuant/out/88_20221125-072416/_checkpoint.pth.tar
+                Best: /home/ilena7440/LSQ_FakeQuant/out/88_20221125-072416/_best.pth.tar
+save quantized models...
+2022-11-25 07:25:56,201 - INFO  - >>>>>> Epoch   1
+2022-11-25 07:25:56,204 - INFO  - Training: 50000 samples (256 per mini-batch)
+2022-11-25 07:26:04,861 - INFO  - Training [1][   20/  196]   Loss 1.131047   Top1 61.289062   Top5 94.218750   BatchTime 0.432736   LR 0.000485   
+2022-11-25 07:26:11,959 - INFO  - Training [1][   40/  196]   Loss 1.117619   Top1 61.992188   Top5 94.238281   BatchTime 0.393802   LR 0.000482   
+2022-11-25 07:26:18,296 - INFO  - Training [1][   60/  196]   Loss 1.108429   Top1 62.037760   Top5 94.218750   BatchTime 0.368161   LR 0.000479   
+2022-11-25 07:26:25,465 - INFO  - Training [1][   80/  196]   Loss 1.102478   Top1 62.080078   Top5 94.350586   BatchTime 0.365726   LR 0.000476   
+2022-11-25 07:26:32,812 - INFO  - Training [1][  100/  196]   Loss 1.103151   Top1 61.925781   Top5 94.062500   BatchTime 0.366056   LR 0.000473   
+2022-11-25 07:26:40,567 - INFO  - Training [1][  120/  196]   Loss 1.084860   Top1 62.539062   Top5 94.355469   BatchTime 0.369671   LR 0.000469   
+2022-11-25 07:26:48,038 - INFO  - Training [1][  140/  196]   Loss 1.077470   Top1 62.896205   Top5 94.483817   BatchTime 0.370219   LR 0.000465   
+2022-11-25 07:26:55,553 - INFO  - Training [1][  160/  196]   Loss 1.070694   Top1 63.117676   Top5 94.519043   BatchTime 0.370915   LR 0.000460   
+2022-11-25 07:27:02,857 - INFO  - Training [1][  180/  196]   Loss 1.058265   Top1 63.487413   Top5 94.557292   BatchTime 0.370279   LR 0.000456   
+2022-11-25 07:27:08,626 - INFO  - ==> Top1: 63.710    Top5: 94.618    Loss: 1.053
+
+2022-11-25 07:27:08,808 - INFO  - Created `MobileNetv2` model
+          Use pre-trained model = False
+2022-11-25 07:27:10,211 - INFO  - Validation: 10000 samples (256 per mini-batch)
+2022-11-25 07:27:12,695 - INFO  - Validation [1][   20/   40]   Loss 0.836607   Top1 71.640625   Top5 97.617188   BatchTime 0.124102   
+2022-11-25 07:27:13,907 - INFO  - Validation [1][   40/   40]   Loss 0.849961   Top1 70.580000   Top5 97.810000   BatchTime 0.092352   
+2022-11-25 07:27:14,096 - INFO  - ==> Top1: 70.580    Top5: 97.810    Loss: 0.850
+
+2022-11-25 07:27:14,096 - INFO  - ==> Sparsity : 0.343
+
+2022-11-25 07:27:14,097 - INFO  - Scoreboard best 1 ==> Epoch [1][Top1: 70.580   Top5: 97.810]
+2022-11-25 07:27:14,097 - INFO  - Scoreboard best 2 ==> Epoch [0][Top1: 68.840   Top5: 97.040]
+2022-11-25 07:27:19,497 - INFO  - Saving checkpoint to:
+            Current: /home/ilena7440/LSQ_FakeQuant/out/88_20221125-072416/_checkpoint.pth.tar
+                Best: /home/ilena7440/LSQ_FakeQuant/out/88_20221125-072416/_best.pth.tar
+save quantized models...
+2022-11-25 07:27:19,501 - INFO  - >>>>>> Epoch   2
+2022-11-25 07:27:19,503 - INFO  - Training: 50000 samples (256 per mini-batch)
+2022-11-25 07:27:27,541 - INFO  - Training [2][   20/  196]   Loss 1.018253   Top1 64.765625   Top5 94.609375   BatchTime 0.401732   LR 0.000448   
+2022-11-25 07:27:34,366 - INFO  - Training [2][   40/  196]   Loss 0.996852   Top1 66.025391   Top5 94.824219   BatchTime 0.371495   LR 0.000443   
+2022-11-25 07:27:41,743 - INFO  - Training [2][   60/  196]   Loss 0.972672   Top1 66.731771   Top5 95.169271   BatchTime 0.370608   LR 0.000437   
+2022-11-25 07:27:49,517 - INFO  - Training [2][   80/  196]   Loss 0.956142   Top1 67.148438   Top5 95.468750   BatchTime 0.375129   LR 0.000432   
+2022-11-25 07:27:56,720 - INFO  - Training [2][  100/  196]   Loss 0.944650   Top1 67.589844   Top5 95.585938   BatchTime 0.372132   LR 0.000426   
+2022-11-25 07:28:03,976 - INFO  - Training [2][  120/  196]   Loss 0.939003   Top1 67.819010   Top5 95.729167   BatchTime 0.370582   LR 0.000421   
+2022-11-25 07:28:11,362 - INFO  - Training [2][  140/  196]   Loss 0.938102   Top1 67.910156   Top5 95.792411   BatchTime 0.370396   LR 0.000415   
+2022-11-25 07:28:18,608 - INFO  - Training [2][  160/  196]   Loss 0.938531   Top1 67.810059   Top5 95.761719   BatchTime 0.369383   LR 0.000409   
+2022-11-25 07:28:26,019 - INFO  - Training [2][  180/  196]   Loss 0.932761   Top1 68.016493   Top5 95.705295   BatchTime 0.369511   LR 0.000402   
+2022-11-25 07:28:31,743 - INFO  - ==> Top1: 68.146    Top5: 95.758    Loss: 0.929
+
+2022-11-25 07:28:31,926 - INFO  - Created `MobileNetv2` model
+          Use pre-trained model = False
+2022-11-25 07:28:33,394 - INFO  - Validation: 10000 samples (256 per mini-batch)
+2022-11-25 07:28:35,916 - INFO  - Validation [2][   20/   40]   Loss 0.743746   Top1 74.707031   Top5 98.164062   BatchTime 0.126015   
+2022-11-25 07:28:37,225 - INFO  - Validation [2][   40/   40]   Loss 0.738469   Top1 74.640000   Top5 98.370000   BatchTime 0.095720   
+2022-11-25 07:28:37,428 - INFO  - ==> Top1: 74.640    Top5: 98.370    Loss: 0.738
+
+2022-11-25 07:28:37,428 - INFO  - ==> Sparsity : 0.369
+
+2022-11-25 07:28:37,429 - INFO  - Scoreboard best 1 ==> Epoch [2][Top1: 74.640   Top5: 98.370]
+2022-11-25 07:28:37,429 - INFO  - Scoreboard best 2 ==> Epoch [1][Top1: 70.580   Top5: 97.810]
+2022-11-25 07:28:37,429 - INFO  - Scoreboard best 3 ==> Epoch [0][Top1: 68.840   Top5: 97.040]
+2022-11-25 07:28:46,668 - INFO  - Saving checkpoint to:
+            Current: /home/ilena7440/LSQ_FakeQuant/out/88_20221125-072416/_checkpoint.pth.tar
+                Best: /home/ilena7440/LSQ_FakeQuant/out/88_20221125-072416/_best.pth.tar
+save quantized models...
+2022-11-25 07:28:46,671 - INFO  - >>>>>> Epoch   3
+2022-11-25 07:28:46,673 - INFO  - Training: 50000 samples (256 per mini-batch)
+2022-11-25 07:28:55,923 - INFO  - Training [3][   20/  196]   Loss 0.901661   Top1 68.847656   Top5 95.468750   BatchTime 0.462366   LR 0.000391   
+2022-11-25 07:29:03,515 - INFO  - Training [3][   40/  196]   Loss 0.891675   Top1 69.667969   Top5 95.634766   BatchTime 0.420978   LR 0.000384   
+2022-11-25 07:29:11,039 - INFO  - Training [3][   60/  196]   Loss 0.880395   Top1 69.941406   Top5 95.872396   BatchTime 0.406044   LR 0.000377   
+2022-11-25 07:29:18,400 - INFO  - Training [3][   80/  196]   Loss 0.873330   Top1 70.185547   Top5 96.064453   BatchTime 0.396542   LR 0.000370   
+2022-11-25 07:29:25,717 - INFO  - Training [3][  100/  196]   Loss 0.860913   Top1 70.562500   Top5 96.226562   BatchTime 0.390412   LR 0.000363   
+2022-11-25 07:29:33,043 - INFO  - Training [3][  120/  196]   Loss 0.857946   Top1 70.651042   Top5 96.321615   BatchTime 0.386391   LR 0.000356   
+2022-11-25 07:29:39,983 - INFO  - Training [3][  140/  196]   Loss 0.853353   Top1 70.742188   Top5 96.369978   BatchTime 0.380763   LR 0.000348   
+2022-11-25 07:29:46,779 - INFO  - Training [3][  160/  196]   Loss 0.852031   Top1 70.732422   Top5 96.372070   BatchTime 0.375642   LR 0.000341   
+2022-11-25 07:29:53,725 - INFO  - Training [3][  180/  196]   Loss 0.846999   Top1 70.857205   Top5 96.371528   BatchTime 0.372490   LR 0.000333   
+2022-11-25 07:29:58,981 - INFO  - ==> Top1: 70.884    Top5: 96.374    Loss: 0.846
+
+2022-11-25 07:29:59,169 - INFO  - Created `MobileNetv2` model
+          Use pre-trained model = False
+2022-11-25 07:30:00,500 - INFO  - Validation: 10000 samples (256 per mini-batch)
+2022-11-25 07:30:03,029 - INFO  - Validation [3][   20/   40]   Loss 0.627357   Top1 79.257812   Top5 98.339844   BatchTime 0.126360   
+2022-11-25 07:30:04,134 - INFO  - Validation [3][   40/   40]   Loss 0.628435   Top1 78.940000   Top5 98.400000   BatchTime 0.090827   
+2022-11-25 07:30:04,332 - INFO  - ==> Top1: 78.940    Top5: 98.400    Loss: 0.628
+
+2022-11-25 07:30:04,332 - INFO  - ==> Sparsity : 0.378
+
+2022-11-25 07:30:04,332 - INFO  - Scoreboard best 1 ==> Epoch [3][Top1: 78.940   Top5: 98.400]
+2022-11-25 07:30:04,332 - INFO  - Scoreboard best 2 ==> Epoch [2][Top1: 74.640   Top5: 98.370]
+2022-11-25 07:30:04,333 - INFO  - Scoreboard best 3 ==> Epoch [1][Top1: 70.580   Top5: 97.810]
+2022-11-25 07:30:10,952 - INFO  - Saving checkpoint to:
+            Current: /home/ilena7440/LSQ_FakeQuant/out/88_20221125-072416/_checkpoint.pth.tar
+                Best: /home/ilena7440/LSQ_FakeQuant/out/88_20221125-072416/_best.pth.tar
+save quantized models...
+2022-11-25 07:30:10,955 - INFO  - >>>>>> Epoch   4
+2022-11-25 07:30:10,957 - INFO  - Training: 50000 samples (256 per mini-batch)
+2022-11-25 07:30:19,699 - INFO  - Training [4][   20/  196]   Loss 0.816540   Top1 71.210938   Top5 96.367188   BatchTime 0.436953   LR 0.000320   
+2022-11-25 07:30:27,056 - INFO  - Training [4][   40/  196]   Loss 0.804411   Top1 72.011719   Top5 96.630859   BatchTime 0.402405   LR 0.000312   
+2022-11-25 07:30:34,453 - INFO  - Training [4][   60/  196]   Loss 0.805562   Top1 72.076823   Top5 96.803385   BatchTime 0.391550   LR 0.000304   
+2022-11-25 07:30:41,709 - INFO  - Training [4][   80/  196]   Loss 0.804220   Top1 72.031250   Top5 96.855469   BatchTime 0.384360   LR 0.000296   
+2022-11-25 07:30:49,409 - INFO  - Training [4][  100/  196]   Loss 0.791124   Top1 72.652344   Top5 96.902344   BatchTime 0.384493   LR 0.000289   
+2022-11-25 07:30:57,553 - INFO  - Training [4][  120/  196]   Loss 0.782192   Top1 73.040365   Top5 96.940104   BatchTime 0.388275   LR 0.000281   
+2022-11-25 07:31:06,451 - INFO  - Training [4][  140/  196]   Loss 0.780273   Top1 73.205915   Top5 96.953125   BatchTime 0.396363   LR 0.000273   
+2022-11-25 07:31:14,872 - INFO  - Training [4][  160/  196]   Loss 0.780411   Top1 73.183594   Top5 96.921387   BatchTime 0.399447   LR 0.000265   
+2022-11-25 07:31:22,710 - INFO  - Training [4][  180/  196]   Loss 0.775821   Top1 73.235677   Top5 96.905382   BatchTime 0.398609   LR 0.000257   
+2022-11-25 07:31:29,962 - INFO  - ==> Top1: 73.348    Top5: 96.890    Loss: 0.773
+
+2022-11-25 07:31:30,145 - INFO  - Created `MobileNetv2` model
+          Use pre-trained model = False
+2022-11-25 07:31:31,913 - INFO  - Validation: 10000 samples (256 per mini-batch)
+2022-11-25 07:31:34,510 - INFO  - Validation [4][   20/   40]   Loss 0.544815   Top1 82.128906   Top5 98.808594   BatchTime 0.129748   
+2022-11-25 07:31:35,732 - INFO  - Validation [4][   40/   40]   Loss 0.538274   Top1 81.960000   Top5 99.020000   BatchTime 0.095433   
+2022-11-25 07:31:35,921 - INFO  - ==> Top1: 81.960    Top5: 99.020    Loss: 0.538
+
+2022-11-25 07:31:35,921 - INFO  - ==> Sparsity : 0.366
+
+2022-11-25 07:31:35,922 - INFO  - Scoreboard best 1 ==> Epoch [4][Top1: 81.960   Top5: 99.020]
+2022-11-25 07:31:35,922 - INFO  - Scoreboard best 2 ==> Epoch [3][Top1: 78.940   Top5: 98.400]
+2022-11-25 07:31:35,922 - INFO  - Scoreboard best 3 ==> Epoch [2][Top1: 74.640   Top5: 98.370]
+2022-11-25 07:31:41,327 - INFO  - Saving checkpoint to:
+            Current: /home/ilena7440/LSQ_FakeQuant/out/88_20221125-072416/_checkpoint.pth.tar
+                Best: /home/ilena7440/LSQ_FakeQuant/out/88_20221125-072416/_best.pth.tar
+save quantized models...
+2022-11-25 07:31:41,328 - INFO  - >>>>>> Epoch   5
+2022-11-25 07:31:41,330 - INFO  - Training: 50000 samples (256 per mini-batch)
+2022-11-25 07:31:52,068 - INFO  - Training [5][   20/  196]   Loss 0.755978   Top1 73.769531   Top5 96.562500   BatchTime 0.536730   LR 0.000242   
+2022-11-25 07:32:01,541 - INFO  - Training [5][   40/  196]   Loss 0.766214   Top1 73.564453   Top5 96.572266   BatchTime 0.505214   LR 0.000234   
+2022-11-25 07:32:10,504 - INFO  - Training [5][   60/  196]   Loss 0.751283   Top1 74.049479   Top5 96.660156   BatchTime 0.486197   LR 0.000226   
+2022-11-25 07:32:19,511 - INFO  - Training [5][   80/  196]   Loss 0.738411   Top1 74.458008   Top5 96.850586   BatchTime 0.477229   LR 0.000218   
+2022-11-25 07:32:28,748 - INFO  - Training [5][  100/  196]   Loss 0.730052   Top1 74.722656   Top5 96.976562   BatchTime 0.474152   LR 0.000210   
+2022-11-25 07:32:37,890 - INFO  - Training [5][  120/  196]   Loss 0.723373   Top1 74.895833   Top5 97.089844   BatchTime 0.471314   LR 0.000202   
+2022-11-25 07:32:45,402 - INFO  - Training [5][  140/  196]   Loss 0.722545   Top1 74.972098   Top5 97.128906   BatchTime 0.457634   LR 0.000195   
+2022-11-25 07:32:51,373 - INFO  - Training [5][  160/  196]   Loss 0.722591   Top1 74.970703   Top5 97.126465   BatchTime 0.437749   LR 0.000187   
+2022-11-25 07:32:56,957 - INFO  - Training [5][  180/  196]   Loss 0.721179   Top1 75.047743   Top5 97.081163   BatchTime 0.420131   LR 0.000179   
+2022-11-25 07:33:03,059 - INFO  - ==> Top1: 75.192    Top5: 97.104    Loss: 0.719
+
+2022-11-25 07:33:03,338 - INFO  - Created `MobileNetv2` model
+          Use pre-trained model = False
+2022-11-25 07:33:05,086 - INFO  - Validation: 10000 samples (256 per mini-batch)
+2022-11-25 07:33:07,720 - INFO  - Validation [5][   20/   40]   Loss 0.513020   Top1 82.753906   Top5 98.808594   BatchTime 0.131619   
+2022-11-25 07:33:08,822 - INFO  - Validation [5][   40/   40]   Loss 0.502582   Top1 82.940000   Top5 99.110000   BatchTime 0.093363   
+2022-11-25 07:33:09,055 - INFO  - ==> Top1: 82.940    Top5: 99.110    Loss: 0.503
+
+2022-11-25 07:33:09,055 - INFO  - ==> Sparsity : 0.375
+
+2022-11-25 07:33:09,055 - INFO  - Scoreboard best 1 ==> Epoch [5][Top1: 82.940   Top5: 99.110]
+2022-11-25 07:33:09,055 - INFO  - Scoreboard best 2 ==> Epoch [4][Top1: 81.960   Top5: 99.020]
+2022-11-25 07:33:09,056 - INFO  - Scoreboard best 3 ==> Epoch [3][Top1: 78.940   Top5: 98.400]
+2022-11-25 07:33:14,547 - INFO  - Saving checkpoint to:
+            Current: /home/ilena7440/LSQ_FakeQuant/out/88_20221125-072416/_checkpoint.pth.tar
+                Best: /home/ilena7440/LSQ_FakeQuant/out/88_20221125-072416/_best.pth.tar
+save quantized models...
+2022-11-25 07:33:14,550 - INFO  - >>>>>> Epoch   6
+2022-11-25 07:33:14,552 - INFO  - Training: 50000 samples (256 per mini-batch)
+2022-11-25 07:33:23,878 - INFO  - Training [6][   20/  196]   Loss 0.716131   Top1 75.156250   Top5 96.972656   BatchTime 0.466193   LR 0.000166   
+2022-11-25 07:33:32,800 - INFO  - Training [6][   40/  196]   Loss 0.712944   Top1 75.166016   Top5 96.953125   BatchTime 0.456130   LR 0.000158   
+2022-11-25 07:33:41,396 - INFO  - Training [6][   60/  196]   Loss 0.697201   Top1 75.696615   Top5 97.194010   BatchTime 0.447349   LR 0.000151   
+2022-11-25 07:33:50,023 - INFO  - Training [6][   80/  196]   Loss 0.687685   Top1 76.137695   Top5 97.363281   BatchTime 0.443353   LR 0.000143   
+2022-11-25 07:33:58,671 - INFO  - Training [6][  100/  196]   Loss 0.680756   Top1 76.386719   Top5 97.468750   BatchTime 0.441162   LR 0.000136   
+2022-11-25 07:34:07,690 - INFO  - Training [6][  120/  196]   Loss 0.678543   Top1 76.490885   Top5 97.519531   BatchTime 0.442791   LR 0.000129   
+2022-11-25 07:34:15,752 - INFO  - Training [6][  140/  196]   Loss 0.677810   Top1 76.512277   Top5 97.578125   BatchTime 0.437120   LR 0.000122   
+2022-11-25 07:34:24,600 - INFO  - Training [6][  160/  196]   Loss 0.679017   Top1 76.442871   Top5 97.568359   BatchTime 0.437779   LR 0.000115   
+2022-11-25 07:34:33,358 - INFO  - Training [6][  180/  196]   Loss 0.675653   Top1 76.523438   Top5 97.530382   BatchTime 0.437795   LR 0.000108   
+2022-11-25 07:34:40,512 - INFO  - ==> Top1: 76.542    Top5: 97.538    Loss: 0.676
+
+2022-11-25 07:34:40,696 - INFO  - Created `MobileNetv2` model
+          Use pre-trained model = False
+2022-11-25 07:34:42,522 - INFO  - Validation: 10000 samples (256 per mini-batch)
+2022-11-25 07:34:45,338 - INFO  - Validation [6][   20/   40]   Loss 0.472143   Top1 84.218750   Top5 99.140625   BatchTime 0.140661   
+2022-11-25 07:34:46,385 - INFO  - Validation [6][   40/   40]   Loss 0.464300   Top1 84.380000   Top5 99.340000   BatchTime 0.096521   
+2022-11-25 07:34:46,680 - INFO  - ==> Top1: 84.380    Top5: 99.340    Loss: 0.464
+
+2022-11-25 07:34:46,681 - INFO  - ==> Sparsity : 0.383
+
+2022-11-25 07:34:46,681 - INFO  - Scoreboard best 1 ==> Epoch [6][Top1: 84.380   Top5: 99.340]
+2022-11-25 07:34:46,681 - INFO  - Scoreboard best 2 ==> Epoch [5][Top1: 82.940   Top5: 99.110]
+2022-11-25 07:34:46,681 - INFO  - Scoreboard best 3 ==> Epoch [4][Top1: 81.960   Top5: 99.020]
+2022-11-25 07:34:52,250 - INFO  - Saving checkpoint to:
+            Current: /home/ilena7440/LSQ_FakeQuant/out/88_20221125-072416/_checkpoint.pth.tar
+                Best: /home/ilena7440/LSQ_FakeQuant/out/88_20221125-072416/_best.pth.tar
+save quantized models...
+2022-11-25 07:34:52,254 - INFO  - >>>>>> Epoch   7
+2022-11-25 07:34:52,257 - INFO  - Training: 50000 samples (256 per mini-batch)
+2022-11-25 07:35:02,788 - INFO  - Training [7][   20/  196]   Loss 0.676156   Top1 76.484375   Top5 96.894531   BatchTime 0.526456   LR 0.000097   
+2022-11-25 07:35:11,435 - INFO  - Training [7][   40/  196]   Loss 0.663657   Top1 76.748047   Top5 97.480469   BatchTime 0.479403   LR 0.000091   
+2022-11-25 07:35:19,355 - INFO  - Training [7][   60/  196]   Loss 0.655015   Top1 77.115885   Top5 97.513021   BatchTime 0.451590   LR 0.000085   
+2022-11-25 07:35:28,215 - INFO  - Training [7][   80/  196]   Loss 0.650612   Top1 77.265625   Top5 97.617188   BatchTime 0.449453   LR 0.000079   
+2022-11-25 07:35:36,797 - INFO  - Training [7][  100/  196]   Loss 0.643531   Top1 77.472656   Top5 97.695312   BatchTime 0.445373   LR 0.000073   
+2022-11-25 07:35:45,134 - INFO  - Training [7][  120/  196]   Loss 0.636001   Top1 77.662760   Top5 97.805990   BatchTime 0.440622   LR 0.000067   
+2022-11-25 07:35:54,709 - INFO  - Training [7][  140/  196]   Loss 0.635557   Top1 77.762277   Top5 97.820871   BatchTime 0.446070   LR 0.000062   
+2022-11-25 07:36:04,152 - INFO  - Training [7][  160/  196]   Loss 0.635653   Top1 77.763672   Top5 97.807617   BatchTime 0.449326   LR 0.000057   
+2022-11-25 07:36:13,359 - INFO  - Training [7][  180/  196]   Loss 0.636011   Top1 77.805990   Top5 97.799479   BatchTime 0.450552   LR 0.000052   
+2022-11-25 07:36:20,669 - INFO  - ==> Top1: 77.898    Top5: 97.806    Loss: 0.634
+
+2022-11-25 07:36:20,859 - INFO  - Created `MobileNetv2` model
+          Use pre-trained model = False
+2022-11-25 07:36:25,213 - INFO  - Validation: 10000 samples (256 per mini-batch)
+2022-11-25 07:36:27,996 - INFO  - Validation [7][   20/   40]   Loss 0.442541   Top1 84.882812   Top5 99.199219   BatchTime 0.139074   
+2022-11-25 07:36:29,065 - INFO  - Validation [7][   40/   40]   Loss 0.435236   Top1 85.060000   Top5 99.360000   BatchTime 0.096267   
+2022-11-25 07:36:29,273 - INFO  - ==> Top1: 85.060    Top5: 99.360    Loss: 0.435
+
+2022-11-25 07:36:29,273 - INFO  - ==> Sparsity : 0.386
+
+2022-11-25 07:36:29,273 - INFO  - Scoreboard best 1 ==> Epoch [7][Top1: 85.060   Top5: 99.360]
+2022-11-25 07:36:29,273 - INFO  - Scoreboard best 2 ==> Epoch [6][Top1: 84.380   Top5: 99.340]
+2022-11-25 07:36:29,274 - INFO  - Scoreboard best 3 ==> Epoch [5][Top1: 82.940   Top5: 99.110]
+2022-11-25 07:36:35,093 - INFO  - Saving checkpoint to:
+            Current: /home/ilena7440/LSQ_FakeQuant/out/88_20221125-072416/_checkpoint.pth.tar
+                Best: /home/ilena7440/LSQ_FakeQuant/out/88_20221125-072416/_best.pth.tar
+save quantized models...
+2022-11-25 07:36:35,095 - INFO  - >>>>>> Epoch   8
+2022-11-25 07:36:35,097 - INFO  - Training: 50000 samples (256 per mini-batch)
+2022-11-25 07:36:45,684 - INFO  - Training [8][   20/  196]   Loss 0.607749   Top1 79.160156   Top5 97.226562   BatchTime 0.529231   LR 0.000043   
+2022-11-25 07:36:53,842 - INFO  - Training [8][   40/  196]   Loss 0.635961   Top1 78.232422   Top5 97.304688   BatchTime 0.468564   LR 0.000039   
+2022-11-25 07:37:01,935 - INFO  - Training [8][   60/  196]   Loss 0.632216   Top1 78.229167   Top5 97.395833   BatchTime 0.447259   LR 0.000035   
+2022-11-25 07:37:10,626 - INFO  - Training [8][   80/  196]   Loss 0.631965   Top1 78.388672   Top5 97.485352   BatchTime 0.444082   LR 0.000031   
+2022-11-25 07:37:19,305 - INFO  - Training [8][  100/  196]   Loss 0.625692   Top1 78.523438   Top5 97.613281   BatchTime 0.442061   LR 0.000027   
+2022-11-25 07:37:28,772 - INFO  - Training [8][  120/  196]   Loss 0.617003   Top1 78.873698   Top5 97.744141   BatchTime 0.447272   LR 0.000023   
+2022-11-25 07:37:38,214 - INFO  - Training [8][  140/  196]   Loss 0.613422   Top1 79.003906   Top5 97.815290   BatchTime 0.450820   LR 0.000020   
+2022-11-25 07:37:47,828 - INFO  - Training [8][  160/  196]   Loss 0.613559   Top1 79.028320   Top5 97.858887   BatchTime 0.454553   LR 0.000017   
+2022-11-25 07:37:57,105 - INFO  - Training [8][  180/  196]   Loss 0.611524   Top1 79.071181   Top5 97.864583   BatchTime 0.455583   LR 0.000014   
+2022-11-25 07:38:04,693 - INFO  - ==> Top1: 79.054    Top5: 97.886    Loss: 0.610
+
+2022-11-25 07:38:04,889 - INFO  - Created `MobileNetv2` model
+          Use pre-trained model = False
+2022-11-25 07:38:06,809 - INFO  - Validation: 10000 samples (256 per mini-batch)
+2022-11-25 07:38:09,426 - INFO  - Validation [8][   20/   40]   Loss 0.426701   Top1 85.742188   Top5 99.277344   BatchTime 0.130726   
+2022-11-25 07:38:10,637 - INFO  - Validation [8][   40/   40]   Loss 0.420141   Top1 85.750000   Top5 99.410000   BatchTime 0.095648   
+2022-11-25 07:38:10,836 - INFO  - ==> Top1: 85.750    Top5: 99.410    Loss: 0.420
+
+2022-11-25 07:38:10,837 - INFO  - ==> Sparsity : 0.387
+
+2022-11-25 07:38:10,837 - INFO  - Scoreboard best 1 ==> Epoch [8][Top1: 85.750   Top5: 99.410]
+2022-11-25 07:38:10,837 - INFO  - Scoreboard best 2 ==> Epoch [7][Top1: 85.060   Top5: 99.360]
+2022-11-25 07:38:10,837 - INFO  - Scoreboard best 3 ==> Epoch [6][Top1: 84.380   Top5: 99.340]
+2022-11-25 07:38:16,524 - INFO  - Saving checkpoint to:
+            Current: /home/ilena7440/LSQ_FakeQuant/out/88_20221125-072416/_checkpoint.pth.tar
+                Best: /home/ilena7440/LSQ_FakeQuant/out/88_20221125-072416/_best.pth.tar
+save quantized models...
+2022-11-25 07:38:16,529 - INFO  - >>>>>> Epoch   9
+2022-11-25 07:38:16,531 - INFO  - Training: 50000 samples (256 per mini-batch)
+2022-11-25 07:38:26,662 - INFO  - Training [9][   20/  196]   Loss 0.602736   Top1 79.355469   Top5 97.714844   BatchTime 0.506419   LR 0.000010   
+2022-11-25 07:38:34,379 - INFO  - Training [9][   40/  196]   Loss 0.620587   Top1 78.886719   Top5 97.539062   BatchTime 0.446128   LR 0.000008   
+2022-11-25 07:38:41,995 - INFO  - Training [9][   60/  196]   Loss 0.609709   Top1 79.160156   Top5 97.714844   BatchTime 0.424344   LR 0.000006   
+2022-11-25 07:38:50,919 - INFO  - Training [9][   80/  196]   Loss 0.609447   Top1 79.174805   Top5 97.900391   BatchTime 0.429817   LR 0.000004   
+2022-11-25 07:39:00,396 - INFO  - Training [9][  100/  196]   Loss 0.600467   Top1 79.394531   Top5 97.957031   BatchTime 0.438620   LR 0.000003   
+2022-11-25 07:39:09,813 - INFO  - Training [9][  120/  196]   Loss 0.592343   Top1 79.677734   Top5 98.033854   BatchTime 0.443990   LR 0.000002   
+2022-11-25 07:39:19,186 - INFO  - Training [9][  140/  196]   Loss 0.591964   Top1 79.690290   Top5 98.108259   BatchTime 0.447515   LR 0.000001   
+2022-11-25 07:39:28,391 - INFO  - Training [9][  160/  196]   Loss 0.597592   Top1 79.479980   Top5 98.076172   BatchTime 0.449103   LR 0.000000   
+2022-11-25 07:39:37,977 - INFO  - Training [9][  180/  196]   Loss 0.594269   Top1 79.533420   Top5 98.083767   BatchTime 0.452459   LR 0.000000   
+2022-11-25 07:39:45,240 - INFO  - ==> Top1: 79.638    Top5: 98.092    Loss: 0.591
+
+2022-11-25 07:39:45,424 - INFO  - Created `MobileNetv2` model
+          Use pre-trained model = False
+2022-11-25 07:39:47,294 - INFO  - Validation: 10000 samples (256 per mini-batch)
+2022-11-25 07:39:49,973 - INFO  - Validation [9][   20/   40]   Loss 0.426788   Top1 85.703125   Top5 99.335938   BatchTime 0.133854   
+2022-11-25 07:39:51,185 - INFO  - Validation [9][   40/   40]   Loss 0.418328   Top1 85.710000   Top5 99.440000   BatchTime 0.097225   
+2022-11-25 07:39:51,434 - INFO  - ==> Top1: 85.710    Top5: 99.440    Loss: 0.418
+
+2022-11-25 07:39:51,434 - INFO  - ==> Sparsity : 0.387
+
+2022-11-25 07:39:51,435 - INFO  - Scoreboard best 1 ==> Epoch [8][Top1: 85.750   Top5: 99.410]
+2022-11-25 07:39:51,435 - INFO  - Scoreboard best 2 ==> Epoch [9][Top1: 85.710   Top5: 99.440]
+2022-11-25 07:39:51,435 - INFO  - Scoreboard best 3 ==> Epoch [7][Top1: 85.060   Top5: 99.360]
+2022-11-25 07:39:51,754 - INFO  - Saving checkpoint to:
+            Current: /home/ilena7440/LSQ_FakeQuant/out/88_20221125-072416/_checkpoint.pth.tar
+
+2022-11-25 07:39:51,756 - INFO  - >>>>>> Epoch  10
+2022-11-25 07:39:51,759 - INFO  - Training: 50000 samples (256 per mini-batch)
+2022-11-25 07:40:02,384 - INFO  - Training [10][   20/  196]   Loss 0.658661   Top1 76.855469   Top5 97.089844   BatchTime 0.531122   LR 0.000250   
+2022-11-25 07:40:09,718 - INFO  - Training [10][   40/  196]   Loss 0.667045   Top1 76.269531   Top5 97.294922   BatchTime 0.448907   LR 0.000250   
+2022-11-25 07:40:16,291 - INFO  - Training [10][   60/  196]   Loss 0.670867   Top1 76.347656   Top5 97.363281   BatchTime 0.408828   LR 0.000250   
+2022-11-25 07:40:24,324 - INFO  - Training [10][   80/  196]   Loss 0.673537   Top1 76.347656   Top5 97.456055   BatchTime 0.407029   LR 0.000250   
+2022-11-25 07:40:33,697 - INFO  - Training [10][  100/  196]   Loss 0.672836   Top1 76.488281   Top5 97.394531   BatchTime 0.419352   LR 0.000250   
+2022-11-25 07:40:42,790 - INFO  - Training [10][  120/  196]   Loss 0.673757   Top1 76.572266   Top5 97.386068   BatchTime 0.425233   LR 0.000249   
+2022-11-25 07:40:52,142 - INFO  - Training [10][  140/  196]   Loss 0.670631   Top1 76.702009   Top5 97.486049   BatchTime 0.431290   LR 0.000249   
+2022-11-25 07:41:01,348 - INFO  - Training [10][  160/  196]   Loss 0.673717   Top1 76.596680   Top5 97.475586   BatchTime 0.434913   LR 0.000249   
+2022-11-25 07:41:10,461 - INFO  - Training [10][  180/  196]   Loss 0.674636   Top1 76.534288   Top5 97.419705   BatchTime 0.437219   LR 0.000249   
+2022-11-25 07:41:17,966 - INFO  - ==> Top1: 76.434    Top5: 97.406    Loss: 0.677
+
+2022-11-25 07:41:18,144 - INFO  - Created `MobileNetv2` model
+          Use pre-trained model = False
+2022-11-25 07:41:20,055 - INFO  - Validation: 10000 samples (256 per mini-batch)
+2022-11-25 07:41:22,659 - INFO  - Validation [10][   20/   40]   Loss 0.511570   Top1 82.812500   Top5 99.101562   BatchTime 0.130100   
+2022-11-25 07:41:23,789 - INFO  - Validation [10][   40/   40]   Loss 0.507250   Top1 82.710000   Top5 99.180000   BatchTime 0.093307   
+2022-11-25 07:41:24,046 - INFO  - ==> Top1: 82.710    Top5: 99.180    Loss: 0.507
+
+2022-11-25 07:41:24,047 - INFO  - ==> Sparsity : 0.362
+
+2022-11-25 07:41:24,047 - INFO  - Scoreboard best 1 ==> Epoch [8][Top1: 85.750   Top5: 99.410]
+2022-11-25 07:41:24,047 - INFO  - Scoreboard best 2 ==> Epoch [9][Top1: 85.710   Top5: 99.440]
+2022-11-25 07:41:24,047 - INFO  - Scoreboard best 3 ==> Epoch [7][Top1: 85.060   Top5: 99.360]
+2022-11-25 07:41:24,175 - INFO  - Saving checkpoint to:
+            Current: /home/ilena7440/LSQ_FakeQuant/out/88_20221125-072416/_checkpoint.pth.tar
+
+2022-11-25 07:41:24,177 - INFO  - >>>>>> Epoch  11
+2022-11-25 07:41:24,179 - INFO  - Training: 50000 samples (256 per mini-batch)
+2022-11-25 07:41:34,950 - INFO  - Training [11][   20/  196]   Loss 0.704709   Top1 75.761719   Top5 97.148438   BatchTime 0.538425   LR 0.000248   
+2022-11-25 07:41:44,084 - INFO  - Training [11][   40/  196]   Loss 0.702055   Top1 75.712891   Top5 97.285156   BatchTime 0.497570   LR 0.000248   
+2022-11-25 07:41:50,972 - INFO  - Training [11][   60/  196]   Loss 0.695293   Top1 75.826823   Top5 97.447917   BatchTime 0.446508   LR 0.000247   
+2022-11-25 07:41:57,933 - INFO  - Training [11][   80/  196]   Loss 0.690260   Top1 76.025391   Top5 97.534180   BatchTime 0.421897   LR 0.000247   
+2022-11-25 07:42:07,447 - INFO  - Training [11][  100/  196]   Loss 0.678770   Top1 76.457031   Top5 97.578125   BatchTime 0.432651   LR 0.000247   
+2022-11-25 07:42:16,861 - INFO  - Training [11][  120/  196]   Loss 0.671112   Top1 76.829427   Top5 97.666016   BatchTime 0.438992   LR 0.000246   
+2022-11-25 07:42:25,909 - INFO  - Training [11][  140/  196]   Loss 0.668568   Top1 76.964286   Top5 97.695312   BatchTime 0.440911   LR 0.000246   
+2022-11-25 07:42:35,096 - INFO  - Training [11][  160/  196]   Loss 0.673393   Top1 76.755371   Top5 97.661133   BatchTime 0.443211   LR 0.000245   
+2022-11-25 07:42:44,469 - INFO  - Training [11][  180/  196]   Loss 0.672445   Top1 76.814236   Top5 97.649740   BatchTime 0.446038   LR 0.000244   
+2022-11-25 07:42:51,893 - INFO  - ==> Top1: 76.830    Top5: 97.650    Loss: 0.671
+
+2022-11-25 07:42:52,085 - INFO  - Created `MobileNetv2` model
+          Use pre-trained model = False
+2022-11-25 07:42:54,180 - INFO  - Validation: 10000 samples (256 per mini-batch)
+2022-11-25 07:42:56,860 - INFO  - Validation [11][   20/   40]   Loss 0.520022   Top1 82.285156   Top5 98.945312   BatchTime 0.133912   
+2022-11-25 07:42:58,053 - INFO  - Validation [11][   40/   40]   Loss 0.523798   Top1 81.790000   Top5 99.160000   BatchTime 0.096801   
+2022-11-25 07:42:58,312 - INFO  - ==> Top1: 81.790    Top5: 99.160    Loss: 0.524
+
+2022-11-25 07:42:58,313 - INFO  - ==> Sparsity : 0.361
+
+2022-11-25 07:42:58,313 - INFO  - Scoreboard best 1 ==> Epoch [8][Top1: 85.750   Top5: 99.410]
+2022-11-25 07:42:58,313 - INFO  - Scoreboard best 2 ==> Epoch [9][Top1: 85.710   Top5: 99.440]
+2022-11-25 07:42:58,313 - INFO  - Scoreboard best 3 ==> Epoch [7][Top1: 85.060   Top5: 99.360]
+2022-11-25 07:42:58,436 - INFO  - Saving checkpoint to:
+            Current: /home/ilena7440/LSQ_FakeQuant/out/88_20221125-072416/_checkpoint.pth.tar
+
+2022-11-25 07:42:58,438 - INFO  - >>>>>> Epoch  12
+2022-11-25 07:42:58,440 - INFO  - Training: 50000 samples (256 per mini-batch)
+2022-11-25 07:43:09,504 - INFO  - Training [12][   20/  196]   Loss 0.683704   Top1 76.875000   Top5 97.109375   BatchTime 0.553059   LR 0.000243   
+2022-11-25 07:43:18,716 - INFO  - Training [12][   40/  196]   Loss 0.679913   Top1 76.650391   Top5 97.324219   BatchTime 0.506826   LR 0.000243   
+2022-11-25 07:43:26,521 - INFO  - Training [12][   60/  196]   Loss 0.673471   Top1 76.940104   Top5 97.460938   BatchTime 0.467966   LR 0.000242   
+2022-11-25 07:43:33,893 - INFO  - Training [12][   80/  196]   Loss 0.674571   Top1 76.904297   Top5 97.573242   BatchTime 0.443124   LR 0.000241   
+2022-11-25 07:43:42,130 - INFO  - Training [12][  100/  196]   Loss 0.666543   Top1 77.109375   Top5 97.644531   BatchTime 0.436873   LR 0.000240   
+2022-11-25 07:43:51,390 - INFO  - Training [12][  120/  196]   Loss 0.657585   Top1 77.412109   Top5 97.708333   BatchTime 0.441222   LR 0.000240   
+2022-11-25 07:44:00,897 - INFO  - Training [12][  140/  196]   Loss 0.655454   Top1 77.525112   Top5 97.737165   BatchTime 0.446099   LR 0.000239   
+2022-11-25 07:44:10,538 - INFO  - Training [12][  160/  196]   Loss 0.658729   Top1 77.355957   Top5 97.729492   BatchTime 0.450589   LR 0.000238   
+2022-11-25 07:44:19,907 - INFO  - Training [12][  180/  196]   Loss 0.657423   Top1 77.421875   Top5 97.708333   BatchTime 0.452578   LR 0.000237   
+2022-11-25 07:44:27,561 - INFO  - ==> Top1: 77.504    Top5: 97.726    Loss: 0.655
+
+2022-11-25 07:44:27,746 - INFO  - Created `MobileNetv2` model
+          Use pre-trained model = False
+2022-11-25 07:44:29,699 - INFO  - Validation: 10000 samples (256 per mini-batch)
+2022-11-25 07:44:32,469 - INFO  - Validation [12][   20/   40]   Loss 0.472163   Top1 84.277344   Top5 99.277344   BatchTime 0.138401   
+2022-11-25 07:44:33,703 - INFO  - Validation [12][   40/   40]   Loss 0.465796   Top1 84.200000   Top5 99.390000   BatchTime 0.100066   
+2022-11-25 07:44:33,915 - INFO  - ==> Top1: 84.200    Top5: 99.390    Loss: 0.466
+
+2022-11-25 07:44:33,915 - INFO  - ==> Sparsity : 0.368
+
+2022-11-25 07:44:33,915 - INFO  - Scoreboard best 1 ==> Epoch [8][Top1: 85.750   Top5: 99.410]
+2022-11-25 07:44:33,915 - INFO  - Scoreboard best 2 ==> Epoch [9][Top1: 85.710   Top5: 99.440]
+2022-11-25 07:44:33,916 - INFO  - Scoreboard best 3 ==> Epoch [7][Top1: 85.060   Top5: 99.360]
+2022-11-25 07:44:34,046 - INFO  - Saving checkpoint to:
+            Current: /home/ilena7440/LSQ_FakeQuant/out/88_20221125-072416/_checkpoint.pth.tar
+
+2022-11-25 07:44:34,047 - INFO  - >>>>>> Epoch  13
+2022-11-25 07:44:34,049 - INFO  - Training: 50000 samples (256 per mini-batch)
+2022-11-25 07:44:44,623 - INFO  - Training [13][   20/  196]   Loss 0.689297   Top1 75.585938   Top5 97.285156   BatchTime 0.528522   LR 0.000235   
+2022-11-25 07:44:53,629 - INFO  - Training [13][   40/  196]   Loss 0.674926   Top1 76.435547   Top5 97.304688   BatchTime 0.489427   LR 0.000235   
+2022-11-25 07:45:01,305 - INFO  - Training [13][   60/  196]   Loss 0.657891   Top1 77.050781   Top5 97.519531   BatchTime 0.454214   LR 0.000234   
+2022-11-25 07:45:10,004 - INFO  - Training [13][   80/  196]   Loss 0.647436   Top1 77.573242   Top5 97.583008   BatchTime 0.449395   LR 0.000233   
+2022-11-25 07:45:17,967 - INFO  - Training [13][  100/  196]   Loss 0.643899   Top1 77.656250   Top5 97.675781   BatchTime 0.439144   LR 0.000232   
+2022-11-25 07:45:26,515 - INFO  - Training [13][  120/  196]   Loss 0.637840   Top1 77.822266   Top5 97.796224   BatchTime 0.437188   LR 0.000230   
+2022-11-25 07:45:35,462 - INFO  - Training [13][  140/  196]   Loss 0.633193   Top1 78.030134   Top5 97.879464   BatchTime 0.438638   LR 0.000229   
+2022-11-25 07:45:44,451 - INFO  - Training [13][  160/  196]   Loss 0.633527   Top1 77.963867   Top5 97.875977   BatchTime 0.439988   LR 0.000228   
+2022-11-25 07:45:53,265 - INFO  - Training [13][  180/  196]   Loss 0.634812   Top1 77.879774   Top5 97.847222   BatchTime 0.440070   LR 0.000227   
+2022-11-25 07:46:00,517 - INFO  - ==> Top1: 77.818    Top5: 97.842    Loss: 0.635
+
+2022-11-25 07:46:00,691 - INFO  - Created `MobileNetv2` model
+          Use pre-trained model = False
+2022-11-25 07:46:02,548 - INFO  - Validation: 10000 samples (256 per mini-batch)
+2022-11-25 07:46:05,165 - INFO  - Validation [13][   20/   40]   Loss 0.453233   Top1 85.253906   Top5 99.238281   BatchTime 0.130746   
+2022-11-25 07:46:06,280 - INFO  - Validation [13][   40/   40]   Loss 0.451273   Top1 84.790000   Top5 99.350000   BatchTime 0.093266   
+2022-11-25 07:46:06,508 - INFO  - ==> Top1: 84.790    Top5: 99.350    Loss: 0.451
+
+2022-11-25 07:46:06,508 - INFO  - ==> Sparsity : 0.368
+
+2022-11-25 07:46:06,509 - INFO  - Scoreboard best 1 ==> Epoch [8][Top1: 85.750   Top5: 99.410]
+2022-11-25 07:46:06,509 - INFO  - Scoreboard best 2 ==> Epoch [9][Top1: 85.710   Top5: 99.440]
+2022-11-25 07:46:06,509 - INFO  - Scoreboard best 3 ==> Epoch [7][Top1: 85.060   Top5: 99.360]
+2022-11-25 07:46:06,640 - INFO  - Saving checkpoint to:
+            Current: /home/ilena7440/LSQ_FakeQuant/out/88_20221125-072416/_checkpoint.pth.tar
+
+2022-11-25 07:46:06,641 - INFO  - >>>>>> Epoch  14
+2022-11-25 07:46:06,643 - INFO  - Training: 50000 samples (256 per mini-batch)
+2022-11-25 07:46:17,862 - INFO  - Training [14][   20/  196]   Loss 0.639997   Top1 77.773438   Top5 97.265625   BatchTime 0.560821   LR 0.000225   
+2022-11-25 07:46:26,526 - INFO  - Training [14][   40/  196]   Loss 0.636892   Top1 77.666016   Top5 97.441406   BatchTime 0.497013   LR 0.000224   
+2022-11-25 07:46:35,094 - INFO  - Training [14][   60/  196]   Loss 0.637443   Top1 77.714844   Top5 97.630208   BatchTime 0.474141   LR 0.000223   
+2022-11-25 07:46:43,960 - INFO  - Training [14][   80/  196]   Loss 0.630088   Top1 78.002930   Top5 97.719727   BatchTime 0.466422   LR 0.000221   
+2022-11-25 07:46:52,163 - INFO  - Training [14][  100/  196]   Loss 0.626176   Top1 78.300781   Top5 97.703125   BatchTime 0.455173   LR 0.000220   
+2022-11-25 07:46:59,750 - INFO  - Training [14][  120/  196]   Loss 0.618959   Top1 78.580729   Top5 97.884115   BatchTime 0.442531   LR 0.000219   
+2022-11-25 07:47:09,006 - INFO  - Training [14][  140/  196]   Loss 0.615827   Top1 78.694196   Top5 97.943638   BatchTime 0.445429   LR 0.000217   
+2022-11-25 07:47:18,498 - INFO  - Training [14][  160/  196]   Loss 0.618675   Top1 78.579102   Top5 97.902832   BatchTime 0.449070   LR 0.000216   
+2022-11-25 07:47:27,319 - INFO  - Training [14][  180/  196]   Loss 0.618953   Top1 78.552517   Top5 97.873264   BatchTime 0.448183   LR 0.000215   
+2022-11-25 07:47:34,515 - INFO  - ==> Top1: 78.614    Top5: 97.862    Loss: 0.618
+
+2022-11-25 07:47:34,727 - INFO  - Created `MobileNetv2` model
+          Use pre-trained model = False
+2022-11-25 07:47:36,552 - INFO  - Validation: 10000 samples (256 per mini-batch)
+2022-11-25 07:47:39,830 - INFO  - Validation [14][   20/   40]   Loss 0.456257   Top1 84.453125   Top5 99.277344   BatchTime 0.163823   
+2022-11-25 07:47:40,949 - INFO  - Validation [14][   40/   40]   Loss 0.448264   Top1 84.750000   Top5 99.470000   BatchTime 0.109878   
+2022-11-25 07:47:41,175 - INFO  - ==> Top1: 84.750    Top5: 99.470    Loss: 0.448
+
+2022-11-25 07:47:41,175 - INFO  - ==> Sparsity : 0.369
+
+2022-11-25 07:47:41,175 - INFO  - Scoreboard best 1 ==> Epoch [8][Top1: 85.750   Top5: 99.410]
+2022-11-25 07:47:41,176 - INFO  - Scoreboard best 2 ==> Epoch [9][Top1: 85.710   Top5: 99.440]
+2022-11-25 07:47:41,176 - INFO  - Scoreboard best 3 ==> Epoch [7][Top1: 85.060   Top5: 99.360]
+2022-11-25 07:47:41,333 - INFO  - Saving checkpoint to:
+            Current: /home/ilena7440/LSQ_FakeQuant/out/88_20221125-072416/_checkpoint.pth.tar
+
+2022-11-25 07:47:41,335 - INFO  - >>>>>> Epoch  15
+2022-11-25 07:47:41,336 - INFO  - Training: 50000 samples (256 per mini-batch)
+2022-11-25 07:47:52,000 - INFO  - Training [15][   20/  196]   Loss 0.602028   Top1 78.652344   Top5 97.558594   BatchTime 0.533057   LR 0.000212   
+2022-11-25 07:48:00,175 - INFO  - Training [15][   40/  196]   Loss 0.612886   Top1 78.408203   Top5 97.753906   BatchTime 0.470893   LR 0.000211   
+2022-11-25 07:48:08,838 - INFO  - Training [15][   60/  196]   Loss 0.605574   Top1 78.782552   Top5 97.858073   BatchTime 0.458315   LR 0.000209   
+2022-11-25 07:48:17,777 - INFO  - Training [15][   80/  196]   Loss 0.610584   Top1 78.676758   Top5 97.871094   BatchTime 0.455469   LR 0.000208   
+2022-11-25 07:48:26,955 - INFO  - Training [15][  100/  196]   Loss 0.604559   Top1 78.875000   Top5 97.937500   BatchTime 0.456156   LR 0.000206   
+2022-11-25 07:48:34,914 - INFO  - Training [15][  120/  196]   Loss 0.601807   Top1 78.916016   Top5 98.059896   BatchTime 0.446455   LR 0.000205   
+2022-11-25 07:48:43,409 - INFO  - Training [15][  140/  196]   Loss 0.599871   Top1 79.015067   Top5 98.077567   BatchTime 0.443354   LR 0.000203   
+2022-11-25 07:48:52,525 - INFO  - Training [15][  160/  196]   Loss 0.602404   Top1 78.955078   Top5 98.061523   BatchTime 0.444907   LR 0.000201   
+2022-11-25 07:49:01,788 - INFO  - Training [15][  180/  196]   Loss 0.602526   Top1 78.951823   Top5 97.992622   BatchTime 0.446935   LR 0.000200   
+2022-11-25 07:49:09,245 - INFO  - ==> Top1: 79.004    Top5: 97.988    Loss: 0.601
+
+2022-11-25 07:49:09,416 - INFO  - Created `MobileNetv2` model
+          Use pre-trained model = False
+2022-11-25 07:49:11,396 - INFO  - Validation: 10000 samples (256 per mini-batch)
+2022-11-25 07:49:14,103 - INFO  - Validation [15][   20/   40]   Loss 0.461274   Top1 84.335938   Top5 99.355469   BatchTime 0.135256   
+2022-11-25 07:49:15,225 - INFO  - Validation [15][   40/   40]   Loss 0.457815   Top1 84.120000   Top5 99.420000   BatchTime 0.095691   
+2022-11-25 07:49:15,449 - INFO  - ==> Top1: 84.120    Top5: 99.420    Loss: 0.458
+
+2022-11-25 07:49:15,449 - INFO  - ==> Sparsity : 0.373
+
+2022-11-25 07:49:15,449 - INFO  - Scoreboard best 1 ==> Epoch [8][Top1: 85.750   Top5: 99.410]
+2022-11-25 07:49:15,449 - INFO  - Scoreboard best 2 ==> Epoch [9][Top1: 85.710   Top5: 99.440]
+2022-11-25 07:49:15,449 - INFO  - Scoreboard best 3 ==> Epoch [7][Top1: 85.060   Top5: 99.360]
+2022-11-25 07:49:15,580 - INFO  - Saving checkpoint to:
+            Current: /home/ilena7440/LSQ_FakeQuant/out/88_20221125-072416/_checkpoint.pth.tar
+
+2022-11-25 07:49:15,582 - INFO  - >>>>>> Epoch  16
+2022-11-25 07:49:15,584 - INFO  - Training: 50000 samples (256 per mini-batch)
+2022-11-25 07:49:26,251 - INFO  - Training [16][   20/  196]   Loss 0.622821   Top1 78.203125   Top5 97.382812   BatchTime 0.533238   LR 0.000197   
+2022-11-25 07:49:34,576 - INFO  - Training [16][   40/  196]   Loss 0.630314   Top1 77.890625   Top5 97.568359   BatchTime 0.474750   LR 0.000195   
+2022-11-25 07:49:43,622 - INFO  - Training [16][   60/  196]   Loss 0.619030   Top1 78.294271   Top5 97.682292   BatchTime 0.467259   LR 0.000194   
+2022-11-25 07:49:52,726 - INFO  - Training [16][   80/  196]   Loss 0.615338   Top1 78.530273   Top5 97.802734   BatchTime 0.464244   LR 0.000192   
+2022-11-25 07:50:02,069 - INFO  - Training [16][  100/  196]   Loss 0.607534   Top1 78.812500   Top5 97.863281   BatchTime 0.464828   LR 0.000190   
+2022-11-25 07:50:10,536 - INFO  - Training [16][  120/  196]   Loss 0.600297   Top1 79.026693   Top5 97.949219   BatchTime 0.457907   LR 0.000188   
+2022-11-25 07:50:18,248 - INFO  - Training [16][  140/  196]   Loss 0.594596   Top1 79.257812   Top5 98.027344   BatchTime 0.447581   LR 0.000187   
+2022-11-25 07:50:27,923 - INFO  - Training [16][  160/  196]   Loss 0.593770   Top1 79.304199   Top5 97.988281   BatchTime 0.452100   LR 0.000185   
+2022-11-25 07:50:36,721 - INFO  - Training [16][  180/  196]   Loss 0.591375   Top1 79.364149   Top5 97.979601   BatchTime 0.450747   LR 0.000183   
+2022-11-25 07:50:44,259 - INFO  - ==> Top1: 79.542    Top5: 98.018    Loss: 0.587
+
+2022-11-25 07:50:44,432 - INFO  - Created `MobileNetv2` model
+          Use pre-trained model = False
+2022-11-25 07:50:46,720 - INFO  - Validation: 10000 samples (256 per mini-batch)
+2022-11-25 07:50:49,360 - INFO  - Validation [16][   20/   40]   Loss 0.421510   Top1 86.191406   Top5 99.375000   BatchTime 0.131885   
+2022-11-25 07:50:50,441 - INFO  - Validation [16][   40/   40]   Loss 0.406953   Top1 86.300000   Top5 99.500000   BatchTime 0.092973   
+2022-11-25 07:50:50,671 - INFO  - ==> Top1: 86.300    Top5: 99.500    Loss: 0.407
+
+2022-11-25 07:50:50,671 - INFO  - ==> Sparsity : 0.370
+
+2022-11-25 07:50:50,671 - INFO  - Scoreboard best 1 ==> Epoch [16][Top1: 86.300   Top5: 99.500]
+2022-11-25 07:50:50,672 - INFO  - Scoreboard best 2 ==> Epoch [8][Top1: 85.750   Top5: 99.410]
+2022-11-25 07:50:50,672 - INFO  - Scoreboard best 3 ==> Epoch [9][Top1: 85.710   Top5: 99.440]
+2022-11-25 07:50:56,176 - INFO  - Saving checkpoint to:
+            Current: /home/ilena7440/LSQ_FakeQuant/out/88_20221125-072416/_checkpoint.pth.tar
+                Best: /home/ilena7440/LSQ_FakeQuant/out/88_20221125-072416/_best.pth.tar
+save quantized models...
+2022-11-25 07:50:56,178 - INFO  - >>>>>> Epoch  17
+2022-11-25 07:50:56,180 - INFO  - Training: 50000 samples (256 per mini-batch)
+2022-11-25 07:51:05,951 - INFO  - Training [17][   20/  196]   Loss 0.602414   Top1 79.082031   Top5 97.812500   BatchTime 0.488401   LR 0.000180   
+2022-11-25 07:51:14,991 - INFO  - Training [17][   40/  196]   Loss 0.584010   Top1 79.814453   Top5 97.890625   BatchTime 0.470191   LR 0.000178   
+2022-11-25 07:51:24,578 - INFO  - Training [17][   60/  196]   Loss 0.582849   Top1 79.817708   Top5 97.851562   BatchTime 0.473249   LR 0.000176   
+2022-11-25 07:51:34,111 - INFO  - Training [17][   80/  196]   Loss 0.579705   Top1 79.887695   Top5 98.017578   BatchTime 0.474100   LR 0.000175   
+2022-11-25 07:51:42,883 - INFO  - Training [17][  100/  196]   Loss 0.572380   Top1 80.125000   Top5 98.136719   BatchTime 0.466996   LR 0.000173   
+2022-11-25 07:51:51,477 - INFO  - Training [17][  120/  196]   Loss 0.566618   Top1 80.328776   Top5 98.216146   BatchTime 0.460780   LR 0.000171   
+2022-11-25 07:52:00,406 - INFO  - Training [17][  140/  196]   Loss 0.565495   Top1 80.334821   Top5 98.272879   BatchTime 0.458738   LR 0.000169   
+2022-11-25 07:52:09,949 - INFO  - Training [17][  160/  196]   Loss 0.566085   Top1 80.253906   Top5 98.234863   BatchTime 0.461037   LR 0.000167   
+2022-11-25 07:52:19,068 - INFO  - Training [17][  180/  196]   Loss 0.565645   Top1 80.238715   Top5 98.213976   BatchTime 0.460468   LR 0.000165   
+2022-11-25 07:52:26,547 - INFO  - ==> Top1: 80.318    Top5: 98.226    Loss: 0.564
+
+2022-11-25 07:52:26,843 - INFO  - Created `MobileNetv2` model
+          Use pre-trained model = False
+2022-11-25 07:52:28,939 - INFO  - Validation: 10000 samples (256 per mini-batch)
+2022-11-25 07:52:31,715 - INFO  - Validation [17][   20/   40]   Loss 0.415222   Top1 85.468750   Top5 99.492188   BatchTime 0.138707   
+2022-11-25 07:52:33,155 - INFO  - Validation [17][   40/   40]   Loss 0.397608   Top1 86.130000   Top5 99.560000   BatchTime 0.105340   
+2022-11-25 07:52:33,381 - INFO  - ==> Top1: 86.130    Top5: 99.560    Loss: 0.398
+
+2022-11-25 07:52:33,382 - INFO  - ==> Sparsity : 0.380
+
+2022-11-25 07:52:33,382 - INFO  - Scoreboard best 1 ==> Epoch [16][Top1: 86.300   Top5: 99.500]
+2022-11-25 07:52:33,382 - INFO  - Scoreboard best 2 ==> Epoch [17][Top1: 86.130   Top5: 99.560]
+2022-11-25 07:52:33,382 - INFO  - Scoreboard best 3 ==> Epoch [8][Top1: 85.750   Top5: 99.410]
+2022-11-25 07:52:33,532 - INFO  - Saving checkpoint to:
+            Current: /home/ilena7440/LSQ_FakeQuant/out/88_20221125-072416/_checkpoint.pth.tar
+
+2022-11-25 07:52:33,534 - INFO  - >>>>>> Epoch  18
+2022-11-25 07:52:33,536 - INFO  - Training: 50000 samples (256 per mini-batch)
+2022-11-25 07:52:44,011 - INFO  - Training [18][   20/  196]   Loss 0.575032   Top1 80.488281   Top5 97.832031   BatchTime 0.523595   LR 0.000162   
+2022-11-25 07:52:52,979 - INFO  - Training [18][   40/  196]   Loss 0.563340   Top1 80.888672   Top5 97.910156   BatchTime 0.486010   LR 0.000160   
+2022-11-25 07:53:02,222 - INFO  - Training [18][   60/  196]   Loss 0.558639   Top1 80.904948   Top5 97.955729   BatchTime 0.478052   LR 0.000158   
+2022-11-25 07:53:11,034 - INFO  - Training [18][   80/  196]   Loss 0.557119   Top1 80.893555   Top5 98.144531   BatchTime 0.468686   LR 0.000156   
+2022-11-25 07:53:19,607 - INFO  - Training [18][  100/  196]   Loss 0.548389   Top1 81.097656   Top5 98.218750   BatchTime 0.460678   LR 0.000154   
+2022-11-25 07:53:28,688 - INFO  - Training [18][  120/  196]   Loss 0.546827   Top1 81.113281   Top5 98.271484   BatchTime 0.459572   LR 0.000152   
+2022-11-25 07:53:38,150 - INFO  - Training [18][  140/  196]   Loss 0.546573   Top1 81.146763   Top5 98.331473   BatchTime 0.461506   LR 0.000150   
+2022-11-25 07:53:47,031 - INFO  - Training [18][  160/  196]   Loss 0.546813   Top1 81.152344   Top5 98.303223   BatchTime 0.459321   LR 0.000148   
+2022-11-25 07:53:55,914 - INFO  - Training [18][  180/  196]   Loss 0.545320   Top1 81.100260   Top5 98.294271   BatchTime 0.457634   LR 0.000146   
+2022-11-25 07:54:03,134 - INFO  - ==> Top1: 81.112    Top5: 98.292    Loss: 0.545
+
+2022-11-25 07:54:03,324 - INFO  - Created `MobileNetv2` model
+          Use pre-trained model = False
+2022-11-25 07:54:05,085 - INFO  - Validation: 10000 samples (256 per mini-batch)
+2022-11-25 07:54:08,034 - INFO  - Validation [18][   20/   40]   Loss 0.406645   Top1 86.210938   Top5 99.394531   BatchTime 0.147298   
+2022-11-25 07:54:09,130 - INFO  - Validation [18][   40/   40]   Loss 0.392571   Top1 86.640000   Top5 99.550000   BatchTime 0.101063   
+2022-11-25 07:54:09,717 - INFO  - ==> Top1: 86.640    Top5: 99.550    Loss: 0.393
+
+2022-11-25 07:54:09,718 - INFO  - ==> Sparsity : 0.389
+
+2022-11-25 07:54:09,718 - INFO  - Scoreboard best 1 ==> Epoch [18][Top1: 86.640   Top5: 99.550]
+2022-11-25 07:54:09,718 - INFO  - Scoreboard best 2 ==> Epoch [16][Top1: 86.300   Top5: 99.500]
+2022-11-25 07:54:09,718 - INFO  - Scoreboard best 3 ==> Epoch [17][Top1: 86.130   Top5: 99.560]
+2022-11-25 07:54:16,715 - INFO  - Saving checkpoint to:
+            Current: /home/ilena7440/LSQ_FakeQuant/out/88_20221125-072416/_checkpoint.pth.tar
+                Best: /home/ilena7440/LSQ_FakeQuant/out/88_20221125-072416/_best.pth.tar
+save quantized models...
+2022-11-25 07:54:16,719 - INFO  - >>>>>> Epoch  19
+2022-11-25 07:54:16,722 - INFO  - Training: 50000 samples (256 per mini-batch)
+2022-11-25 07:54:26,171 - INFO  - Training [19][   20/  196]   Loss 0.560304   Top1 80.429688   Top5 97.792969   BatchTime 0.472340   LR 0.000143   
+2022-11-25 07:54:34,401 - INFO  - Training [19][   40/  196]   Loss 0.556115   Top1 80.664062   Top5 98.085938   BatchTime 0.441908   LR 0.000141   
+2022-11-25 07:54:41,764 - INFO  - Training [19][   60/  196]   Loss 0.548282   Top1 80.950521   Top5 98.190104   BatchTime 0.417323   LR 0.000139   
+2022-11-25 07:54:48,517 - INFO  - Training [19][   80/  196]   Loss 0.547399   Top1 80.927734   Top5 98.305664   BatchTime 0.397397   LR 0.000137   
+2022-11-25 07:54:55,818 - INFO  - Training [19][  100/  196]   Loss 0.542998   Top1 81.113281   Top5 98.343750   BatchTime 0.390936   LR 0.000135   
+2022-11-25 07:55:03,267 - INFO  - Training [19][  120/  196]   Loss 0.537889   Top1 81.380208   Top5 98.424479   BatchTime 0.387853   LR 0.000133   
+2022-11-25 07:55:10,755 - INFO  - Training [19][  140/  196]   Loss 0.536030   Top1 81.414621   Top5 98.479353   BatchTime 0.385930   LR 0.000131   
+2022-11-25 07:55:18,200 - INFO  - Training [19][  160/  196]   Loss 0.539066   Top1 81.237793   Top5 98.420410   BatchTime 0.384216   LR 0.000129   
+2022-11-25 07:55:25,283 - INFO  - Training [19][  180/  196]   Loss 0.537933   Top1 81.234809   Top5 98.383247   BatchTime 0.380874   LR 0.000127   
+2022-11-25 07:55:31,317 - INFO  - ==> Top1: 81.262    Top5: 98.340    Loss: 0.537
+
+2022-11-25 07:55:31,502 - INFO  - Created `MobileNetv2` model
+          Use pre-trained model = False
+2022-11-25 07:55:32,939 - INFO  - Validation: 10000 samples (256 per mini-batch)
+2022-11-25 07:55:35,550 - INFO  - Validation [19][   20/   40]   Loss 0.386001   Top1 87.031250   Top5 99.355469   BatchTime 0.130393   
+2022-11-25 07:55:36,619 - INFO  - Validation [19][   40/   40]   Loss 0.378546   Top1 87.220000   Top5 99.500000   BatchTime 0.091924   
+2022-11-25 07:55:36,831 - INFO  - ==> Top1: 87.220    Top5: 99.500    Loss: 0.379
+
+2022-11-25 07:55:36,831 - INFO  - ==> Sparsity : 0.382
+
+2022-11-25 07:55:36,831 - INFO  - Scoreboard best 1 ==> Epoch [19][Top1: 87.220   Top5: 99.500]
+2022-11-25 07:55:36,832 - INFO  - Scoreboard best 2 ==> Epoch [18][Top1: 86.640   Top5: 99.550]
+2022-11-25 07:55:36,832 - INFO  - Scoreboard best 3 ==> Epoch [16][Top1: 86.300   Top5: 99.500]
+2022-11-25 07:55:42,771 - INFO  - Saving checkpoint to:
+            Current: /home/ilena7440/LSQ_FakeQuant/out/88_20221125-072416/_checkpoint.pth.tar
+                Best: /home/ilena7440/LSQ_FakeQuant/out/88_20221125-072416/_best.pth.tar
+save quantized models...
+2022-11-25 07:55:42,775 - INFO  - >>>>>> Epoch  20
+2022-11-25 07:55:42,776 - INFO  - Training: 50000 samples (256 per mini-batch)
+2022-11-25 07:55:51,968 - INFO  - Training [20][   20/  196]   Loss 0.529941   Top1 81.250000   Top5 98.046875   BatchTime 0.459440   LR 0.000123   
+2022-11-25 07:55:59,109 - INFO  - Training [20][   40/  196]   Loss 0.536847   Top1 81.123047   Top5 98.154297   BatchTime 0.408239   LR 0.000121   
+2022-11-25 07:56:06,826 - INFO  - Training [20][   60/  196]   Loss 0.535094   Top1 81.269531   Top5 98.144531   BatchTime 0.400778   LR 0.000119   
+2022-11-25 07:56:14,283 - INFO  - Training [20][   80/  196]   Loss 0.535279   Top1 81.298828   Top5 98.208008   BatchTime 0.393801   LR 0.000117   
+2022-11-25 07:56:21,511 - INFO  - Training [20][  100/  196]   Loss 0.526422   Top1 81.476562   Top5 98.269531   BatchTime 0.387313   LR 0.000115   
+2022-11-25 07:56:28,950 - INFO  - Training [20][  120/  196]   Loss 0.519574   Top1 81.699219   Top5 98.313802   BatchTime 0.384755   LR 0.000113   
+2022-11-25 07:56:36,693 - INFO  - Training [20][  140/  196]   Loss 0.520879   Top1 81.637835   Top5 98.381696   BatchTime 0.385097   LR 0.000111   
+2022-11-25 07:56:44,008 - INFO  - Training [20][  160/  196]   Loss 0.522446   Top1 81.621094   Top5 98.383789   BatchTime 0.382679   LR 0.000109   
+2022-11-25 07:56:50,951 - INFO  - Training [20][  180/  196]   Loss 0.522937   Top1 81.647135   Top5 98.350694   BatchTime 0.378731   LR 0.000107   
+2022-11-25 07:56:57,031 - INFO  - ==> Top1: 81.658    Top5: 98.340    Loss: 0.523
+
+2022-11-25 07:56:57,219 - INFO  - Created `MobileNetv2` model
+          Use pre-trained model = False
+2022-11-25 07:56:58,666 - INFO  - Validation: 10000 samples (256 per mini-batch)
+2022-11-25 07:57:01,307 - INFO  - Validation [20][   20/   40]   Loss 0.382878   Top1 87.402344   Top5 99.453125   BatchTime 0.131923   
+2022-11-25 07:57:02,421 - INFO  - Validation [20][   40/   40]   Loss 0.377274   Top1 87.390000   Top5 99.600000   BatchTime 0.093817   
+2022-11-25 07:57:02,634 - INFO  - ==> Top1: 87.390    Top5: 99.600    Loss: 0.377
+
+2022-11-25 07:57:02,635 - INFO  - ==> Sparsity : 0.391
+
+2022-11-25 07:57:02,635 - INFO  - Scoreboard best 1 ==> Epoch [20][Top1: 87.390   Top5: 99.600]
+2022-11-25 07:57:02,635 - INFO  - Scoreboard best 2 ==> Epoch [19][Top1: 87.220   Top5: 99.500]
+2022-11-25 07:57:02,636 - INFO  - Scoreboard best 3 ==> Epoch [18][Top1: 86.640   Top5: 99.550]
+2022-11-25 07:57:08,347 - INFO  - Saving checkpoint to:
+            Current: /home/ilena7440/LSQ_FakeQuant/out/88_20221125-072416/_checkpoint.pth.tar
+                Best: /home/ilena7440/LSQ_FakeQuant/out/88_20221125-072416/_best.pth.tar
+save quantized models...
+2022-11-25 07:57:08,351 - INFO  - >>>>>> Epoch  21
+2022-11-25 07:57:08,352 - INFO  - Training: 50000 samples (256 per mini-batch)
+2022-11-25 07:57:16,475 - INFO  - Training [21][   20/  196]   Loss 0.525300   Top1 81.406250   Top5 97.988281   BatchTime 0.405993   LR 0.000104   
+2022-11-25 07:57:23,810 - INFO  - Training [21][   40/  196]   Loss 0.525506   Top1 81.464844   Top5 98.154297   BatchTime 0.386377   LR 0.000102   
+2022-11-25 07:57:31,663 - INFO  - Training [21][   60/  196]   Loss 0.519247   Top1 81.731771   Top5 98.222656   BatchTime 0.388469   LR 0.000100   
+2022-11-25 07:57:39,139 - INFO  - Training [21][   80/  196]   Loss 0.516472   Top1 81.840820   Top5 98.349609   BatchTime 0.384802   LR 0.000098   
+2022-11-25 07:57:46,346 - INFO  - Training [21][  100/  196]   Loss 0.515187   Top1 81.851562   Top5 98.339844   BatchTime 0.379911   LR 0.000096   
+2022-11-25 07:57:53,546 - INFO  - Training [21][  120/  196]   Loss 0.510440   Top1 81.956380   Top5 98.414714   BatchTime 0.376593   LR 0.000094   
+2022-11-25 07:58:00,707 - INFO  - Training [21][  140/  196]   Loss 0.506523   Top1 82.061942   Top5 98.493304   BatchTime 0.373939   LR 0.000092   
+2022-11-25 07:58:08,226 - INFO  - Training [21][  160/  196]   Loss 0.510274   Top1 82.058105   Top5 98.452148   BatchTime 0.374188   LR 0.000090   
+2022-11-25 07:58:15,540 - INFO  - Training [21][  180/  196]   Loss 0.508906   Top1 82.105035   Top5 98.465712   BatchTime 0.373245   LR 0.000088   
+2022-11-25 07:58:21,605 - INFO  - ==> Top1: 82.234    Top5: 98.466    Loss: 0.506
+
+2022-11-25 07:58:21,772 - INFO  - Created `MobileNetv2` model
+          Use pre-trained model = False
+2022-11-25 07:58:23,244 - INFO  - Validation: 10000 samples (256 per mini-batch)
+2022-11-25 07:58:25,900 - INFO  - Validation [21][   20/   40]   Loss 0.373317   Top1 87.636719   Top5 99.570312   BatchTime 0.132695   
+2022-11-25 07:58:26,997 - INFO  - Validation [21][   40/   40]   Loss 0.364989   Top1 87.640000   Top5 99.610000   BatchTime 0.093778   
+2022-11-25 07:58:27,201 - INFO  - ==> Top1: 87.640    Top5: 99.610    Loss: 0.365
+
+2022-11-25 07:58:27,201 - INFO  - ==> Sparsity : 0.394
+
+2022-11-25 07:58:27,201 - INFO  - Scoreboard best 1 ==> Epoch [21][Top1: 87.640   Top5: 99.610]
+2022-11-25 07:58:27,202 - INFO  - Scoreboard best 2 ==> Epoch [20][Top1: 87.390   Top5: 99.600]
+2022-11-25 07:58:27,202 - INFO  - Scoreboard best 3 ==> Epoch [19][Top1: 87.220   Top5: 99.500]
+2022-11-25 07:58:33,846 - INFO  - Saving checkpoint to:
+            Current: /home/ilena7440/LSQ_FakeQuant/out/88_20221125-072416/_checkpoint.pth.tar
+                Best: /home/ilena7440/LSQ_FakeQuant/out/88_20221125-072416/_best.pth.tar
+save quantized models...
+2022-11-25 07:58:33,850 - INFO  - >>>>>> Epoch  22
+2022-11-25 07:58:33,852 - INFO  - Training: 50000 samples (256 per mini-batch)
+2022-11-25 07:58:43,203 - INFO  - Training [22][   20/  196]   Loss 0.507532   Top1 82.402344   Top5 98.203125   BatchTime 0.467415   LR 0.000085   
+2022-11-25 07:58:51,054 - INFO  - Training [22][   40/  196]   Loss 0.510535   Top1 82.373047   Top5 98.183594   BatchTime 0.429967   LR 0.000083   
+2022-11-25 07:58:58,665 - INFO  - Training [22][   60/  196]   Loss 0.503702   Top1 82.662760   Top5 98.222656   BatchTime 0.413497   LR 0.000081   
+2022-11-25 07:59:06,379 - INFO  - Training [22][   80/  196]   Loss 0.505953   Top1 82.656250   Top5 98.295898   BatchTime 0.406552   LR 0.000079   
+2022-11-25 07:59:13,774 - INFO  - Training [22][  100/  196]   Loss 0.500199   Top1 82.773438   Top5 98.332031   BatchTime 0.399187   LR 0.000077   
+2022-11-25 07:59:21,093 - INFO  - Training [22][  120/  196]   Loss 0.496241   Top1 82.955729   Top5 98.398438   BatchTime 0.393651   LR 0.000075   
+2022-11-25 07:59:28,454 - INFO  - Training [22][  140/  196]   Loss 0.496927   Top1 82.935268   Top5 98.448661   BatchTime 0.389991   LR 0.000073   
+2022-11-25 07:59:35,956 - INFO  - Training [22][  160/  196]   Loss 0.500870   Top1 82.775879   Top5 98.420410   BatchTime 0.388131   LR 0.000072   
+2022-11-25 07:59:43,303 - INFO  - Training [22][  180/  196]   Loss 0.499335   Top1 82.819010   Top5 98.426649   BatchTime 0.385820   LR 0.000070   
+2022-11-25 07:59:48,748 - INFO  - ==> Top1: 82.828    Top5: 98.422    Loss: 0.499
+
+2022-11-25 07:59:48,912 - INFO  - Created `MobileNetv2` model
+          Use pre-trained model = False
+2022-11-25 07:59:52,116 - INFO  - Validation: 10000 samples (256 per mini-batch)
+2022-11-25 07:59:56,135 - INFO  - Validation [22][   20/   40]   Loss 0.363028   Top1 88.164062   Top5 99.589844   BatchTime 0.200838   
+2022-11-25 07:59:57,958 - INFO  - Validation [22][   40/   40]   Loss 0.352581   Top1 88.160000   Top5 99.620000   BatchTime 0.145999   
+2022-11-25 07:59:58,383 - INFO  - ==> Top1: 88.160    Top5: 99.620    Loss: 0.353
+
+2022-11-25 07:59:58,383 - INFO  - ==> Sparsity : 0.395
+
+2022-11-25 07:59:58,383 - INFO  - Scoreboard best 1 ==> Epoch [22][Top1: 88.160   Top5: 99.620]
+2022-11-25 07:59:58,384 - INFO  - Scoreboard best 2 ==> Epoch [21][Top1: 87.640   Top5: 99.610]
+2022-11-25 07:59:58,384 - INFO  - Scoreboard best 3 ==> Epoch [20][Top1: 87.390   Top5: 99.600]
+2022-11-25 08:00:03,907 - INFO  - Saving checkpoint to:
+            Current: /home/ilena7440/LSQ_FakeQuant/out/88_20221125-072416/_checkpoint.pth.tar
+                Best: /home/ilena7440/LSQ_FakeQuant/out/88_20221125-072416/_best.pth.tar
+save quantized models...
+2022-11-25 08:00:03,913 - INFO  - >>>>>> Epoch  23
+2022-11-25 08:00:03,915 - INFO  - Training: 50000 samples (256 per mini-batch)
+2022-11-25 08:00:13,387 - INFO  - Training [23][   20/  196]   Loss 0.532486   Top1 81.503906   Top5 97.675781   BatchTime 0.473481   LR 0.000067   
+2022-11-25 08:00:21,286 - INFO  - Training [23][   40/  196]   Loss 0.521780   Top1 81.777344   Top5 98.007812   BatchTime 0.434210   LR 0.000065   
+2022-11-25 08:00:28,843 - INFO  - Training [23][   60/  196]   Loss 0.514250   Top1 81.992188   Top5 98.151042   BatchTime 0.415422   LR 0.000063   
+2022-11-25 08:00:36,012 - INFO  - Training [23][   80/  196]   Loss 0.508103   Top1 82.353516   Top5 98.261719   BatchTime 0.401178   LR 0.000061   
+2022-11-25 08:00:43,344 - INFO  - Training [23][  100/  196]   Loss 0.497613   Top1 82.679688   Top5 98.386719   BatchTime 0.394261   LR 0.000060   
+2022-11-25 08:00:50,514 - INFO  - Training [23][  120/  196]   Loss 0.490067   Top1 82.893880   Top5 98.483073   BatchTime 0.388300   LR 0.000058   
+2022-11-25 08:00:57,752 - INFO  - Training [23][  140/  196]   Loss 0.488217   Top1 82.974330   Top5 98.512835   BatchTime 0.384526   LR 0.000056   
+2022-11-25 08:01:04,815 - INFO  - Training [23][  160/  196]   Loss 0.488955   Top1 82.927246   Top5 98.491211   BatchTime 0.380602   LR 0.000055   
+2022-11-25 08:01:11,007 - INFO  - Training [23][  180/  196]   Loss 0.487969   Top1 82.940538   Top5 98.465712   BatchTime 0.372713   LR 0.000053   
+2022-11-25 08:01:15,838 - INFO  - ==> Top1: 83.048    Top5: 98.466    Loss: 0.486
+
+2022-11-25 08:01:16,139 - INFO  - Created `MobileNetv2` model
+          Use pre-trained model = False
+2022-11-25 08:01:17,534 - INFO  - Validation: 10000 samples (256 per mini-batch)
+2022-11-25 08:01:20,764 - INFO  - Validation [23][   20/   40]   Loss 0.354299   Top1 88.398438   Top5 99.570312   BatchTime 0.161438   
+2022-11-25 08:01:23,667 - INFO  - Validation [23][   40/   40]   Loss 0.342660   Top1 88.460000   Top5 99.650000   BatchTime 0.153293   
+2022-11-25 08:01:23,907 - INFO  - ==> Top1: 88.460    Top5: 99.650    Loss: 0.343
+
+2022-11-25 08:01:23,907 - INFO  - ==> Sparsity : 0.400
+
+2022-11-25 08:01:23,908 - INFO  - Scoreboard best 1 ==> Epoch [23][Top1: 88.460   Top5: 99.650]
+2022-11-25 08:01:23,908 - INFO  - Scoreboard best 2 ==> Epoch [22][Top1: 88.160   Top5: 99.620]
+2022-11-25 08:01:23,908 - INFO  - Scoreboard best 3 ==> Epoch [21][Top1: 87.640   Top5: 99.610]
+2022-11-25 08:01:29,593 - INFO  - Saving checkpoint to:
+            Current: /home/ilena7440/LSQ_FakeQuant/out/88_20221125-072416/_checkpoint.pth.tar
+                Best: /home/ilena7440/LSQ_FakeQuant/out/88_20221125-072416/_best.pth.tar
+save quantized models...
+2022-11-25 08:01:29,594 - INFO  - >>>>>> Epoch  24
+2022-11-25 08:01:29,596 - INFO  - Training: 50000 samples (256 per mini-batch)
+2022-11-25 08:01:39,669 - INFO  - Training [24][   20/  196]   Loss 0.492960   Top1 83.574219   Top5 98.242188   BatchTime 0.503491   LR 0.000050   
+2022-11-25 08:01:47,902 - INFO  - Training [24][   40/  196]   Loss 0.486163   Top1 83.535156   Top5 98.349609   BatchTime 0.457578   LR 0.000048   
+2022-11-25 08:01:56,768 - INFO  - Training [24][   60/  196]   Loss 0.484551   Top1 83.157552   Top5 98.385417   BatchTime 0.452805   LR 0.000047   
+2022-11-25 08:02:05,696 - INFO  - Training [24][   80/  196]   Loss 0.483520   Top1 83.222656   Top5 98.393555   BatchTime 0.451206   LR 0.000045   
+2022-11-25 08:02:14,668 - INFO  - Training [24][  100/  196]   Loss 0.477344   Top1 83.375000   Top5 98.457031   BatchTime 0.450689   LR 0.000044   
+2022-11-25 08:02:23,972 - INFO  - Training [24][  120/  196]   Loss 0.473445   Top1 83.583984   Top5 98.489583   BatchTime 0.453105   LR 0.000042   
+2022-11-25 08:02:32,735 - INFO  - Training [24][  140/  196]   Loss 0.470510   Top1 83.683036   Top5 98.593750   BatchTime 0.450969   LR 0.000041   
+2022-11-25 08:02:40,664 - INFO  - Training [24][  160/  196]   Loss 0.471119   Top1 83.630371   Top5 98.581543   BatchTime 0.444154   LR 0.000039   
+2022-11-25 08:02:49,585 - INFO  - Training [24][  180/  196]   Loss 0.469802   Top1 83.632812   Top5 98.569878   BatchTime 0.444359   LR 0.000038   
+2022-11-25 08:02:57,314 - INFO  - ==> Top1: 83.724    Top5: 98.572    Loss: 0.468
+
+2022-11-25 08:02:57,521 - INFO  - Created `MobileNetv2` model
+          Use pre-trained model = False
+2022-11-25 08:02:59,544 - INFO  - Validation: 10000 samples (256 per mini-batch)
+2022-11-25 08:03:02,399 - INFO  - Validation [24][   20/   40]   Loss 0.352317   Top1 88.222656   Top5 99.609375   BatchTime 0.142579   
+2022-11-25 08:03:03,958 - INFO  - Validation [24][   40/   40]   Loss 0.338483   Top1 88.600000   Top5 99.660000   BatchTime 0.110272   
+2022-11-25 08:03:04,186 - INFO  - ==> Top1: 88.600    Top5: 99.660    Loss: 0.338
+
+2022-11-25 08:03:04,186 - INFO  - ==> Sparsity : 0.403
+
+2022-11-25 08:03:04,187 - INFO  - Scoreboard best 1 ==> Epoch [24][Top1: 88.600   Top5: 99.660]
+2022-11-25 08:03:04,187 - INFO  - Scoreboard best 2 ==> Epoch [23][Top1: 88.460   Top5: 99.650]
+2022-11-25 08:03:04,187 - INFO  - Scoreboard best 3 ==> Epoch [22][Top1: 88.160   Top5: 99.620]
+2022-11-25 08:03:10,097 - INFO  - Saving checkpoint to:
+            Current: /home/ilena7440/LSQ_FakeQuant/out/88_20221125-072416/_checkpoint.pth.tar
+                Best: /home/ilena7440/LSQ_FakeQuant/out/88_20221125-072416/_best.pth.tar
+save quantized models...
+2022-11-25 08:03:10,103 - INFO  - >>>>>> Epoch  25
+2022-11-25 08:03:10,105 - INFO  - Training: 50000 samples (256 per mini-batch)
+2022-11-25 08:03:20,802 - INFO  - Training [25][   20/  196]   Loss 0.468304   Top1 83.632812   Top5 98.457031   BatchTime 0.534697   LR 0.000035   
+2022-11-25 08:03:29,481 - INFO  - Training [25][   40/  196]   Loss 0.477396   Top1 83.300781   Top5 98.417969   BatchTime 0.484318   LR 0.000034   
+2022-11-25 08:03:37,411 - INFO  - Training [25][   60/  196]   Loss 0.478485   Top1 83.333333   Top5 98.509115   BatchTime 0.455048   LR 0.000033   
+2022-11-25 08:03:46,276 - INFO  - Training [25][   80/  196]   Loss 0.477536   Top1 83.393555   Top5 98.569336   BatchTime 0.452104   LR 0.000031   
+2022-11-25 08:03:55,603 - INFO  - Training [25][  100/  196]   Loss 0.467936   Top1 83.757812   Top5 98.574219   BatchTime 0.454944   LR 0.000030   
+2022-11-25 08:04:04,382 - INFO  - Training [25][  120/  196]   Loss 0.463536   Top1 83.919271   Top5 98.639323   BatchTime 0.452281   LR 0.000029   
+2022-11-25 08:04:12,011 - INFO  - Training [25][  140/  196]   Loss 0.461139   Top1 84.017857   Top5 98.696987   BatchTime 0.442164   LR 0.000027   
+2022-11-25 08:04:20,257 - INFO  - Training [25][  160/  196]   Loss 0.464767   Top1 83.950195   Top5 98.666992   BatchTime 0.438428   LR 0.000026   
+2022-11-25 08:04:29,879 - INFO  - Training [25][  180/  196]   Loss 0.461632   Top1 84.016927   Top5 98.639323   BatchTime 0.443170   LR 0.000025   
+2022-11-25 08:04:37,694 - INFO  - ==> Top1: 84.050    Top5: 98.612    Loss: 0.461
+
+2022-11-25 08:04:38,086 - INFO  - Created `MobileNetv2` model
+          Use pre-trained model = False
+2022-11-25 08:04:40,027 - INFO  - Validation: 10000 samples (256 per mini-batch)
+2022-11-25 08:04:42,831 - INFO  - Validation [25][   20/   40]   Loss 0.343121   Top1 88.535156   Top5 99.589844   BatchTime 0.140119   
+2022-11-25 08:04:43,956 - INFO  - Validation [25][   40/   40]   Loss 0.334714   Top1 88.620000   Top5 99.720000   BatchTime 0.098199   
+2022-11-25 08:04:44,203 - INFO  - ==> Top1: 88.620    Top5: 99.720    Loss: 0.335
+
+2022-11-25 08:04:44,203 - INFO  - ==> Sparsity : 0.405
+
+2022-11-25 08:04:44,204 - INFO  - Scoreboard best 1 ==> Epoch [25][Top1: 88.620   Top5: 99.720]
+2022-11-25 08:04:44,204 - INFO  - Scoreboard best 2 ==> Epoch [24][Top1: 88.600   Top5: 99.660]
+2022-11-25 08:04:44,204 - INFO  - Scoreboard best 3 ==> Epoch [23][Top1: 88.460   Top5: 99.650]
+2022-11-25 08:04:49,824 - INFO  - Saving checkpoint to:
+            Current: /home/ilena7440/LSQ_FakeQuant/out/88_20221125-072416/_checkpoint.pth.tar
+                Best: /home/ilena7440/LSQ_FakeQuant/out/88_20221125-072416/_best.pth.tar
+save quantized models...
+2022-11-25 08:04:49,833 - INFO  - >>>>>> Epoch  26
+2022-11-25 08:04:49,835 - INFO  - Training: 50000 samples (256 per mini-batch)
+2022-11-25 08:05:00,637 - INFO  - Training [26][   20/  196]   Loss 0.468961   Top1 83.339844   Top5 98.339844   BatchTime 0.539995   LR 0.000023   
+2022-11-25 08:05:09,096 - INFO  - Training [26][   40/  196]   Loss 0.471755   Top1 83.359375   Top5 98.408203   BatchTime 0.481453   LR 0.000022   
+2022-11-25 08:05:16,657 - INFO  - Training [26][   60/  196]   Loss 0.467168   Top1 83.645833   Top5 98.502604   BatchTime 0.446986   LR 0.000021   
+2022-11-25 08:05:25,894 - INFO  - Training [26][   80/  196]   Loss 0.468070   Top1 83.735352   Top5 98.569336   BatchTime 0.450698   LR 0.000019   
+2022-11-25 08:05:34,786 - INFO  - Training [26][  100/  196]   Loss 0.459055   Top1 84.042969   Top5 98.617188   BatchTime 0.449479   LR 0.000018   
+2022-11-25 08:05:43,984 - INFO  - Training [26][  120/  196]   Loss 0.454630   Top1 84.205729   Top5 98.710938   BatchTime 0.451214   LR 0.000017   
+2022-11-25 08:05:52,222 - INFO  - Training [26][  140/  196]   Loss 0.456824   Top1 84.160156   Top5 98.763951   BatchTime 0.445603   LR 0.000016   
+2022-11-25 08:06:01,276 - INFO  - Training [26][  160/  196]   Loss 0.460245   Top1 84.025879   Top5 98.764648   BatchTime 0.446485   LR 0.000015   
+2022-11-25 08:06:10,427 - INFO  - Training [26][  180/  196]   Loss 0.457899   Top1 84.088542   Top5 98.736979   BatchTime 0.447714   LR 0.000014   
+2022-11-25 08:06:17,719 - INFO  - ==> Top1: 84.090    Top5: 98.740    Loss: 0.456
+
+2022-11-25 08:06:17,892 - INFO  - Created `MobileNetv2` model
+          Use pre-trained model = False
+2022-11-25 08:06:19,910 - INFO  - Validation: 10000 samples (256 per mini-batch)
+2022-11-25 08:06:22,821 - INFO  - Validation [26][   20/   40]   Loss 0.343721   Top1 88.613281   Top5 99.570312   BatchTime 0.145473   
+2022-11-25 08:06:24,037 - INFO  - Validation [26][   40/   40]   Loss 0.331980   Top1 88.910000   Top5 99.640000   BatchTime 0.103131   
+2022-11-25 08:06:24,268 - INFO  - ==> Top1: 88.910    Top5: 99.640    Loss: 0.332
+
+2022-11-25 08:06:24,268 - INFO  - ==> Sparsity : 0.408
+
+2022-11-25 08:06:24,268 - INFO  - Scoreboard best 1 ==> Epoch [26][Top1: 88.910   Top5: 99.640]
+2022-11-25 08:06:24,269 - INFO  - Scoreboard best 2 ==> Epoch [25][Top1: 88.620   Top5: 99.720]
+2022-11-25 08:06:24,269 - INFO  - Scoreboard best 3 ==> Epoch [24][Top1: 88.600   Top5: 99.660]
+2022-11-25 08:06:29,520 - INFO  - Saving checkpoint to:
+            Current: /home/ilena7440/LSQ_FakeQuant/out/88_20221125-072416/_checkpoint.pth.tar
+                Best: /home/ilena7440/LSQ_FakeQuant/out/88_20221125-072416/_best.pth.tar
+save quantized models...
+2022-11-25 08:06:29,527 - INFO  - >>>>>> Epoch  27
+2022-11-25 08:06:29,530 - INFO  - Training: 50000 samples (256 per mini-batch)
+2022-11-25 08:06:40,691 - INFO  - Training [27][   20/  196]   Loss 0.445022   Top1 84.082031   Top5 98.183594   BatchTime 0.557944   LR 0.000013   
+2022-11-25 08:06:49,029 - INFO  - Training [27][   40/  196]   Loss 0.463359   Top1 83.671875   Top5 98.281250   BatchTime 0.487422   LR 0.000012   
+2022-11-25 08:06:56,870 - INFO  - Training [27][   60/  196]   Loss 0.465349   Top1 83.580729   Top5 98.326823   BatchTime 0.455633   LR 0.000011   
+2022-11-25 08:07:06,393 - INFO  - Training [27][   80/  196]   Loss 0.465728   Top1 83.613281   Top5 98.491211   BatchTime 0.460761   LR 0.000010   
+2022-11-25 08:07:15,842 - INFO  - Training [27][  100/  196]   Loss 0.459229   Top1 84.007812   Top5 98.562500   BatchTime 0.463092   LR 0.000009   
+2022-11-25 08:07:23,710 - INFO  - Training [27][  120/  196]   Loss 0.453759   Top1 84.270833   Top5 98.658854   BatchTime 0.451478   LR 0.000009   
+2022-11-25 08:07:31,492 - INFO  - Training [27][  140/  196]   Loss 0.451840   Top1 84.299665   Top5 98.699777   BatchTime 0.442565   LR 0.000008   
+2022-11-25 08:07:40,355 - INFO  - Training [27][  160/  196]   Loss 0.453906   Top1 84.243164   Top5 98.671875   BatchTime 0.442638   LR 0.000007   
+2022-11-25 08:07:49,771 - INFO  - Training [27][  180/  196]   Loss 0.452299   Top1 84.318576   Top5 98.632812   BatchTime 0.445767   LR 0.000007   
+2022-11-25 08:07:57,259 - INFO  - ==> Top1: 84.278    Top5: 98.642    Loss: 0.452
+
+2022-11-25 08:07:57,453 - INFO  - Created `MobileNetv2` model
+          Use pre-trained model = False
+2022-11-25 08:07:59,592 - INFO  - Validation: 10000 samples (256 per mini-batch)
+2022-11-25 08:08:02,547 - INFO  - Validation [27][   20/   40]   Loss 0.336802   Top1 88.750000   Top5 99.648438   BatchTime 0.147626   
+2022-11-25 08:08:03,740 - INFO  - Validation [27][   40/   40]   Loss 0.327737   Top1 88.880000   Top5 99.700000   BatchTime 0.103657   
+2022-11-25 08:08:03,977 - INFO  - ==> Top1: 88.880    Top5: 99.700    Loss: 0.328
+
+2022-11-25 08:08:03,977 - INFO  - ==> Sparsity : 0.409
+
+2022-11-25 08:08:03,978 - INFO  - Scoreboard best 1 ==> Epoch [26][Top1: 88.910   Top5: 99.640]
+2022-11-25 08:08:03,978 - INFO  - Scoreboard best 2 ==> Epoch [27][Top1: 88.880   Top5: 99.700]
+2022-11-25 08:08:03,978 - INFO  - Scoreboard best 3 ==> Epoch [25][Top1: 88.620   Top5: 99.720]
+2022-11-25 08:08:04,123 - INFO  - Saving checkpoint to:
+            Current: /home/ilena7440/LSQ_FakeQuant/out/88_20221125-072416/_checkpoint.pth.tar
+
+2022-11-25 08:08:04,125 - INFO  - >>>>>> Epoch  28
+2022-11-25 08:08:04,127 - INFO  - Training: 50000 samples (256 per mini-batch)
+2022-11-25 08:08:15,179 - INFO  - Training [28][   20/  196]   Loss 0.451444   Top1 83.867188   Top5 98.496094   BatchTime 0.552458   LR 0.000006   
+2022-11-25 08:08:24,549 - INFO  - Training [28][   40/  196]   Loss 0.464065   Top1 83.671875   Top5 98.398438   BatchTime 0.510475   LR 0.000005   
+2022-11-25 08:08:32,784 - INFO  - Training [28][   60/  196]   Loss 0.458851   Top1 83.958333   Top5 98.548177   BatchTime 0.477563   LR 0.000004   
+2022-11-25 08:08:40,699 - INFO  - Training [28][   80/  196]   Loss 0.460379   Top1 84.013672   Top5 98.579102   BatchTime 0.457113   LR 0.000004   
+2022-11-25 08:08:49,911 - INFO  - Training [28][  100/  196]   Loss 0.456630   Top1 84.179688   Top5 98.597656   BatchTime 0.457811   LR 0.000003   
+2022-11-25 08:08:58,506 - INFO  - Training [28][  120/  196]   Loss 0.452595   Top1 84.231771   Top5 98.649089   BatchTime 0.453131   LR 0.000003   
+2022-11-25 08:09:06,233 - INFO  - Training [28][  140/  196]   Loss 0.446637   Top1 84.494978   Top5 98.680246   BatchTime 0.443592   LR 0.000003   
+2022-11-25 08:09:15,010 - INFO  - Training [28][  160/  196]   Loss 0.447189   Top1 84.470215   Top5 98.703613   BatchTime 0.442994   LR 0.000002   
+2022-11-25 08:09:24,129 - INFO  - Training [28][  180/  196]   Loss 0.445370   Top1 84.546441   Top5 98.665365   BatchTime 0.444437   LR 0.000002   
+2022-11-25 08:09:31,593 - INFO  - ==> Top1: 84.562    Top5: 98.654    Loss: 0.444
+
+2022-11-25 08:09:31,789 - INFO  - Created `MobileNetv2` model
+          Use pre-trained model = False
+2022-11-25 08:09:33,602 - INFO  - Validation: 10000 samples (256 per mini-batch)
+2022-11-25 08:09:37,685 - INFO  - Validation [28][   20/   40]   Loss 0.341434   Top1 88.496094   Top5 99.628906   BatchTime 0.204059   
+2022-11-25 08:09:39,352 - INFO  - Validation [28][   40/   40]   Loss 0.330291   Top1 88.720000   Top5 99.700000   BatchTime 0.143722   
+2022-11-25 08:09:39,591 - INFO  - ==> Top1: 88.720    Top5: 99.700    Loss: 0.330
+
+2022-11-25 08:09:39,591 - INFO  - ==> Sparsity : 0.410
+
+2022-11-25 08:09:39,591 - INFO  - Scoreboard best 1 ==> Epoch [26][Top1: 88.910   Top5: 99.640]
+2022-11-25 08:09:39,591 - INFO  - Scoreboard best 2 ==> Epoch [27][Top1: 88.880   Top5: 99.700]
+2022-11-25 08:09:39,592 - INFO  - Scoreboard best 3 ==> Epoch [28][Top1: 88.720   Top5: 99.700]
+2022-11-25 08:09:39,742 - INFO  - Saving checkpoint to:
+            Current: /home/ilena7440/LSQ_FakeQuant/out/88_20221125-072416/_checkpoint.pth.tar
+
+2022-11-25 08:09:39,744 - INFO  - >>>>>> Epoch  29
+2022-11-25 08:09:39,746 - INFO  - Training: 50000 samples (256 per mini-batch)
+2022-11-25 08:09:50,712 - INFO  - Training [29][   20/  196]   Loss 0.480619   Top1 83.222656   Top5 98.164062   BatchTime 0.548177   LR 0.000001   
+2022-11-25 08:10:00,452 - INFO  - Training [29][   40/  196]   Loss 0.466457   Top1 83.779297   Top5 98.417969   BatchTime 0.517569   LR 0.000001   
+2022-11-25 08:10:08,828 - INFO  - Training [29][   60/  196]   Loss 0.460497   Top1 83.919271   Top5 98.483073   BatchTime 0.484651   LR 0.000001   
+2022-11-25 08:10:16,736 - INFO  - Training [29][   80/  196]   Loss 0.458270   Top1 84.072266   Top5 98.574219   BatchTime 0.462338   LR 0.000001   
+2022-11-25 08:10:25,987 - INFO  - Training [29][  100/  196]   Loss 0.451813   Top1 84.242188   Top5 98.636719   BatchTime 0.462378   LR 0.000000   
+2022-11-25 08:10:35,015 - INFO  - Training [29][  120/  196]   Loss 0.445934   Top1 84.414062   Top5 98.671875   BatchTime 0.460548   LR 0.000000   
+2022-11-25 08:10:42,967 - INFO  - Training [29][  140/  196]   Loss 0.446228   Top1 84.369420   Top5 98.713728   BatchTime 0.451558   LR 0.000000   
+2022-11-25 08:10:51,439 - INFO  - Training [29][  160/  196]   Loss 0.448544   Top1 84.313965   Top5 98.688965   BatchTime 0.448057   LR 0.000000   
+2022-11-25 08:11:01,374 - INFO  - Training [29][  180/  196]   Loss 0.449287   Top1 84.214410   Top5 98.654514   BatchTime 0.453469   LR 0.000000   
+2022-11-25 08:11:09,098 - INFO  - ==> Top1: 84.286    Top5: 98.662    Loss: 0.448
+
+2022-11-25 08:11:09,274 - INFO  - Created `MobileNetv2` model
+          Use pre-trained model = False
+2022-11-25 08:11:12,124 - INFO  - Validation: 10000 samples (256 per mini-batch)
+2022-11-25 08:11:15,557 - INFO  - Validation [29][   20/   40]   Loss 0.339314   Top1 88.574219   Top5 99.628906   BatchTime 0.171510   
+2022-11-25 08:11:16,548 - INFO  - Validation [29][   40/   40]   Loss 0.329231   Top1 88.960000   Top5 99.710000   BatchTime 0.110529   
+2022-11-25 08:11:16,810 - INFO  - ==> Top1: 88.960    Top5: 99.710    Loss: 0.329
+
+2022-11-25 08:11:16,810 - INFO  - ==> Sparsity : 0.410
+
+2022-11-25 08:11:16,811 - INFO  - Scoreboard best 1 ==> Epoch [29][Top1: 88.960   Top5: 99.710]
+2022-11-25 08:11:16,811 - INFO  - Scoreboard best 2 ==> Epoch [26][Top1: 88.910   Top5: 99.640]
+2022-11-25 08:11:16,811 - INFO  - Scoreboard best 3 ==> Epoch [27][Top1: 88.880   Top5: 99.700]
+2022-11-25 08:11:22,269 - INFO  - Saving checkpoint to:
+            Current: /home/ilena7440/LSQ_FakeQuant/out/88_20221125-072416/_checkpoint.pth.tar
+                Best: /home/ilena7440/LSQ_FakeQuant/out/88_20221125-072416/_best.pth.tar
+save quantized models...
+2022-11-25 08:11:22,271 - INFO  - >>>>>> Epoch  30
+2022-11-25 08:11:22,273 - INFO  - Training: 50000 samples (256 per mini-batch)
+2022-11-25 08:11:33,083 - INFO  - Training [30][   20/  196]   Loss 0.467313   Top1 83.671875   Top5 98.417969   BatchTime 0.540379   LR 0.000125   
+2022-11-25 08:11:42,143 - INFO  - Training [30][   40/  196]   Loss 0.485834   Top1 82.958984   Top5 98.320312   BatchTime 0.496699   LR 0.000125   
+2022-11-25 08:11:49,937 - INFO  - Training [30][   60/  196]   Loss 0.490218   Top1 82.975260   Top5 98.378906   BatchTime 0.461033   LR 0.000125   
+2022-11-25 08:11:58,056 - INFO  - Training [30][   80/  196]   Loss 0.491908   Top1 82.822266   Top5 98.466797   BatchTime 0.447260   LR 0.000125   
+2022-11-25 08:12:07,137 - INFO  - Training [30][  100/  196]   Loss 0.491672   Top1 82.769531   Top5 98.410156   BatchTime 0.448614   LR 0.000125   
+2022-11-25 08:12:15,687 - INFO  - Training [30][  120/  196]   Loss 0.489099   Top1 82.952474   Top5 98.476562   BatchTime 0.445094   LR 0.000125   
+2022-11-25 08:12:23,583 - INFO  - Training [30][  140/  196]   Loss 0.487623   Top1 83.027344   Top5 98.510045   BatchTime 0.437910   LR 0.000125   
+2022-11-25 08:12:32,550 - INFO  - Training [30][  160/  196]   Loss 0.491514   Top1 82.917480   Top5 98.486328   BatchTime 0.439214   LR 0.000125   
+2022-11-25 08:12:41,938 - INFO  - Training [30][  180/  196]   Loss 0.492842   Top1 82.860243   Top5 98.439670   BatchTime 0.442567   LR 0.000125   
+2022-11-25 08:12:49,518 - INFO  - ==> Top1: 82.836    Top5: 98.460    Loss: 0.492
+
+2022-11-25 08:12:49,691 - INFO  - Created `MobileNetv2` model
+          Use pre-trained model = False
+2022-11-25 08:12:51,693 - INFO  - Validation: 10000 samples (256 per mini-batch)
+2022-11-25 08:12:54,480 - INFO  - Validation [30][   20/   40]   Loss 0.384591   Top1 87.285156   Top5 99.492188   BatchTime 0.139269   
+2022-11-25 08:12:55,632 - INFO  - Validation [30][   40/   40]   Loss 0.371226   Top1 87.590000   Top5 99.590000   BatchTime 0.098435   
+2022-11-25 08:12:55,843 - INFO  - ==> Top1: 87.590    Top5: 99.590    Loss: 0.371
+
+2022-11-25 08:12:55,843 - INFO  - ==> Sparsity : 0.395
+
+2022-11-25 08:12:55,843 - INFO  - Scoreboard best 1 ==> Epoch [29][Top1: 88.960   Top5: 99.710]
+2022-11-25 08:12:55,843 - INFO  - Scoreboard best 2 ==> Epoch [26][Top1: 88.910   Top5: 99.640]
+2022-11-25 08:12:55,843 - INFO  - Scoreboard best 3 ==> Epoch [27][Top1: 88.880   Top5: 99.700]
+2022-11-25 08:12:55,973 - INFO  - Saving checkpoint to:
+            Current: /home/ilena7440/LSQ_FakeQuant/out/88_20221125-072416/_checkpoint.pth.tar
+
+2022-11-25 08:12:55,975 - INFO  - >>>>>> Epoch  31
+2022-11-25 08:12:55,977 - INFO  - Training: 50000 samples (256 per mini-batch)
+2022-11-25 08:13:07,109 - INFO  - Training [31][   20/  196]   Loss 0.513048   Top1 81.542969   Top5 98.105469   BatchTime 0.556460   LR 0.000125   
+2022-11-25 08:13:16,277 - INFO  - Training [31][   40/  196]   Loss 0.517418   Top1 81.757812   Top5 98.134766   BatchTime 0.507426   LR 0.000125   
+2022-11-25 08:13:24,724 - INFO  - Training [31][   60/  196]   Loss 0.503202   Top1 82.356771   Top5 98.203125   BatchTime 0.479062   LR 0.000125   
+2022-11-25 08:13:32,270 - INFO  - Training [31][   80/  196]   Loss 0.497266   Top1 82.578125   Top5 98.354492   BatchTime 0.453622   LR 0.000125   
+2022-11-25 08:13:41,489 - INFO  - Training [31][  100/  196]   Loss 0.488285   Top1 82.972656   Top5 98.429688   BatchTime 0.455083   LR 0.000125   
+2022-11-25 08:13:51,136 - INFO  - Training [31][  120/  196]   Loss 0.485817   Top1 83.121745   Top5 98.509115   BatchTime 0.459631   LR 0.000125   
+2022-11-25 08:13:59,873 - INFO  - Training [31][  140/  196]   Loss 0.484519   Top1 83.191964   Top5 98.557478   BatchTime 0.456377   LR 0.000124   
+2022-11-25 08:14:07,484 - INFO  - Training [31][  160/  196]   Loss 0.487305   Top1 83.090820   Top5 98.532715   BatchTime 0.446898   LR 0.000124   
+2022-11-25 08:14:16,668 - INFO  - Training [31][  180/  196]   Loss 0.489445   Top1 82.894965   Top5 98.500434   BatchTime 0.448265   LR 0.000124   
+2022-11-25 08:14:24,566 - INFO  - ==> Top1: 82.922    Top5: 98.502    Loss: 0.490
+
+2022-11-25 08:14:24,810 - INFO  - Created `MobileNetv2` model
+          Use pre-trained model = False
+2022-11-25 08:14:26,732 - INFO  - Validation: 10000 samples (256 per mini-batch)
+2022-11-25 08:14:29,563 - INFO  - Validation [31][   20/   40]   Loss 0.369518   Top1 87.480469   Top5 99.570312   BatchTime 0.141395   
+2022-11-25 08:14:30,644 - INFO  - Validation [31][   40/   40]   Loss 0.363428   Top1 87.670000   Top5 99.610000   BatchTime 0.097731   
+2022-11-25 08:14:30,862 - INFO  - ==> Top1: 87.670    Top5: 99.610    Loss: 0.363
+
+2022-11-25 08:14:30,863 - INFO  - ==> Sparsity : 0.400
+
+2022-11-25 08:14:30,863 - INFO  - Scoreboard best 1 ==> Epoch [29][Top1: 88.960   Top5: 99.710]
+2022-11-25 08:14:30,863 - INFO  - Scoreboard best 2 ==> Epoch [26][Top1: 88.910   Top5: 99.640]
+2022-11-25 08:14:30,864 - INFO  - Scoreboard best 3 ==> Epoch [27][Top1: 88.880   Top5: 99.700]
+2022-11-25 08:14:31,041 - INFO  - Saving checkpoint to:
+            Current: /home/ilena7440/LSQ_FakeQuant/out/88_20221125-072416/_checkpoint.pth.tar
+
+2022-11-25 08:14:31,043 - INFO  - >>>>>> Epoch  32
+2022-11-25 08:14:31,045 - INFO  - Training: 50000 samples (256 per mini-batch)
+2022-11-25 08:14:41,952 - INFO  - Training [32][   20/  196]   Loss 0.493791   Top1 82.988281   Top5 97.910156   BatchTime 0.545232   LR 0.000124   
+2022-11-25 08:14:51,192 - INFO  - Training [32][   40/  196]   Loss 0.492052   Top1 82.773438   Top5 98.076172   BatchTime 0.503608   LR 0.000124   
+2022-11-25 08:14:59,824 - INFO  - Training [32][   60/  196]   Loss 0.490112   Top1 82.858073   Top5 98.196615   BatchTime 0.479609   LR 0.000124   
+2022-11-25 08:15:07,975 - INFO  - Training [32][   80/  196]   Loss 0.487737   Top1 82.929688   Top5 98.286133   BatchTime 0.461584   LR 0.000124   
+2022-11-25 08:15:16,954 - INFO  - Training [32][  100/  196]   Loss 0.486233   Top1 83.003906   Top5 98.371094   BatchTime 0.459062   LR 0.000124   
+2022-11-25 08:15:26,152 - INFO  - Training [32][  120/  196]   Loss 0.484077   Top1 83.157552   Top5 98.427734   BatchTime 0.459201   LR 0.000124   
+2022-11-25 08:15:34,719 - INFO  - Training [32][  140/  196]   Loss 0.483042   Top1 83.250558   Top5 98.498884   BatchTime 0.454789   LR 0.000124   
+2022-11-25 08:15:43,116 - INFO  - Training [32][  160/  196]   Loss 0.486194   Top1 83.161621   Top5 98.469238   BatchTime 0.450420   LR 0.000123   
+2022-11-25 08:15:52,623 - INFO  - Training [32][  180/  196]   Loss 0.486112   Top1 83.105469   Top5 98.463542   BatchTime 0.453194   LR 0.000123   
+2022-11-25 08:16:00,199 - INFO  - ==> Top1: 83.146    Top5: 98.456    Loss: 0.486
+
+2022-11-25 08:16:00,371 - INFO  - Created `MobileNetv2` model
+          Use pre-trained model = False
+2022-11-25 08:16:02,414 - INFO  - Validation: 10000 samples (256 per mini-batch)
+2022-11-25 08:16:05,184 - INFO  - Validation [32][   20/   40]   Loss 0.401635   Top1 86.601562   Top5 99.414062   BatchTime 0.138385   
+2022-11-25 08:16:06,273 - INFO  - Validation [32][   40/   40]   Loss 0.383702   Top1 86.980000   Top5 99.580000   BatchTime 0.096434   
+2022-11-25 08:16:06,535 - INFO  - ==> Top1: 86.980    Top5: 99.580    Loss: 0.384
+
+2022-11-25 08:16:06,535 - INFO  - ==> Sparsity : 0.405
+
+2022-11-25 08:16:06,535 - INFO  - Scoreboard best 1 ==> Epoch [29][Top1: 88.960   Top5: 99.710]
+2022-11-25 08:16:06,536 - INFO  - Scoreboard best 2 ==> Epoch [26][Top1: 88.910   Top5: 99.640]
+2022-11-25 08:16:06,536 - INFO  - Scoreboard best 3 ==> Epoch [27][Top1: 88.880   Top5: 99.700]
+2022-11-25 08:16:06,685 - INFO  - Saving checkpoint to:
+            Current: /home/ilena7440/LSQ_FakeQuant/out/88_20221125-072416/_checkpoint.pth.tar
+
+2022-11-25 08:16:06,686 - INFO  - >>>>>> Epoch  33
+2022-11-25 08:16:06,688 - INFO  - Training: 50000 samples (256 per mini-batch)
+2022-11-25 08:16:17,626 - INFO  - Training [33][   20/  196]   Loss 0.493260   Top1 83.027344   Top5 98.027344   BatchTime 0.546767   LR 0.000123   
+2022-11-25 08:16:27,139 - INFO  - Training [33][   40/  196]   Loss 0.499060   Top1 82.753906   Top5 98.173828   BatchTime 0.511206   LR 0.000123   
+2022-11-25 08:16:36,868 - INFO  - Training [33][   60/  196]   Loss 0.490356   Top1 83.092448   Top5 98.333333   BatchTime 0.502941   LR 0.000123   
+2022-11-25 08:16:45,596 - INFO  - Training [33][   80/  196]   Loss 0.487300   Top1 83.291016   Top5 98.432617   BatchTime 0.486313   LR 0.000123   
+2022-11-25 08:16:53,133 - INFO  - Training [33][  100/  196]   Loss 0.483681   Top1 83.398438   Top5 98.484375   BatchTime 0.464416   LR 0.000123   
+2022-11-25 08:17:02,266 - INFO  - Training [33][  120/  196]   Loss 0.481043   Top1 83.476562   Top5 98.531901   BatchTime 0.463117   LR 0.000123   
+2022-11-25 08:17:10,535 - INFO  - Training [33][  140/  196]   Loss 0.480160   Top1 83.487723   Top5 98.565848   BatchTime 0.456022   LR 0.000122   
+2022-11-25 08:17:19,341 - INFO  - Training [33][  160/  196]   Loss 0.485134   Top1 83.288574   Top5 98.537598   BatchTime 0.454061   LR 0.000122   
+2022-11-25 08:17:28,434 - INFO  - Training [33][  180/  196]   Loss 0.485702   Top1 83.229167   Top5 98.489583   BatchTime 0.454123   LR 0.000122   
+2022-11-25 08:17:35,992 - INFO  - ==> Top1: 83.240    Top5: 98.476    Loss: 0.485
+
+2022-11-25 08:17:36,170 - INFO  - Created `MobileNetv2` model
+          Use pre-trained model = False
+2022-11-25 08:17:38,030 - INFO  - Validation: 10000 samples (256 per mini-batch)
+2022-11-25 08:17:40,821 - INFO  - Validation [33][   20/   40]   Loss 0.371604   Top1 87.792969   Top5 99.531250   BatchTime 0.139453   
+2022-11-25 08:17:41,995 - INFO  - Validation [33][   40/   40]   Loss 0.360960   Top1 87.830000   Top5 99.650000   BatchTime 0.099072   
+2022-11-25 08:17:42,246 - INFO  - ==> Top1: 87.830    Top5: 99.650    Loss: 0.361
+
+2022-11-25 08:17:42,246 - INFO  - ==> Sparsity : 0.408
+
+2022-11-25 08:17:42,246 - INFO  - Scoreboard best 1 ==> Epoch [29][Top1: 88.960   Top5: 99.710]
+2022-11-25 08:17:42,246 - INFO  - Scoreboard best 2 ==> Epoch [26][Top1: 88.910   Top5: 99.640]
+2022-11-25 08:17:42,246 - INFO  - Scoreboard best 3 ==> Epoch [27][Top1: 88.880   Top5: 99.700]
+2022-11-25 08:17:42,407 - INFO  - Saving checkpoint to:
+            Current: /home/ilena7440/LSQ_FakeQuant/out/88_20221125-072416/_checkpoint.pth.tar
+
+2022-11-25 08:17:42,409 - INFO  - >>>>>> Epoch  34
+2022-11-25 08:17:42,412 - INFO  - Training: 50000 samples (256 per mini-batch)
+2022-11-25 08:17:53,722 - INFO  - Training [34][   20/  196]   Loss 0.516959   Top1 81.386719   Top5 97.851562   BatchTime 0.565283   LR 0.000122   
+2022-11-25 08:18:03,460 - INFO  - Training [34][   40/  196]   Loss 0.496458   Top1 82.656250   Top5 98.007812   BatchTime 0.526082   LR 0.000122   
+2022-11-25 08:18:12,827 - INFO  - Training [34][   60/  196]   Loss 0.488486   Top1 82.792969   Top5 98.177083   BatchTime 0.506842   LR 0.000121   
+2022-11-25 08:18:21,810 - INFO  - Training [34][   80/  196]   Loss 0.491994   Top1 82.807617   Top5 98.300781   BatchTime 0.492415   LR 0.000121   
+2022-11-25 08:18:30,035 - INFO  - Training [34][  100/  196]   Loss 0.484479   Top1 83.152344   Top5 98.367188   BatchTime 0.476185   LR 0.000121   
+2022-11-25 08:18:39,220 - INFO  - Training [34][  120/  196]   Loss 0.482027   Top1 83.261719   Top5 98.460286   BatchTime 0.473361   LR 0.000121   
+2022-11-25 08:18:47,548 - INFO  - Training [34][  140/  196]   Loss 0.481783   Top1 83.264509   Top5 98.479353   BatchTime 0.465225   LR 0.000121   
+2022-11-25 08:18:56,286 - INFO  - Training [34][  160/  196]   Loss 0.481750   Top1 83.249512   Top5 98.481445   BatchTime 0.461684   LR 0.000121   
+2022-11-25 08:19:05,918 - INFO  - Training [34][  180/  196]   Loss 0.481482   Top1 83.279080   Top5 98.448351   BatchTime 0.463896   LR 0.000120   
+2022-11-25 08:19:13,451 - INFO  - ==> Top1: 83.364    Top5: 98.442    Loss: 0.479
+
+2022-11-25 08:19:13,687 - INFO  - Created `MobileNetv2` model
+          Use pre-trained model = False
+2022-11-25 08:19:15,606 - INFO  - Validation: 10000 samples (256 per mini-batch)
+2022-11-25 08:19:18,434 - INFO  - Validation [34][   20/   40]   Loss 0.364693   Top1 87.734375   Top5 99.492188   BatchTime 0.141309   
+2022-11-25 08:19:19,752 - INFO  - Validation [34][   40/   40]   Loss 0.354414   Top1 87.980000   Top5 99.630000   BatchTime 0.103618   
+2022-11-25 08:19:20,308 - INFO  - ==> Top1: 87.980    Top5: 99.630    Loss: 0.354
+
+2022-11-25 08:19:20,308 - INFO  - ==> Sparsity : 0.399
+
+2022-11-25 08:19:20,309 - INFO  - Scoreboard best 1 ==> Epoch [29][Top1: 88.960   Top5: 99.710]
+2022-11-25 08:19:20,309 - INFO  - Scoreboard best 2 ==> Epoch [26][Top1: 88.910   Top5: 99.640]
+2022-11-25 08:19:20,309 - INFO  - Scoreboard best 3 ==> Epoch [27][Top1: 88.880   Top5: 99.700]
+2022-11-25 08:19:20,457 - INFO  - Saving checkpoint to:
+            Current: /home/ilena7440/LSQ_FakeQuant/out/88_20221125-072416/_checkpoint.pth.tar
+
+2022-11-25 08:19:20,459 - INFO  - >>>>>> Epoch  35
+2022-11-25 08:19:20,461 - INFO  - Training: 50000 samples (256 per mini-batch)
+2022-11-25 08:19:31,745 - INFO  - Training [35][   20/  196]   Loss 0.484915   Top1 83.007812   Top5 98.144531   BatchTime 0.564072   LR 0.000120   
+2022-11-25 08:19:40,906 - INFO  - Training [35][   40/  196]   Loss 0.483187   Top1 82.734375   Top5 98.310547   BatchTime 0.511069   LR 0.000120   
+2022-11-25 08:19:50,019 - INFO  - Training [35][   60/  196]   Loss 0.480882   Top1 82.734375   Top5 98.385417   BatchTime 0.492592   LR 0.000120   
+2022-11-25 08:19:58,836 - INFO  - Training [35][   80/  196]   Loss 0.477779   Top1 82.929688   Top5 98.442383   BatchTime 0.479655   LR 0.000119   
+2022-11-25 08:20:07,487 - INFO  - Training [35][  100/  196]   Loss 0.473955   Top1 83.070312   Top5 98.488281   BatchTime 0.470229   LR 0.000119   
+2022-11-25 08:20:16,698 - INFO  - Training [35][  120/  196]   Loss 0.469079   Top1 83.297526   Top5 98.574219   BatchTime 0.468621   LR 0.000119   
+2022-11-25 08:20:24,962 - INFO  - Training [35][  140/  196]   Loss 0.469843   Top1 83.351004   Top5 98.643973   BatchTime 0.460702   LR 0.000119   
+2022-11-25 08:20:33,232 - INFO  - Training [35][  160/  196]   Loss 0.472513   Top1 83.305664   Top5 98.603516   BatchTime 0.454801   LR 0.000119   
+2022-11-25 08:20:42,425 - INFO  - Training [35][  180/  196]   Loss 0.472500   Top1 83.361545   Top5 98.567708   BatchTime 0.455335   LR 0.000118   
+2022-11-25 08:20:50,240 - INFO  - ==> Top1: 83.386    Top5: 98.566    Loss: 0.471
+
+2022-11-25 08:20:50,482 - INFO  - Created `MobileNetv2` model
+          Use pre-trained model = False
+2022-11-25 08:20:52,536 - INFO  - Validation: 10000 samples (256 per mini-batch)
+2022-11-25 08:20:55,391 - INFO  - Validation [35][   20/   40]   Loss 0.376123   Top1 87.363281   Top5 99.511719   BatchTime 0.142667   
+2022-11-25 08:20:56,991 - INFO  - Validation [35][   40/   40]   Loss 0.369699   Top1 87.390000   Top5 99.610000   BatchTime 0.111336   
+2022-11-25 08:20:57,208 - INFO  - ==> Top1: 87.390    Top5: 99.610    Loss: 0.370
+
+2022-11-25 08:20:57,208 - INFO  - ==> Sparsity : 0.410
+
+2022-11-25 08:20:57,208 - INFO  - Scoreboard best 1 ==> Epoch [29][Top1: 88.960   Top5: 99.710]
+2022-11-25 08:20:57,209 - INFO  - Scoreboard best 2 ==> Epoch [26][Top1: 88.910   Top5: 99.640]
+2022-11-25 08:20:57,209 - INFO  - Scoreboard best 3 ==> Epoch [27][Top1: 88.880   Top5: 99.700]
+2022-11-25 08:20:57,343 - INFO  - Saving checkpoint to:
+            Current: /home/ilena7440/LSQ_FakeQuant/out/88_20221125-072416/_checkpoint.pth.tar
+
+2022-11-25 08:20:57,344 - INFO  - >>>>>> Epoch  36
+2022-11-25 08:20:57,346 - INFO  - Training: 50000 samples (256 per mini-batch)
+2022-11-25 08:21:08,624 - INFO  - Training [36][   20/  196]   Loss 0.481515   Top1 83.320312   Top5 97.832031   BatchTime 0.563772   LR 0.000118   
+2022-11-25 08:21:17,782 - INFO  - Training [36][   40/  196]   Loss 0.490982   Top1 82.792969   Top5 98.017578   BatchTime 0.510840   LR 0.000118   
+2022-11-25 08:21:26,747 - INFO  - Training [36][   60/  196]   Loss 0.491984   Top1 82.877604   Top5 98.183594   BatchTime 0.489968   LR 0.000117   
+2022-11-25 08:21:34,638 - INFO  - Training [36][   80/  196]   Loss 0.487781   Top1 82.993164   Top5 98.310547   BatchTime 0.466119   LR 0.000117   
+2022-11-25 08:21:43,601 - INFO  - Training [36][  100/  196]   Loss 0.478493   Top1 83.281250   Top5 98.378906   BatchTime 0.462516   LR 0.000117   
+2022-11-25 08:21:53,182 - INFO  - Training [36][  120/  196]   Loss 0.475257   Top1 83.378906   Top5 98.473307   BatchTime 0.465271   LR 0.000117   
+2022-11-25 08:22:01,625 - INFO  - Training [36][  140/  196]   Loss 0.473069   Top1 83.473772   Top5 98.518415   BatchTime 0.459112   LR 0.000117   
+2022-11-25 08:22:10,147 - INFO  - Training [36][  160/  196]   Loss 0.475485   Top1 83.439941   Top5 98.535156   BatchTime 0.454985   LR 0.000116   
+2022-11-25 08:22:19,649 - INFO  - Training [36][  180/  196]   Loss 0.473828   Top1 83.465712   Top5 98.535156   BatchTime 0.457220   LR 0.000116   
+2022-11-25 08:22:27,128 - INFO  - ==> Top1: 83.490    Top5: 98.552    Loss: 0.473
+
+2022-11-25 08:22:27,293 - INFO  - Created `MobileNetv2` model
+          Use pre-trained model = False
+2022-11-25 08:22:29,050 - INFO  - Validation: 10000 samples (256 per mini-batch)
+2022-11-25 08:22:31,853 - INFO  - Validation [36][   20/   40]   Loss 0.356271   Top1 87.382812   Top5 99.472656   BatchTime 0.140098   
+2022-11-25 08:22:33,003 - INFO  - Validation [36][   40/   40]   Loss 0.346923   Top1 88.000000   Top5 99.570000   BatchTime 0.098805   
+2022-11-25 08:22:33,240 - INFO  - ==> Top1: 88.000    Top5: 99.570    Loss: 0.347
+
+2022-11-25 08:22:33,241 - INFO  - ==> Sparsity : 0.401
+
+2022-11-25 08:22:33,241 - INFO  - Scoreboard best 1 ==> Epoch [29][Top1: 88.960   Top5: 99.710]
+2022-11-25 08:22:33,241 - INFO  - Scoreboard best 2 ==> Epoch [26][Top1: 88.910   Top5: 99.640]
+2022-11-25 08:22:33,241 - INFO  - Scoreboard best 3 ==> Epoch [27][Top1: 88.880   Top5: 99.700]
+2022-11-25 08:22:33,369 - INFO  - Saving checkpoint to:
+            Current: /home/ilena7440/LSQ_FakeQuant/out/88_20221125-072416/_checkpoint.pth.tar
+
+2022-11-25 08:22:33,371 - INFO  - >>>>>> Epoch  37
+2022-11-25 08:22:33,372 - INFO  - Training: 50000 samples (256 per mini-batch)
+2022-11-25 08:22:44,480 - INFO  - Training [37][   20/  196]   Loss 0.473293   Top1 83.613281   Top5 98.066406   BatchTime 0.555232   LR 0.000116   
+2022-11-25 08:22:53,609 - INFO  - Training [37][   40/  196]   Loss 0.478317   Top1 83.486328   Top5 98.115234   BatchTime 0.505847   LR 0.000115   
+2022-11-25 08:23:02,912 - INFO  - Training [37][   60/  196]   Loss 0.472483   Top1 83.522135   Top5 98.144531   BatchTime 0.492273   LR 0.000115   
+2022-11-25 08:23:11,240 - INFO  - Training [37][   80/  196]   Loss 0.475327   Top1 83.574219   Top5 98.344727   BatchTime 0.473304   LR 0.000115   
+2022-11-25 08:23:20,368 - INFO  - Training [37][  100/  196]   Loss 0.466017   Top1 83.707031   Top5 98.500000   BatchTime 0.469926   LR 0.000114   
+2022-11-25 08:23:29,802 - INFO  - Training [37][  120/  196]   Loss 0.461509   Top1 83.867188   Top5 98.538411   BatchTime 0.470218   LR 0.000114   
+2022-11-25 08:23:38,825 - INFO  - Training [37][  140/  196]   Loss 0.463347   Top1 83.875558   Top5 98.574219   BatchTime 0.467494   LR 0.000114   
+2022-11-25 08:23:47,382 - INFO  - Training [37][  160/  196]   Loss 0.464860   Top1 83.806152   Top5 98.601074   BatchTime 0.462542   LR 0.000114   
+2022-11-25 08:23:56,602 - INFO  - Training [37][  180/  196]   Loss 0.463235   Top1 83.873698   Top5 98.565538   BatchTime 0.462371   LR 0.000113   
+2022-11-25 08:24:04,404 - INFO  - ==> Top1: 83.890    Top5: 98.576    Loss: 0.462
+
+2022-11-25 08:24:04,626 - INFO  - Created `MobileNetv2` model
+          Use pre-trained model = False
+2022-11-25 08:24:06,584 - INFO  - Validation: 10000 samples (256 per mini-batch)
+2022-11-25 08:24:09,388 - INFO  - Validation [37][   20/   40]   Loss 0.360743   Top1 87.890625   Top5 99.492188   BatchTime 0.140104   
+2022-11-25 08:24:10,498 - INFO  - Validation [37][   40/   40]   Loss 0.345513   Top1 88.460000   Top5 99.590000   BatchTime 0.097786   
+2022-11-25 08:24:10,713 - INFO  - ==> Top1: 88.460    Top5: 99.590    Loss: 0.346
+
+2022-11-25 08:24:10,713 - INFO  - ==> Sparsity : 0.402
+
+2022-11-25 08:24:10,713 - INFO  - Scoreboard best 1 ==> Epoch [29][Top1: 88.960   Top5: 99.710]
+2022-11-25 08:24:10,714 - INFO  - Scoreboard best 2 ==> Epoch [26][Top1: 88.910   Top5: 99.640]
+2022-11-25 08:24:10,714 - INFO  - Scoreboard best 3 ==> Epoch [27][Top1: 88.880   Top5: 99.700]
+2022-11-25 08:24:11,063 - INFO  - Saving checkpoint to:
+            Current: /home/ilena7440/LSQ_FakeQuant/out/88_20221125-072416/_checkpoint.pth.tar
+
+2022-11-25 08:24:11,065 - INFO  - >>>>>> Epoch  38
+2022-11-25 08:24:11,067 - INFO  - Training: 50000 samples (256 per mini-batch)
+2022-11-25 08:24:22,134 - INFO  - Training [38][   20/  196]   Loss 0.460842   Top1 83.808594   Top5 98.085938   BatchTime 0.553234   LR 0.000113   
+2022-11-25 08:24:31,312 - INFO  - Training [38][   40/  196]   Loss 0.471112   Top1 83.505859   Top5 98.242188   BatchTime 0.506062   LR 0.000112   
+2022-11-25 08:24:40,664 - INFO  - Training [38][   60/  196]   Loss 0.463637   Top1 83.886719   Top5 98.333333   BatchTime 0.493235   LR 0.000112   
+2022-11-25 08:24:49,141 - INFO  - Training [38][   80/  196]   Loss 0.466792   Top1 83.706055   Top5 98.452148   BatchTime 0.475894   LR 0.000112   
+2022-11-25 08:24:58,757 - INFO  - Training [38][  100/  196]   Loss 0.458443   Top1 83.945312   Top5 98.531250   BatchTime 0.476872   LR 0.000112   
+2022-11-25 08:25:08,387 - INFO  - Training [38][  120/  196]   Loss 0.457672   Top1 84.000651   Top5 98.613281   BatchTime 0.477644   LR 0.000111   
+2022-11-25 08:25:16,993 - INFO  - Training [38][  140/  196]   Loss 0.458285   Top1 84.029018   Top5 98.674665   BatchTime 0.470883   LR 0.000111   
+2022-11-25 08:25:25,891 - INFO  - Training [38][  160/  196]   Loss 0.460660   Top1 83.945312   Top5 98.649902   BatchTime 0.467633   LR 0.000111   
+2022-11-25 08:25:35,170 - INFO  - Training [38][  180/  196]   Loss 0.461568   Top1 83.854167   Top5 98.624132   BatchTime 0.467221   LR 0.000110   
+2022-11-25 08:25:42,890 - INFO  - ==> Top1: 83.864    Top5: 98.606    Loss: 0.461
+
+2022-11-25 08:25:43,105 - INFO  - Created `MobileNetv2` model
+          Use pre-trained model = False
+2022-11-25 08:25:45,001 - INFO  - Validation: 10000 samples (256 per mini-batch)
+2022-11-25 08:25:47,868 - INFO  - Validation [38][   20/   40]   Loss 0.349026   Top1 88.300781   Top5 99.511719   BatchTime 0.143268   
+2022-11-25 08:25:48,963 - INFO  - Validation [38][   40/   40]   Loss 0.338434   Top1 88.660000   Top5 99.630000   BatchTime 0.099011   
+2022-11-25 08:25:49,210 - INFO  - ==> Top1: 88.660    Top5: 99.630    Loss: 0.338
+
+2022-11-25 08:25:49,211 - INFO  - ==> Sparsity : 0.412
+
+2022-11-25 08:25:49,211 - INFO  - Scoreboard best 1 ==> Epoch [29][Top1: 88.960   Top5: 99.710]
+2022-11-25 08:25:49,211 - INFO  - Scoreboard best 2 ==> Epoch [26][Top1: 88.910   Top5: 99.640]
+2022-11-25 08:25:49,211 - INFO  - Scoreboard best 3 ==> Epoch [27][Top1: 88.880   Top5: 99.700]
+2022-11-25 08:25:49,337 - INFO  - Saving checkpoint to:
+            Current: /home/ilena7440/LSQ_FakeQuant/out/88_20221125-072416/_checkpoint.pth.tar
+
+2022-11-25 08:25:49,338 - INFO  - >>>>>> Epoch  39
+2022-11-25 08:25:49,340 - INFO  - Training: 50000 samples (256 per mini-batch)
+2022-11-25 08:26:00,599 - INFO  - Training [39][   20/  196]   Loss 0.467967   Top1 83.437500   Top5 98.457031   BatchTime 0.562794   LR 0.000110   
+2022-11-25 08:26:09,911 - INFO  - Training [39][   40/  196]   Loss 0.456830   Top1 83.935547   Top5 98.535156   BatchTime 0.514199   LR 0.000109   
+2022-11-25 08:26:18,599 - INFO  - Training [39][   60/  196]   Loss 0.456242   Top1 84.003906   Top5 98.593750   BatchTime 0.487614   LR 0.000109   
+2022-11-25 08:26:27,950 - INFO  - Training [39][   80/  196]   Loss 0.455033   Top1 84.194336   Top5 98.671875   BatchTime 0.482589   LR 0.000109   
+2022-11-25 08:26:37,557 - INFO  - Training [39][  100/  196]   Loss 0.456020   Top1 84.152344   Top5 98.714844   BatchTime 0.482142   LR 0.000108   
+2022-11-25 08:26:47,054 - INFO  - Training [39][  120/  196]   Loss 0.453058   Top1 84.287109   Top5 98.759766   BatchTime 0.480922   LR 0.000108   
+2022-11-25 08:26:55,032 - INFO  - Training [39][  140/  196]   Loss 0.451569   Top1 84.296875   Top5 98.783482   BatchTime 0.469207   LR 0.000108   
+2022-11-25 08:27:04,563 - INFO  - Training [39][  160/  196]   Loss 0.453439   Top1 84.213867   Top5 98.764648   BatchTime 0.470121   LR 0.000107   
+2022-11-25 08:27:14,054 - INFO  - Training [39][  180/  196]   Loss 0.454710   Top1 84.151476   Top5 98.719618   BatchTime 0.470613   LR 0.000107   
+2022-11-25 08:27:21,895 - INFO  - ==> Top1: 84.128    Top5: 98.692    Loss: 0.455
+
+2022-11-25 08:27:22,289 - INFO  - Created `MobileNetv2` model
+          Use pre-trained model = False
+2022-11-25 08:27:25,716 - INFO  - Validation: 10000 samples (256 per mini-batch)
+2022-11-25 08:27:28,938 - INFO  - Validation [39][   20/   40]   Loss 0.339412   Top1 88.515625   Top5 99.531250   BatchTime 0.161014   
+2022-11-25 08:27:30,106 - INFO  - Validation [39][   40/   40]   Loss 0.323512   Top1 89.040000   Top5 99.660000   BatchTime 0.109708   
+2022-11-25 08:27:30,365 - INFO  - ==> Top1: 89.040    Top5: 99.660    Loss: 0.324
+
+2022-11-25 08:27:30,366 - INFO  - ==> Sparsity : 0.401
+
+2022-11-25 08:27:30,366 - INFO  - Scoreboard best 1 ==> Epoch [39][Top1: 89.040   Top5: 99.660]
+2022-11-25 08:27:30,366 - INFO  - Scoreboard best 2 ==> Epoch [29][Top1: 88.960   Top5: 99.710]
+2022-11-25 08:27:30,366 - INFO  - Scoreboard best 3 ==> Epoch [26][Top1: 88.910   Top5: 99.640]
+2022-11-25 08:27:37,652 - INFO  - Saving checkpoint to:
+            Current: /home/ilena7440/LSQ_FakeQuant/out/88_20221125-072416/_checkpoint.pth.tar
+                Best: /home/ilena7440/LSQ_FakeQuant/out/88_20221125-072416/_best.pth.tar
+save quantized models...
+2022-11-25 08:27:37,658 - INFO  - >>>>>> Epoch  40
+2022-11-25 08:27:37,661 - INFO  - Training: 50000 samples (256 per mini-batch)
+2022-11-25 08:27:48,671 - INFO  - Training [40][   20/  196]   Loss 0.458789   Top1 83.867188   Top5 97.988281   BatchTime 0.550369   LR 0.000106   
+2022-11-25 08:27:56,842 - INFO  - Training [40][   40/  196]   Loss 0.463615   Top1 83.740234   Top5 98.164062   BatchTime 0.479468   LR 0.000106   
+2022-11-25 08:28:06,394 - INFO  - Training [40][   60/  196]   Loss 0.463487   Top1 83.613281   Top5 98.333333   BatchTime 0.478845   LR 0.000106   
+2022-11-25 08:28:15,628 - INFO  - Training [40][   80/  196]   Loss 0.460090   Top1 83.769531   Top5 98.500977   BatchTime 0.474559   LR 0.000105   
+2022-11-25 08:28:24,408 - INFO  - Training [40][  100/  196]   Loss 0.458621   Top1 83.683594   Top5 98.531250   BatchTime 0.467443   LR 0.000105   
+2022-11-25 08:28:32,774 - INFO  - Training [40][  120/  196]   Loss 0.454390   Top1 83.805339   Top5 98.623047   BatchTime 0.459256   LR 0.000105   
+2022-11-25 08:28:42,069 - INFO  - Training [40][  140/  196]   Loss 0.452697   Top1 83.942522   Top5 98.683036   BatchTime 0.460036   LR 0.000104   
+2022-11-25 08:28:51,007 - INFO  - Training [40][  160/  196]   Loss 0.455833   Top1 83.889160   Top5 98.657227   BatchTime 0.458395   LR 0.000104   
+2022-11-25 08:29:01,323 - INFO  - Training [40][  180/  196]   Loss 0.456768   Top1 83.875868   Top5 98.621962   BatchTime 0.464770   LR 0.000103   
+2022-11-25 08:29:08,801 - INFO  - ==> Top1: 84.032    Top5: 98.624    Loss: 0.454
+
+2022-11-25 08:29:08,975 - INFO  - Created `MobileNetv2` model
+          Use pre-trained model = False
+2022-11-25 08:29:10,912 - INFO  - Validation: 10000 samples (256 per mini-batch)
+2022-11-25 08:29:13,754 - INFO  - Validation [40][   20/   40]   Loss 0.347011   Top1 88.574219   Top5 99.667969   BatchTime 0.141968   
+2022-11-25 08:29:14,862 - INFO  - Validation [40][   40/   40]   Loss 0.342047   Top1 88.440000   Top5 99.700000   BatchTime 0.098703   
+2022-11-25 08:29:15,102 - INFO  - ==> Top1: 88.440    Top5: 99.700    Loss: 0.342
+
+2022-11-25 08:29:15,102 - INFO  - ==> Sparsity : 0.401
+
+2022-11-25 08:29:15,103 - INFO  - Scoreboard best 1 ==> Epoch [39][Top1: 89.040   Top5: 99.660]
+2022-11-25 08:29:15,103 - INFO  - Scoreboard best 2 ==> Epoch [29][Top1: 88.960   Top5: 99.710]
+2022-11-25 08:29:15,103 - INFO  - Scoreboard best 3 ==> Epoch [26][Top1: 88.910   Top5: 99.640]
+2022-11-25 08:29:15,247 - INFO  - Saving checkpoint to:
+            Current: /home/ilena7440/LSQ_FakeQuant/out/88_20221125-072416/_checkpoint.pth.tar
+
+2022-11-25 08:29:15,249 - INFO  - >>>>>> Epoch  41
+2022-11-25 08:29:15,251 - INFO  - Training: 50000 samples (256 per mini-batch)
+2022-11-25 08:29:26,189 - INFO  - Training [41][   20/  196]   Loss 0.466253   Top1 83.593750   Top5 98.398438   BatchTime 0.546749   LR 0.000103   
+2022-11-25 08:29:34,125 - INFO  - Training [41][   40/  196]   Loss 0.474334   Top1 83.369141   Top5 98.271484   BatchTime 0.471785   LR 0.000102   
+2022-11-25 08:29:42,402 - INFO  - Training [41][   60/  196]   Loss 0.464503   Top1 83.756510   Top5 98.411458   BatchTime 0.452470   LR 0.000102   
+2022-11-25 08:29:51,635 - INFO  - Training [41][   80/  196]   Loss 0.462577   Top1 83.793945   Top5 98.510742   BatchTime 0.454762   LR 0.000102   
+2022-11-25 08:29:59,949 - INFO  - Training [41][  100/  196]   Loss 0.456537   Top1 84.074219   Top5 98.578125   BatchTime 0.446952   LR 0.000101   
+2022-11-25 08:30:08,933 - INFO  - Training [41][  120/  196]   Loss 0.450324   Top1 84.283854   Top5 98.623047   BatchTime 0.447325   LR 0.000101   
+2022-11-25 08:30:18,354 - INFO  - Training [41][  140/  196]   Loss 0.446431   Top1 84.400112   Top5 98.708147   BatchTime 0.450715   LR 0.000100   
+2022-11-25 08:30:28,397 - INFO  - Training [41][  160/  196]   Loss 0.448491   Top1 84.284668   Top5 98.725586   BatchTime 0.457143   LR 0.000100   
+2022-11-25 08:30:37,778 - INFO  - Training [41][  180/  196]   Loss 0.449087   Top1 84.318576   Top5 98.684896   BatchTime 0.458464   LR 0.000100   
+2022-11-25 08:30:45,393 - INFO  - ==> Top1: 84.442    Top5: 98.688    Loss: 0.446
+
+2022-11-25 08:30:45,588 - INFO  - Created `MobileNetv2` model
+          Use pre-trained model = False
+2022-11-25 08:30:47,466 - INFO  - Validation: 10000 samples (256 per mini-batch)
+2022-11-25 08:30:50,268 - INFO  - Validation [41][   20/   40]   Loss 0.340805   Top1 88.613281   Top5 99.648438   BatchTime 0.139974   
+2022-11-25 08:30:51,355 - INFO  - Validation [41][   40/   40]   Loss 0.334357   Top1 88.840000   Top5 99.660000   BatchTime 0.097180   
+2022-11-25 08:30:51,618 - INFO  - ==> Top1: 88.840    Top5: 99.660    Loss: 0.334
+
+2022-11-25 08:30:51,619 - INFO  - ==> Sparsity : 0.403
+
+2022-11-25 08:30:51,619 - INFO  - Scoreboard best 1 ==> Epoch [39][Top1: 89.040   Top5: 99.660]
+2022-11-25 08:30:51,619 - INFO  - Scoreboard best 2 ==> Epoch [29][Top1: 88.960   Top5: 99.710]
+2022-11-25 08:30:51,619 - INFO  - Scoreboard best 3 ==> Epoch [26][Top1: 88.910   Top5: 99.640]
+2022-11-25 08:30:51,750 - INFO  - Saving checkpoint to:
+            Current: /home/ilena7440/LSQ_FakeQuant/out/88_20221125-072416/_checkpoint.pth.tar
+
+2022-11-25 08:30:51,751 - INFO  - >>>>>> Epoch  42
+2022-11-25 08:30:51,753 - INFO  - Training: 50000 samples (256 per mini-batch)
+2022-11-25 08:31:02,828 - INFO  - Training [42][   20/  196]   Loss 0.484091   Top1 82.890625   Top5 98.066406   BatchTime 0.553609   LR 0.000099   
+2022-11-25 08:31:11,455 - INFO  - Training [42][   40/  196]   Loss 0.459990   Top1 83.837891   Top5 98.339844   BatchTime 0.492482   LR 0.000098   
+2022-11-25 08:31:20,327 - INFO  - Training [42][   60/  196]   Loss 0.459271   Top1 83.932292   Top5 98.417969   BatchTime 0.476175   LR 0.000098   
+2022-11-25 08:31:29,214 - INFO  - Training [42][   80/  196]   Loss 0.454658   Top1 84.052734   Top5 98.515625   BatchTime 0.468224   LR 0.000098   
+2022-11-25 08:31:37,632 - INFO  - Training [42][  100/  196]   Loss 0.450415   Top1 84.269531   Top5 98.566406   BatchTime 0.458757   LR 0.000097   
+2022-11-25 08:31:47,177 - INFO  - Training [42][  120/  196]   Loss 0.446543   Top1 84.375000   Top5 98.639323   BatchTime 0.461834   LR 0.000097   
+2022-11-25 08:31:57,247 - INFO  - Training [42][  140/  196]   Loss 0.444746   Top1 84.472656   Top5 98.674665   BatchTime 0.467787   LR 0.000096   

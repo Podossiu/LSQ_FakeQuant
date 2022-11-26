@@ -1,0 +1,31 @@
+2022-11-25 09:28:09,760 - INFO  - Log file for this run: /home/ilena7440/LSQ_FakeQuant/out/88_20221125-092809/88_20221125-092809.log
+2022-11-25 09:28:14,134 - INFO  - Dataset `cifar10` size:
+          Training Set = 50000 (196)
+        Validation Set = 10000 (40)
+              Test Set = 10000 (40)
+2022-11-25 09:28:15,965 - INFO  - Created `MobileNetv2` model
+          Use pre-trained model = True
+2022-11-25 09:28:16,627 - INFO  - Optimizer: AdamW (
+           Parameter Group 0
+               amsgrad: False
+               betas: (0.9, 0.999)
+               capturable: False
+               eps: 1e-08
+               foreach: None
+               lr: 0.005
+               maximize: False
+               weight_decay: 4e-05
+           )
+2022-11-25 09:28:16,627 - INFO  - LR scheduler: `CosineWarmRestartsLr`
+    Update per batch: True
+             Group 0: 0.005
+
+2022-11-25 09:28:16,659 - INFO  - >>>>>> Epoch   0
+2022-11-25 09:28:16,660 - INFO  - Training: 50000 samples (256 per mini-batch)
+2022-11-25 09:28:24,666 - INFO  - Training [0][   20/  196]   Loss 1.762880   Top1 53.554688   Top5 88.984375   BatchTime 0.400189   LR 0.004999   
+2022-11-25 09:28:33,068 - INFO  - Training [0][   40/  196]   Loss 1.746549   Top1 52.548828   Top5 89.794922   BatchTime 0.410147   LR 0.004995   
+2022-11-25 09:28:41,521 - INFO  - Training [0][   60/  196]   Loss 1.666789   Top1 54.785156   Top5 90.996094   BatchTime 0.414311   LR 0.004989   
+2022-11-25 09:28:57,431 - INFO  - Training [0][   80/  196]   Loss 1.603692   Top1 56.601562   Top5 91.826172   BatchTime 0.509605   LR 0.004980   
+2022-11-25 09:29:17,172 - INFO  - Training [0][  100/  196]   Loss 1.547484   Top1 58.304688   Top5 92.515625   BatchTime 0.605100   LR 0.004968   
+2022-11-25 09:29:25,501 - INFO  - Training [0][  120/  196]   Loss 1.502629   Top1 59.716797   Top5 93.030599   BatchTime 0.573654   LR 0.004954   
+2022-11-25 09:29:33,776 - INFO  - Training [0][  140/  196]   Loss 1.470102   Top1 60.742188   Top5 93.359375   BatchTime 0.550811   LR 0.004938   
